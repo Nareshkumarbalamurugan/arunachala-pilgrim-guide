@@ -58,7 +58,7 @@ const Girivalam = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop" 
+                src="https://tirupatibalajitravels.co.in/wp-content/uploads/2024/12/download-12.jpeg" 
                 alt="Arunachala Hill"
                 className="rounded-lg shadow-2xl w-full"
               />

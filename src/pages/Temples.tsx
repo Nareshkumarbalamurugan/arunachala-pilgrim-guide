@@ -11,7 +11,7 @@ const Temples = () => {
       highlights: ['10-day Karthigai Deepam festival', 'Massive temple complex with towering gopurams', 'Sacred pond and holy tanks'],
       timings: '6 AM – 9 PM daily',
       location: 'Center of Tiruvannamalai town',
-      image: 'https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=600&h=400&fit=crop'
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vjD8BGWjPDaKVQi9q0bv8y0ihOouer2F4A&s?w=600&h=400&fit=crop'
     },
     {
       name: 'Sri Ramana Maharshi Ashram',
@@ -19,7 +19,7 @@ const Temples = () => {
       highlights: ['Meditation halls and quiet gardens', "Ramana Maharshi's samadhi", 'Library and bookshop with spiritual texts'],
       timings: '6 AM – 8 PM',
       location: 'South of the temple town',
-      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop'
+      image: 'https://jubinsblog.com/wp-content/uploads/2021/10/Ashram-1.jpg?w=600&h=400&fit=crop'
     },
     {
       name: 'Virupaksha Cave',
@@ -27,7 +27,7 @@ const Temples = () => {
       highlights: ['Natural rock formations', 'Peaceful surroundings', 'Small shrine nearby'],
       timings: 'Best visited during daytime',
       location: 'Near the base of Arunachala hill',
-      image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop'
+      image: 'https://lawoodsvillageresorts.com/assets/images/virupaksha-cave.jpeg?w=600&h=400&fit=crop'
     }
   ];
 

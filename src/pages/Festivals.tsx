@@ -15,7 +15,7 @@ const Festivals = () => {
         'Temple and town illuminated with thousands of oil lamps'
       ],
       spiritual: 'Symbolizes the victory of light over darkness and the divine presence within.',
-      image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=600&h=400&fit=crop',
+      image: 'https://th-i.thgim.com/public/news/national/tamil-nadu/o4eeal/article30270482.ece/alternates/FREE_1200/TH11KARTHIGAI-DEEPAM',
       color: 'from-orange-500 to-red-600'
     },
     {
@@ -28,7 +28,7 @@ const Festivals = () => {
         'Spiritual discourses and cultural performances'
       ],
       spiritual: 'Celebrates the cosmic dance of Shiva and the overcoming of ignorance.',
-      image: 'https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=600&h=400&fit=crop',
+      image: 'https://assets.thehansindia.com/h-upload/2023/02/17/1336716-mahashivratri2023-21676361579452.webp?w=600&h=400&fit=crop',
       color: 'from-blue-500 to-purple-600'
     },
     {
@@ -41,7 +41,7 @@ const Festivals = () => {
         'Monthly spiritual gathering'
       ],
       spiritual: 'A practice believed to purify karma and enhance spiritual growth.',
-      image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop',
+      image: 'https://tirupatibalajitravels.co.in/wp-content/uploads/2024/12/download-12.jpeg?w=600&h=400&fit=crop',
       color: 'from-indigo-500 to-blue-600'
     },
     {
@@ -54,7 +54,7 @@ const Festivals = () => {
         'Colorful cultural celebrations'
       ],
       spiritual: 'Celebrates courage, devotion, and the divine victory of good over evil.',
-      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxVyuXtuzefIYLetO20T5db_cnvKYdXGfAOQ&s?w=600&h=400&fit=crop',
       color: 'from-green-500 to-teal-600'
     }
   ];
