@@ -13,13 +13,21 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-amber-50">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-purple-50">
       <Navigation />
       <Hero />
-      <WhyVisit />
-      <QuickAccess />
-      <FeaturedSections />
-      <Newsletter />
+      <div id="why-visit">
+        <WhyVisit />
+      </div>
+      <div id="quick-access">
+        <QuickAccess />
+      </div>
+      <div id="featured">
+        <FeaturedSections />
+      </div>
+      <div id="newsletter">
+        <Newsletter />
+      </div>
       <Footer />
     </div>
   );
