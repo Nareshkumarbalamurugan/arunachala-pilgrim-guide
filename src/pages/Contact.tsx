@@ -36,17 +36,16 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Mail className="text-blue-600" size={24} />,
-      title: 'Email Us',
+      title: 'Contact Us',
       description: 'For general inquiries, collaborations, or support',
-      detail: 'kamaleshkumarbalamurugan@gmail.com',
+      detail: "Ph:7812813773 Email:kamaleshkumar   balamurugan@gmail.com",
       note: 'We typically respond within 24–48 hours'
     },
     {
       icon: <Building className="text-green-600" size={24} />,
       title: 'Company Details',
-      description: 'BKDN Groups',
-      detail: 'Tiruvannamalai, Tamil Nadu, India',
-      note: 'Spiritual tourism specialists'
+      description: 'BKND Groups',
+      detail: 'Tiruvannamalai, Tamil Nadu, India'
     },
     {
       icon: <MapPin className="text-orange-600" size={24} />,

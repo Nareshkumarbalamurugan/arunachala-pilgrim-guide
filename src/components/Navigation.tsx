@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import path from 'path';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,6 +12,7 @@ const Navigation = () => {
   const menuItems = [
     { name: 'Home', path: '/', anchor: null },
     { name: 'Temples', path: '/temples', anchor: null },
+    {name:'Linghams',path:'..pages/linghams.tsx',anchor:null},
     { name: 'Girivalam', path: '/girivalam', anchor: null },
     { name: 'Festivals', path: '/festivals', anchor: null },
     { name: 'Stay & Food', path: '/stay-food', anchor: null },

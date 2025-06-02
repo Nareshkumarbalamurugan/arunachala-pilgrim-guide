@@ -11,7 +11,7 @@ const Temples = () => {
       highlights: ['10-day Karthigai Deepam festival', 'Massive temple complex with towering gopurams', 'Sacred pond and holy tanks'],
       timings: '6 AM – 9 PM daily',
       location: 'Center of Tiruvannamalai town',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vjD8BGWjPDaKVQi9q0bv8y0ihOouer2F4A&s?w=600&h=400&fit=crop'
+      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnz2d6bezvap3m6nsxwgcxj%2F1748789010_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=rvARKK9ehsA6s2iaS5oEvjTiJAUxo%2FEafiZ7ULS4pt4%3D&az=oaivgprodscus?w=600&h=400&fit=crop'
     },
     {
       name: 'Sri Ramana Maharshi Ashram',
@@ -19,7 +19,7 @@ const Temples = () => {
       highlights: ['Meditation halls and quiet gardens', "Ramana Maharshi's samadhi", 'Library and bookshop with spiritual texts'],
       timings: '6 AM – 8 PM',
       location: 'South of the temple town',
-      image: 'https://jubinsblog.com/wp-content/uploads/2021/10/Ashram-1.jpg?w=600&h=400&fit=crop'
+      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr9y9wwfzcbbpj3pr7sd2yt%2F1748867518_img_1.webp?st=2025-06-02T10%3A48%3A18Z&se=2025-06-08T11%3A48%3A18Z&sks=b&skt=2025-06-02T10%3A48%3A18Z&ske=2025-06-08T11%3A48%3A18Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=ls7otAn1FGYnAqSs9pDWDhR9pGyxSOKrB8Qz3It%2FhFQ%3D&az=oaivgprodscus?w=600&h=400&fit=crop'
     },
     {
       name: 'Virupaksha Cave',
@@ -27,7 +27,7 @@ const Temples = () => {
       highlights: ['Natural rock formations', 'Peaceful surroundings', 'Small shrine nearby'],
       timings: 'Best visited during daytime',
       location: 'Near the base of Arunachala hill',
-      image: 'https://lawoodsvillageresorts.com/assets/images/virupaksha-cave.jpeg?w=600&h=400&fit=crop'
+      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnz5x2kem2tmg0ecfag3yg8%2F1748789120_img_3.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=Pua%2BTLQWi9pqNaDQ8mXPLKkMTs65oBzELbHryaT27hk%3D&az=oaivgprodscus?w=600&h=400&fit=crop'
     }
   ];
 

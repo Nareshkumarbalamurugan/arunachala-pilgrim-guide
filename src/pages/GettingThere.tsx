@@ -9,22 +9,22 @@ const GettingThere = () => {
   const airports = [
     {
       name: 'Chennai International Airport (MAA)',
-      distance: '185 km',
+      distance: '197 km',
       travelTime: '4-5 hours by road',
       description: 'Primary international gateway with numerous domestic and international flights daily.',
       icon: '✈️'
     },
     {
       name: 'Bengaluru International Airport (BLR)',
-      distance: '160 km', 
-      travelTime: '3.5-4 hours by car',
+      distance: '209.2 km', 
+      travelTime: '4-5 hours by car',
       description: 'Another international airport option. Scenic road journey through Hosur and Krishnagiri.',
       icon: '✈️'
     },
     {
       name: 'Tiruchirappalli International Airport (TRZ)',
-      distance: '140 km',
-      travelTime: '4-4.5 hours by road',
+      distance: '167 km',
+      travelTime: '3-4 hours by road',
       description: 'Smaller airport with good domestic connectivity.',
       icon: '✈️'
     }
@@ -59,7 +59,7 @@ const GettingThere = () => {
     {
       from: 'Bengaluru', 
       route: 'Via NH77',
-      time: '3.5-4 hours',
+      time: '4-5 hours',
       transport: ['TNSTC/KSRTC Buses', 'Private Volvo Buses', 'Taxi'],
       description: 'Well-maintained road through scenic rural landscapes'
     },
@@ -74,7 +74,6 @@ const GettingThere = () => {
 
   const localTransport = [
     { type: 'Auto-Rickshaws', description: 'Most common for short distances', icon: '🛺' },
-    { type: 'Cycle Rickshaws', description: 'Eco-friendly and leisurely travel', icon: '🚲' },
     { type: 'Taxis and Cabs', description: 'Available on hire; hotels arrange pickups', icon: '🚗' },
     { type: 'Walking', description: 'Many temples clustered close together', icon: '🚶‍♂️' }
   ];

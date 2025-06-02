@@ -15,7 +15,7 @@ const Blog = () => {
       date: 'March 15, 2024',
       readTime: '8 min read',
       category: 'Spiritual Experience',
-      image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=400&fit=crop'
+      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr9v1neetv80z7091c4jnye%2F1748867403_img_0.webp?st=2025-06-02T10%3A46%3A00Z&se=2025-06-08T11%3A46%3A00Z&sks=b&skt=2025-06-02T10%3A46%3A00Z&ske=2025-06-08T11%3A46%3A00Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=3b%2F%2Ff36Dou3GECEJK9PEaGxK1p%2Bnm5gQov1Pw52Wzuc%3D&az=oaivgprodscus?w=600&h=400&fit=crop'
     },
     {
       title: 'Meeting Ramana Maharshi: Reflections from the Ashram',
@@ -24,7 +24,7 @@ const Blog = () => {
       date: 'March 10, 2024',
       readTime: '12 min read',
       category: 'Ashram Life',
-      image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&h=400&fit=crop'
+      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr9y9wwfzcbbpj3pr7sd2yt%2F1748867518_img_1.webp?st=2025-06-02T10%3A48%3A18Z&se=2025-06-08T11%3A48%3A18Z&sks=b&skt=2025-06-02T10%3A48%3A18Z&ske=2025-06-08T11%3A48%3A18Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=ls7otAn1FGYnAqSs9pDWDhR9pGyxSOKrB8Qz3It%2FhFQ%3D&az=oaivgprodscus?w=600&h=400&fit=crop'
     },
     {
       title: 'The Karthigai Deepam Festival: A Night of Lights and Devotion',
@@ -33,7 +33,7 @@ const Blog = () => {
       date: 'February 28, 2024',
       readTime: '10 min read',
       category: 'Festivals',
-      image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=600&h=400&fit=crop'
+      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr9rme4f2nt06w4qzpj7dq6%2F1748867315_img_1.webp?st=2025-06-02T10%3A49%3A05Z&se=2025-06-08T11%3A49%3A05Z&sks=b&skt=2025-06-02T10%3A49%3A05Z&ske=2025-06-08T11%3A49%3A05Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=Csfk%2FTSwVZAtSgA2Bn%2ByAdQYF8jM%2BVq5FrzxW0NstCk%3D&az=oaivgprodscus?w=600&h=400&fit=crop'
     }
   ];
 
