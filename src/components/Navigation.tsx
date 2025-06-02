@@ -9,18 +9,20 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  const menuItems = [
-    { name: 'Home', path: '/', anchor: null },
-    { name: 'Temples', path: '/temples', anchor: null },
-    {name:'Linghams',path:'..pages/linghams.tsx',anchor:null},
-    { name: 'Girivalam', path: '/girivalam', anchor: null },
-    { name: 'Festivals', path: '/festivals', anchor: null },
-    { name: 'Stay & Food', path: '/stay-food', anchor: null },
-    { name: 'Spiritual Tourism', path: '/spiritual-tourism', anchor: null },
-    { name: 'Getting There', path: '/getting-there', anchor: null },
-    { name: 'Blog', path: '/blog', anchor: null },
-    { name: 'Contact', path: '/contact', anchor: null },
-  ];
+
+const menuItems = [
+  { name: 'Home', path: '/', anchor: null },
+  { name: 'Temples', path: '/temples', anchor: null },
+  { name: 'Linghams', path: '/linghams', anchor: null }, // <-- FIXED
+  { name: 'Girivalam', path: '/girivalam', anchor: null },
+  { name: 'Festivals', path: '/festivals', anchor: null },
+  { name: 'Stay & Food', path: '/stay-food', anchor: null },
+  { name: 'Spiritual Tourism', path: '/spiritual-tourism', anchor: null },
+  { name: 'Getting There', path: '/getting-there', anchor: null },
+  { name: 'Blog', path: '/blog', anchor: null },
+  { name: 'Contact', path: '/contact', anchor: null },
+];
+
 
   const handleLinkClick = (path: string, anchor: string | null) => {
     setIsMenuOpen(false);
