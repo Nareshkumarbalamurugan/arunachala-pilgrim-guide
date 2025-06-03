@@ -1,8 +1,7 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Temples from "./pages/Temples";
 import Linghams from "./pages/Linghams";
@@ -20,24 +19,22 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <BrowserRouter basename="/arunachala-pilgrim-guide">
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/temples" element={<Temples />} />
-        <Route path="/linghams" element={<Linghams />} />
-        <Route path="/girivalam" element={<Girivalam />} />
-        <Route path="/festivals" element={<Festivals />} />
-        <Route path="/stay-food" element={<StayFood />} />
-        <Route path="/spiritual-tourism" element={<SpiritualTourism />} />
-        <Route path="/getting-there" element={<GettingThere />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Toaster />
-      <Sonner />
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/temples" element={<Temples />} />
+      <Route path="/linghams" element={<Linghams />} />
+      <Route path="/girivalam" element={<Girivalam />} />
+      <Route path="/festivals" element={<Festivals />} />
+      <Route path="/stay-food" element={<StayFood />} />
+      <Route path="/spiritual-tourism" element={<SpiritualTourism />} />
+      <Route path="/getting-there" element={<GettingThere />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/faq" element={<FAQ />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+    <Toaster />
+    <Sonner />
   </QueryClientProvider>
 );
 

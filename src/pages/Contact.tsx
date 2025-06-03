@@ -1,243 +1,187 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Building, MapPin, Users } from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/components/ui/use-toast';
+import { Mail, Phone, Send, MessageSquare } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. We'll get back to you within 24-48 hours.",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
+    setIsSubmitting(true);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
+    try {
+      if (!formRef.current) return;
 
-  const contactInfo = [
-    {
-      icon: <Mail className="text-blue-600" size={24} />,
-      title: 'Contact Us',
-      description: 'For general inquiries, collaborations, or support',
-      detail: "Ph:7812813773 Email:kamaleshkumar   balamurugan@gmail.com",
-      note: 'We typically respond within 24–48 hours'
-    },
-    {
-      icon: <Building className="text-green-600" size={24} />,
-      title: 'Company Details',
-      description: 'BKND Groups',
-      detail: 'Tiruvannamalai, Tamil Nadu, India'
-    },
-    {
-      icon: <MapPin className="text-orange-600" size={24} />,
-      title: 'Visit Tiruvannamalai',
-      description: 'Planning a trip? Need local guidance?',
-      detail: 'Explore our website sections',
-      note: 'Email us for personalized tips'
-    },
-    {
-      icon: <Users className="text-purple-600" size={24} />,
-      title: 'Collaborate With Us',
-      description: 'Travel writers, guides, local services',
-      detail: 'Partnership opportunities available',
-      note: 'Let\'s share the soul of this sacred town'
+      const result = await emailjs.sendForm(
+        'service_gkq4n2h',
+        'template_s8ai5ce',
+        formRef.current,
+        'yrJgpVTnTpZndjJdj'
+      );
+
+      console.log('Success:', result);
+      toast({
+        title: "Message Sent Successfully!",
+        description: "We'll get back to you as soon as possible.",
+        variant: "default",
+      });
+      formRef.current.reset();
+    } catch (error: any) {
+      console.error('EmailJS Error:', error);
+      toast({
+        title: "Error Sending Message",
+        description: error?.text || "Please try again later or use alternative contact methods.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-  ];
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/917812813773', '_blank');
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-amber-50">
       <Navigation />
-      
+
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="relative py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-            Contact Us
-          </h1>
-          <p className="text-xl max-w-4xl mx-auto leading-relaxed">
-            We're here to help you experience the spiritual, cultural, and natural beauty of Tiruvannamalai 
-            in the most authentic way. Whether you have questions, feedback, or partnership inquiries — 
-            we'd love to hear from you.
+          <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
+          <p className="text-xl max-w-3xl mx-auto">
+            Have questions about your spiritual journey in Tiruvannamalai? We're here to help guide you.
           </p>
         </div>
       </section>
 
-      {/* Contact Information */}
+      {/* Contact Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((info, index) => (
-              <Card key={index} className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4">
-                    {info.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {info.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-3">
-                    {info.description}
-                  </p>
-                  <p className="text-gray-900 font-semibold mb-2">
-                    {info.detail}
-                  </p>
-                  <p className="text-gray-500 text-xs">
-                    {info.note}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Send Us a Message
-            </h2>
-            <p className="text-lg text-gray-600">
-              Have questions about Tiruvannamalai or need personalized travel advice? 
-              Drop us a message and we'll get back to you soon.
-            </p>
-          </div>
-          
-          <Card className="shadow-2xl">
-            <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <Card className="shadow-xl">
+              <CardContent className="p-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
+                    <label htmlFor="from_name" className="block text-sm font-medium text-gray-700 mb-2">
+                      Your Name
                     </label>
                     <Input
-                      id="name"
-                      name="name"
-                      type="text"
+                      id="from_name"
+                      name="from_name"
                       required
-                      value={formData.name}
-                      onChange={handleChange}
+                      placeholder="Enter your name"
                       className="w-full"
-                      placeholder="Your full name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
+                    <label htmlFor="reply_to" className="block text-sm font-medium text-gray-700 mb-2">
+                      Email Address
                     </label>
                     <Input
-                      id="email"
-                      name="email"
+                      id="reply_to"
+                      name="reply_to"
                       type="email"
                       required
-                      value={formData.email}
-                      onChange={handleChange}
+                      placeholder="Enter your email"
                       className="w-full"
-                      placeholder="your.email@example.com"
                     />
                   </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject *
-                  </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    type="text"
-                    required
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full"
-                    placeholder="What is your message about?"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full min-h-[120px]"
-                    placeholder="Tell us how we can help you..."
-                  />
-                </div>
-                
-                <div className="text-center">
-                  <Button 
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      Your Message
+                    </label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      required
+                      placeholder="How can we help you?"
+                      className="w-full min-h-[150px]"
+                    />
+                  </div>
+                  <Button
                     type="submit"
-                    size="lg"
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 font-semibold"
+                    className="w-full bg-orange-600 hover:bg-orange-700 text-white"
+                    disabled={isSubmitting}
                   >
-                    Send Message
+                    {isSubmitting ? (
+                      "Sending..."
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="ml-2 h-4 w-4" />
+                      </>
+                    )}
                   </Button>
-                </div>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+                </form>
+              </CardContent>
+            </Card>
 
-      {/* Additional Info */}
-      <section className="py-16 bg-gradient-to-br from-blue-100 to-purple-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="shadow-lg">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  🤝 Collaborate With Us
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Are you a travel writer, spiritual guide, cafe/guest house owner, or local service provider 
-                  in Tiruvannamalai? Let's collaborate and share the soul of this sacred town with the world.
-                </p>
-                <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-                  Partnership Inquiry
-                </Button>
-              </CardContent>
-            </Card>
-            
-            <Card className="shadow-lg">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  📣 Stay Connected
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Follow us on social media and subscribe to our newsletter for updates on blog stories, 
-                  events, and travel tips about Tiruvannamalai.
-                </p>
-                <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">
-                  Follow Updates
-                </Button>
-              </CardContent>
-            </Card>
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <Card className="shadow-xl">
+                <CardContent className="p-8">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Quick Contact</h2>
+
+                  {/* WhatsApp Button */}
+                  <Button
+                    onClick={handleWhatsAppClick}
+                    className="w-full mb-4 bg-green-600 hover:bg-green-700 text-white flex items-center justify-center gap-2 h-12"
+                  >
+                    <MessageSquare className="h-5 w-5" />
+                    Chat on WhatsApp
+                  </Button>
+
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-orange-100 p-3 rounded-full">
+                        <Phone className="h-6 w-6 text-orange-600" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
+                        <p className="text-gray-600">+91 7812813773</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="bg-orange-100 p-3 rounded-full">
+                        <Mail className="h-6 w-6 text-orange-600" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-900">Email</h3>
+                        <p className="text-gray-600">kamaleshkumarbalamurugan@gmail.com</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Additional Information Card */}
+              <Card className="shadow-xl">
+                <CardContent className="p-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Response Time</h3>
+                  <p className="text-gray-600 mb-4">
+                    We typically respond within 24 hours. For immediate assistance, please use WhatsApp.
+                  </p>
+                  <div className="bg-orange-50 p-4 rounded-lg">
+                    <p className="text-sm text-orange-800">
+                      Available for WhatsApp chat: 9 AM - 6 PM IST
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -14,7 +13,7 @@ const Temples = () => {
       timings: '6 AM – 9 PM daily',
       location: 'Center of Tiruvannamalai town',
       image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnz2d6bezvap3m6nsxwgcxj%2F1748789010_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=rvARKK9ehsA6s2iaS5oEvjTiJAUxo%2FEafiZ7ULS4pt4%3D&az=oaivgprodscus',
-      mapLink: '#'
+      mapLink: 'https://maps.app.goo.gl/BsZH1Qc4PEZzBs9P9'
     },
     {
       name: 'Sri Ramana Maharshi Ashram',
@@ -23,7 +22,7 @@ const Temples = () => {
       timings: '6 AM – 8 PM',
       location: 'South of the temple town',
       image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr9y9wwfzcbbpj3pr7sd2yt%2F1748867518_img_1.webp?st=2025-06-02T10%3A48%3A18Z&se=2025-06-08T11%3A48%3A18Z&sks=b&skt=2025-06-02T10%3A48%3A18Z&ske=2025-06-08T11%3A48%3A18Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=ls7otAn1FGYnAqSs9pDWDhR9pGyxSOKrB8Qz3It%2FhFQ%3D&az=oaivgprodscus',
-      mapLink: '#'
+      mapLink: 'https://maps.app.goo.gl/tFBDAd7EuA4pAfJf6'
     },
     {
       name: 'Virupaksha Cave',
@@ -32,31 +31,29 @@ const Temples = () => {
       timings: 'Best visited during daytime',
       location: 'Near the base of Arunachala hill',
       image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnz5x2kem2tmg0ecfag3yg8%2F1748789120_img_3.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=Pua%2BTLQWi9pqNaDQ8mXPLKkMTs65oBzELbHryaT27hk%3D&az=oaivgprodscus',
-      mapLink: '#'
+      mapLink: 'https://maps.app.goo.gl/x7Gnb2NBn4hzemEm7'
     }
   ];
 
   const otherTemples = [
-    { name: 'Agni Vinayagar Temple', mapLink: '#' },
-    { name: 'Valampoori Vinayagar Temple', mapLink: '#' },
-    { name: 'Durvasar Maha Muni Temple', mapLink: '#' },
-    { name: 'Nandhi Muga Darshan', mapLink: '#' },
-    { name: 'Ner Annamalaiyar Temple', mapLink: '#' },
-    { name: 'Suriya Lingam', mapLink: '#' },
-    { name: 'Aadhi Annamalai Temple', mapLink: '#' },
-    { name: 'Mookupodi Siddar Shrine', mapLink: '#' },
-    { name: 'Chandra Lingam', mapLink: '#' },
-    { name: 'Moksha Duvaram', mapLink: '#' },
-    { name: 'Thirukhu Puliyur Temple', mapLink: '#' },
-    { name: 'Panchamuga Darshan Shrine', mapLink: '#' },
-    { name: 'Subramaniya Swamy Temple', mapLink: '#' },
-    { name: 'Arunagiri Nadhar Temple', mapLink: '#' }
+    { name: 'Agni Vinayagar Temple', mapLink: 'https://maps.app.goo.gl/bFhamwGzwnBhEWX27' },
+    { name: 'Valampoori Vinayagar Temple', mapLink: 'https://maps.app.goo.gl/yiKd3bfh3TRpgBnLA' },
+    { name: 'Durvasar Maha Muni Temple', mapLink: 'https://maps.app.goo.gl/xU2isrAdK9xwMCxm7' },
+    { name: 'Nandhi Muga Darshan', mapLink: 'https://timesofindia.indiatimes.com/religion/religious-places/why-does-nandi-face-the-sacred-mountain-instead-of-the-shivalinga-in-thiruvannamalai-temple/articleshow/116079699.cms' },
+    { name: 'Ner Annamalaiyar Temple', mapLink: 'https://maps.app.goo.gl/NyrnXKi1yUanpChq9' },
+    { name: 'Suriya Lingam', mapLink: 'https://maps.app.goo.gl/cJTwWq2vZkqXHBcn7' },
+    { name: 'Adi Annamalai Temple', mapLink: 'https://maps.app.goo.gl/j32xU9u9eCoydzRHA' },
+    { name: 'Mookupodi Siddar Shrine', mapLink: 'https://maps.app.goo.gl/hKS7ag67m6tTXzps9' },
+    { name: 'Chandra Lingam', mapLink: 'https://maps.app.goo.gl/vxbPr5PJRjnSYy6w5' },
+    { name: 'Panchamuga Darshan Shrine', mapLink: 'https://maps.app.goo.gl/mmxF8HYUQ9WpcNm37' },
+    { name: 'Subramaniya Swamy Temple', mapLink: 'https://maps.app.goo.gl/i4JiL44EvjJfkwCp8' },
+    { name: 'Arunagiri Nadhar Temple', mapLink: 'https://maps.app.goo.gl/tvS2SrQ1Fa59N8DQ7' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-amber-50">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -64,7 +61,7 @@ const Temples = () => {
             Sacred Temples of Tiruvannamalai
           </h1>
           <p className="text-xl max-w-4xl mx-auto leading-relaxed">
-            Tiruvannamalai is renowned for its rich spiritual heritage and sacred temples dedicated primarily to Lord Shiva. 
+            Tiruvannamalai is renowned for its rich spiritual heritage and sacred temples dedicated primarily to Lord Shiva.
             These ancient temples are centers of devotion, history, and architecture that draw pilgrims and visitors from all over the world.
           </p>
         </div>
@@ -76,62 +73,65 @@ const Temples = () => {
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
             Main Temples
           </h2>
-          
+
           <div className="space-y-12">
             {mainTemples.map((temple, index) => (
-              <Card key={index} className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
-                <div className="grid grid-cols-1 lg:grid-cols-2">
-                  <div className="relative overflow-hidden">
-                    <img 
-                      src={temple.image} 
-                      alt={temple.name}
-                      className="w-full h-80 lg:h-full object-cover hover:scale-110 transition-transform duration-500"
-                    />
+              <a
+                key={index}
+                href={temple.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+              >
+                <Card className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <div className="grid grid-cols-1 lg:grid-cols-2">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={temple.image}
+                        alt={temple.name}
+                        className="w-full h-80 lg:h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <CardContent className="p-8">
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="text-3xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                          {temple.name}
+                        </h3>
+                        <span className="flex items-center gap-2 text-orange-600 group-hover:text-orange-700 transition-colors">
+                          <MapPin size={20} />
+                          <ExternalLink size={16} />
+                        </span>
+                      </div>
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                        {temple.description}
+                      </p>
+
+                      <div className="mb-6">
+                        <h4 className="text-lg font-semibold text-orange-600 mb-3">Highlights:</h4>
+                        <ul className="space-y-2">
+                          {temple.highlights.map((highlight, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <span className="text-orange-500 mr-2">•</span>
+                              <span className="text-gray-600">{highlight}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                          <strong className="text-gray-900">Timings:</strong>
+                          <p className="text-gray-600">{temple.timings}</p>
+                        </div>
+                        <div>
+                          <strong className="text-gray-900">Location:</strong>
+                          <p className="text-gray-600">{temple.location}</p>
+                        </div>
+                      </div>
+                    </CardContent>
                   </div>
-                  <CardContent className="p-8">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-3xl font-bold text-gray-900">
-                        {temple.name}
-                      </h3>
-                      <a 
-                        href={temple.mapLink} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-orange-600 hover:text-orange-700 transition-colors"
-                      >
-                        <MapPin size={20} />
-                        <ExternalLink size={16} />
-                      </a>
-                    </div>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {temple.description}
-                    </p>
-                    
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-orange-600 mb-3">Highlights:</h4>
-                      <ul className="space-y-2">
-                        {temple.highlights.map((highlight, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="text-orange-500 mr-2">•</span>
-                            <span className="text-gray-600">{highlight}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                      <div>
-                        <strong className="text-gray-900">Timings:</strong>
-                        <p className="text-gray-600">{temple.timings}</p>
-                      </div>
-                      <div>
-                        <strong className="text-gray-900">Location:</strong>
-                        <p className="text-gray-600">{temple.location}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </div>
-              </Card>
+                </Card>
+              </a>
             ))}
           </div>
         </div>
@@ -143,28 +143,31 @@ const Temples = () => {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Other Notable Temples & Shrines
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {otherTemples.map((temple, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-                <CardContent className="p-6 text-center">
-                  <div className="text-2xl mb-3">🛕</div>
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-gray-900 flex-1">
-                      {temple.name}
-                    </h3>
-                    <a 
-                      href={temple.mapLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-orange-600 hover:text-orange-700 transition-colors ml-2"
-                    >
-                      <MapPin size={16} />
-                      <ExternalLink size={14} />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
+              <a
+                key={index}
+                href={temple.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+              >
+                <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-2xl mb-3">🛕</div>
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-lg font-semibold text-gray-900 group-hover:text-orange-600 transition-colors flex-1">
+                        {temple.name}
+                      </h3>
+                      <span className="flex items-center gap-1 text-orange-600 group-hover:text-orange-700 transition-colors ml-2">
+                        <MapPin size={16} />
+                        <ExternalLink size={14} />
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
             ))}
           </div>
         </div>
@@ -176,7 +179,7 @@ const Temples = () => {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Visitor Tips & Etiquette
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="shadow-lg">
               <CardContent className="p-6">
@@ -189,7 +192,7 @@ const Temples = () => {
                 </ul>
               </CardContent>
             </Card>
-            
+
             <Card className="shadow-lg">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-orange-600 mb-4">Practical Tips</h3>
