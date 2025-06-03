@@ -2,8 +2,11 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, MapPin, Calendar, Users } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -29,48 +32,48 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text Content */}
           <div className="text-left">
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm font-semibold mb-4 animate-pulse">
-                ✨ Sacred Spiritual Destination
+                {t('home.hero.badge')}
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent animate-fade-in">
-              Discover the Sacred Heart of Tamil Nadu
+              {t('home.hero.title')}
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-200 animate-fade-in leading-relaxed">
-              Your Complete Guide to Temples, Girivalam, Stays & Spiritual Journeys in Tiruvannamalai
+              {t('home.hero.subtitle')}
             </p>
 
             {/* Stats Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
               <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 text-center border border-white/20">
-                <div className="text-2xl font-bold text-yellow-300">50+</div>
-                <div className="text-sm text-gray-300">Sacred Temples</div>
+                <div className="text-2xl font-bold text-yellow-300">{t('home.hero.stats.temples.value')}</div>
+                <div className="text-sm text-gray-300">{t('home.hero.stats.temples.label')}</div>
               </div>
               <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 text-center border border-white/20">
-                <div className="text-2xl font-bold text-blue-300">14km</div>
-                <div className="text-sm text-gray-300">Girivalam Path</div>
+                <div className="text-2xl font-bold text-blue-300">{t('home.hero.stats.girivalam.value')}</div>
+                <div className="text-sm text-gray-300">{t('home.hero.stats.girivalam.label')}</div>
               </div>
               <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 text-center border border-white/20">
-                <div className="text-2xl font-bold text-green-300">1000+</div>
-                <div className="text-sm text-gray-300">Years History</div>
+                <div className="text-2xl font-bold text-green-300">{t('home.hero.stats.history.value')}</div>
+                <div className="text-sm text-gray-300">{t('home.hero.stats.history.label')}</div>
               </div>
               <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 text-center border border-white/20">
-                <div className="text-2xl font-bold text-purple-300">365</div>
-                <div className="text-sm text-gray-300">Days Sacred</div>
+                <div className="text-2xl font-bold text-purple-300">{t('home.hero.stats.sacred.value')}</div>
+                <div className="text-sm text-gray-300">{t('home.hero.stats.sacred.label')}</div>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 border-0"
               >
-                Start Your Journey
+                {t('home.hero.cta.primary')}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
               <Button
@@ -78,7 +81,7 @@ const Hero = () => {
                 variant="outline"
                 className="border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white px-8 py-4 text-lg font-semibold rounded-full backdrop-blur-sm transition-all duration-300"
               >
-                Plan Your Trip
+                {t('home.hero.cta.secondary')}
               </Button>
             </div>
           </div>
@@ -94,8 +97,8 @@ const Hero = () => {
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">Sacred Temples</h3>
-                      <p className="text-gray-300">Explore ancient spiritual landmarks</p>
+                      <h3 className="text-lg font-semibold text-white">{t('home.hero.features.temples.title')}</h3>
+                      <p className="text-gray-300">{t('home.hero.features.temples.description')}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -108,8 +111,8 @@ const Hero = () => {
                       <Calendar className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">Festivals & Events</h3>
-                      <p className="text-gray-300">Join vibrant spiritual celebrations</p>
+                      <h3 className="text-lg font-semibold text-white">{t('home.hero.features.festivals.title')}</h3>
+                      <p className="text-gray-300">{t('home.hero.features.festivals.description')}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -122,8 +125,8 @@ const Hero = () => {
                       <Users className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">Spiritual Community</h3>
-                      <p className="text-gray-300">Connect with fellow seekers</p>
+                      <h3 className="text-lg font-semibold text-white">{t('home.hero.features.community.title')}</h3>
+                      <p className="text-gray-300">{t('home.hero.features.community.description')}</p>
                     </div>
                   </div>
                 </CardContent>

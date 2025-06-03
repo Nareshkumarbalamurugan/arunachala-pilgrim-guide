@@ -14,7 +14,7 @@ const StayFood = () => {
       description: "Just 1 km from Ramana Ashram, featuring spacious rooms, rooftop pool, spa services, and vegetarian restaurant.",
       features: ["Rooftop Pool", "Spa Services", "Vegetarian Restaurant", "Free WiFi"],
       rating: 4.5,
-      link: "#athena-hotel"
+      link: "https://maps.app.goo.gl/WHKrfXgNYXK1HtK57"
     },
     {
       name: "Hotel Himalayaa",
@@ -22,7 +22,7 @@ const StayFood = () => {
       description: "Modern rooms with free breakfast, Wi-Fi, and parking. Popular for excellent service and comfort.",
       features: ["Free Breakfast", "Free WiFi", "Parking", "Modern Rooms"],
       rating: 4.3,
-      link: "#hotel-himalayaa"
+      link: "https://maps.app.goo.gl/EN5aetX2NeoGC2FV6"
     },
     {
       name: "Sparsa Resort Thiruvannamalai",
@@ -30,7 +30,7 @@ const StayFood = () => {
       description: "Luxury resort with serene views of Arunachala Hill, spa, outdoor pool, and yoga sessions.",
       features: ["Arunachala Views", "Spa", "Outdoor Pool", "Yoga Sessions"],
       rating: 4.7,
-      link: "#sparsa-resort"
+      link: "https://maps.app.goo.gl/kHrY5NsxsCVQGB1u8"
     },
     {
       name: "Hotel Ramakrishna",
@@ -38,7 +38,7 @@ const StayFood = () => {
       description: "Budget-friendly hotel near town center with basic amenities and easy access to attractions.",
       features: ["Town Center", "Budget Friendly", "Basic Amenities", "Easy Access"],
       rating: 4.0,
-      link: "#hotel-ramakrishna"
+      link: "https://maps.app.goo.gl/d9bAqtNpVq4kSZgW8"
     }
   ];
 
@@ -49,7 +49,7 @@ const StayFood = () => {
       description: "Popular local spot for South Indian, North Indian dishes, and flavorful biryanis. Budget-friendly with quick service.",
       specialties: ["Biryani", "South Indian", "Chinese", "North Indian"],
       rating: 4.2,
-      link: "#sri-abirami"
+      link: "https://maps.app.goo.gl/x1774moHWewoEU196"
     },
     {
       name: "Shanti Café",
@@ -57,7 +57,7 @@ const StayFood = () => {
       description: "Known for freshly brewed coffee, croissants from Pondicherry, and peaceful ambiance with lovely views.",
       specialties: ["Coffee", "Croissants", "Sandwiches", "French Pastries"],
       rating: 4.5,
-      link: "#shanti-cafe"
+      link: "https://maps.app.goo.gl/fxgaAHwpVB9E2sDGA"
     },
     {
       name: "The Dreaming Tree",
@@ -65,7 +65,7 @@ const StayFood = () => {
       description: "Rooftop café with fusion cuisines including raw, vegan, and gluten-free options. Perfect for relaxing.",
       specialties: ["Vegan Food", "Raw Food", "Gluten-free", "Global Cuisine"],
       rating: 4.4,
-      link: "#dreaming-tree"
+      link: "https://maps.app.goo.gl/PCUAVMXCPPq9vomn9"
     },
     {
       name: "Bismillah SS Biryani",
@@ -73,7 +73,7 @@ const StayFood = () => {
       description: "Budget-friendly gem serving excellent chicken biryani, crispy parottas, and fried rice.",
       specialties: ["Chicken Biryani", "Parottas", "Fried Rice", "Tandoori"],
       rating: 4.1,
-      link: "#bismillah-biryani"
+      link: "https://maps.app.goo.gl/Ri5d13HTKaVetmeF6"
     }
   ];
 

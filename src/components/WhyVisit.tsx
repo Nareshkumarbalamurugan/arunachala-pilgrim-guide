@@ -1,37 +1,39 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useTranslation } from 'react-i18next';
 
 const WhyVisit = () => {
+  const { t } = useTranslation();
+
   const reasons = [
     {
-      icon: '✨',
-      title: 'Home of Arunachala',
-      description: 'The Eternal Fire Lingam of Shiva',
+      icon: t('home.whyVisit.reasons.arunachala.icon'),
+      title: t('home.whyVisit.reasons.arunachala.title'),
+      description: t('home.whyVisit.reasons.arunachala.description'),
       gradient: 'from-yellow-400 to-orange-500'
     },
     {
-      icon: '🕉️',
-      title: 'Saints & Sages',
-      description: 'Birthplace of Sri Ramana Maharshi',
+      icon: t('home.whyVisit.reasons.saints.icon'),
+      title: t('home.whyVisit.reasons.saints.title'),
+      description: t('home.whyVisit.reasons.saints.description'),
       gradient: 'from-purple-400 to-indigo-500'
     },
     {
-      icon: '🌕',
-      title: 'Sacred Girivalam',
-      description: 'Monthly Full Moon pilgrimage walk',
+      icon: t('home.whyVisit.reasons.girivalam.icon'),
+      title: t('home.whyVisit.reasons.girivalam.title'),
+      description: t('home.whyVisit.reasons.girivalam.description'),
       gradient: 'from-blue-400 to-cyan-500'
     },
     {
-      icon: '🛕',
-      title: 'Ancient Temples',
-      description: 'Explore spiritual landmarks & ashrams',
+      icon: t('home.whyVisit.reasons.temples.icon'),
+      title: t('home.whyVisit.reasons.temples.title'),
+      description: t('home.whyVisit.reasons.temples.description'),
       gradient: 'from-pink-400 to-red-500'
     },
     {
-      icon: '🧘',
-      title: 'Peaceful Retreats',
-      description: 'Meditation, yoga & self-discovery',
+      icon: t('home.whyVisit.reasons.retreats.icon'),
+      title: t('home.whyVisit.reasons.retreats.title'),
+      description: t('home.whyVisit.reasons.retreats.description'),
       gradient: 'from-green-400 to-teal-500'
     }
   ];
@@ -41,10 +43,10 @@ const WhyVisit = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-            Why Visit Tiruvannamalai?
+            {t('home.whyVisit.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Experience the spiritual energy and divine presence of this sacred town
+            {t('home.whyVisit.subtitle')}
           </p>
         </div>
 

@@ -1,25 +1,26 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import LanguageSelector from '@/components/LanguageSelector';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const menuItems = [
-    { name: 'Home', path: '/', anchor: null },
-    { name: 'Temples', path: '/temples', anchor: null },
-    { name: 'Linghams', path: '/linghams', anchor: null },
-    { name: 'Girivalam', path: '/girivalam', anchor: null },
-    { name: 'Festivals', path: '/festivals', anchor: null },
-    { name: 'Stay & Food', path: '/stay-food', anchor: null },
-    { name: 'Spiritual Tourism', path: '/spiritual-tourism', anchor: null },
-    { name: 'Getting There', path: '/getting-there', anchor: null },
-    { name: 'Blog', path: '/blog', anchor: null },
-    { name: 'Contact', path: '/contact', anchor: null },
+    { name: t('navigation.home'), path: '/', anchor: null },
+    { name: t('navigation.temples'), path: '/temples', anchor: null },
+    { name: t('navigation.linghams'), path: '/linghams', anchor: null },
+    { name: t('navigation.girivalam'), path: '/girivalam', anchor: null },
+    { name: t('navigation.festivals'), path: '/festivals', anchor: null },
+    { name: t('navigation.stayFood'), path: '/stay-food', anchor: null },
+    { name: t('navigation.spiritualTourism'), path: '/spiritual-tourism', anchor: null },
+    { name: t('navigation.gettingThere'), path: '/getting-there', anchor: null },
+    { name: t('navigation.blog'), path: '/blog', anchor: null },
+    { name: t('navigation.contact'), path: '/contact', anchor: null },
   ];
 
   const handleLinkClick = (path: string, anchor: string | null) => {
@@ -32,7 +33,6 @@ const Navigation = () => {
         }
       }, 100);
     } else {
-      // Scroll to top when navigating to different pages
       setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }, 100);
@@ -54,7 +54,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
@@ -66,22 +66,29 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <LanguageSelector />
+            <div className="border-l pl-6 border-gray-200">
+              <LanguageSwitcher />
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 rounded-md hover:bg-purple-50 transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} className="text-purple-600" /> : <Menu size={24} className="text-purple-600" />}
-          </button>
+          {/* Mobile Menu Button and Language Switcher */}
+          <div className="lg:hidden flex items-center gap-4">
+            <LanguageSwitcher />
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-purple-600 hover:bg-purple-50"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-purple-100">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-2">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
@@ -92,9 +99,6 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="px-4 py-2">
-                <LanguageSelector />
-              </div>
             </div>
           </div>
         )}

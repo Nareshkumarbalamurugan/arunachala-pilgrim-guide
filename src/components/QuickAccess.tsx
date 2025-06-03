@@ -1,35 +1,37 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
+import { useTranslation } from 'react-i18next';
 
 const QuickAccess = () => {
+  const { t } = useTranslation();
+
   const quickLinks = [
     {
-      icon: '🛕',
-      title: 'Temples Map',
-      description: 'Discover ancient temples',
+      icon: t('home.quickAccess.links.templesMap.icon'),
+      title: t('home.quickAccess.links.templesMap.title'),
+      description: t('home.quickAccess.links.templesMap.description'),
       path: '/temples',
       gradient: 'from-purple-400 to-pink-500'
     },
     {
-      icon: '🚶',
-      title: 'Girivalam Path',
-      description: 'Sacred hill walk guide',
+      icon: t('home.quickAccess.links.girivalam.icon'),
+      title: t('home.quickAccess.links.girivalam.title'),
+      description: t('home.quickAccess.links.girivalam.description'),
       path: '/girivalam',
       gradient: 'from-blue-400 to-indigo-500'
     },
     {
-      icon: '🏨',
-      title: 'Places to Stay',
-      description: 'Find accommodation',
+      icon: t('home.quickAccess.links.stayFood.icon'),
+      title: t('home.quickAccess.links.stayFood.title'),
+      description: t('home.quickAccess.links.stayFood.description'),
       path: '/stay-food',
       gradient: 'from-green-400 to-emerald-500'
     },
     {
-      icon: '📅',
-      title: 'Upcoming Festivals',
-      description: 'Plan your visit',
+      icon: t('home.quickAccess.links.festivals.icon'),
+      title: t('home.quickAccess.links.festivals.title'),
+      description: t('home.quickAccess.links.festivals.description'),
       path: '/festivals',
       gradient: 'from-yellow-400 to-orange-500'
     }
@@ -40,10 +42,10 @@ const QuickAccess = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-            Quick Access
+            {t('home.quickAccess.title')}
           </h2>
           <p className="text-lg text-gray-600">
-            Start planning your spiritual journey
+            {t('home.quickAccess.subtitle')}
           </p>
         </div>
 

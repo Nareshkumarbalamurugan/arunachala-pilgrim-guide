@@ -1,20 +1,22 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Temples', path: '/temples' },
-    { name: 'Girivalam', path: '/girivalam' },
-    { name: 'Festivals', path: '/festivals' },
-    { name: 'Stay & Lodging', path: '/stay-food' },
-    { name: 'Food & Cafés', path: '/stay-food' },
-    { name: 'Spiritual Tourism', path: '/spiritual-tourism' },
-    { name: 'Getting There', path: '/getting-there' },
-    { name: 'Blog / Stories', path: '/blog' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'FAQ', path: '/faq' }
+    { name: t('footer.quickLinks.links.home'), path: '/' },
+    { name: t('footer.quickLinks.links.temples'), path: '/temples' },
+    { name: t('footer.quickLinks.links.girivalam'), path: '/girivalam' },
+    { name: t('footer.quickLinks.links.festivals'), path: '/festivals' },
+    { name: t('footer.quickLinks.links.stayLodging'), path: '/stay-food' },
+    { name: t('footer.quickLinks.links.foodCafes'), path: '/stay-food' },
+    { name: t('footer.quickLinks.links.spiritualTourism'), path: '/spiritual-tourism' },
+    { name: t('footer.quickLinks.links.gettingThere'), path: '/getting-there' },
+    { name: t('footer.quickLinks.links.blog'), path: '/blog' },
+    { name: t('footer.quickLinks.links.contact'), path: '/contact' },
+    { name: t('footer.quickLinks.links.faq'), path: '/faq' }
   ];
 
   const handleLinkClick = (path: string) => {
@@ -33,23 +35,22 @@ const Footer = () => {
                 <span className="text-white font-bold text-lg">T</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold">Tiruvannamalai Guide</h3>
-                <p className="text-sm text-purple-400">by BKND Groups</p>
+                <h3 className="text-xl font-bold">{t('footer.about.title')}</h3>
+                <p className="text-sm text-purple-400">{t('footer.about.subtitle')}</p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              BKND Groups is dedicated to promoting the spiritual, cultural, and natural beauty of Tiruvannamalai. 
-              We help travelers explore this sacred land through reliable information, curated guides, and community-powered insights.
+              {t('footer.about.description')}
             </p>
             <div className="text-gray-400">
-              <p><strong>Email:</strong> kamaleshkumarbalamurugan@gmail.com</p>
-              <p><strong>Location:</strong> Tiruvannamalai, Tamil Nadu, India</p>
+              <p><strong>{t('footer.about.contact.email')}:</strong> kamaleshkumarbalamurugan@gmail.com</p>
+              <p><strong>{t('footer.about.contact.location')}:</strong> {t('footer.about.contact.address')}</p>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-purple-400">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-6 text-purple-400">{t('footer.quickLinks.title')}</h4>
             <div className="space-y-3">
               {quickLinks.slice(0, 6).map((link) => (
                 <Link
@@ -68,7 +69,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-purple-400">More Pages</h4>
+            <h4 className="text-lg font-semibold mb-6 text-purple-400">{t('footer.morePages.title')}</h4>
             <div className="space-y-3">
               {quickLinks.slice(6).map((link) => (
                 <Link
@@ -91,18 +92,18 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <h4 className="text-lg font-semibold text-purple-400 mb-2">
-                🧭 Explore. Experience. Enlighten.
+                {t('footer.bottom.tagline')}
               </h4>
               <p className="text-gray-300 text-sm">
-                Whether you are a spiritual seeker, casual traveler, or cultural enthusiast, Tiruvannamalai welcomes you.
+                {t('footer.bottom.welcomeText')}
               </p>
             </div>
             <div className="text-center md:text-right">
               <p className="text-gray-400 text-sm">
-                © 2025 BKND Groups – All rights reserved.
+                {t('footer.bottom.copyright')}
               </p>
               <p className="text-purple-400 text-sm mt-1">
-                Crafted with devotion in Tiruvannamalai ❤️
+                {t('footer.bottom.craftedWith')}
               </p>
             </div>
           </div>
