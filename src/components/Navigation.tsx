@@ -3,36 +3,38 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import path from 'path';
+import LanguageSelector from '@/components/LanguageSelector';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-
-const menuItems = [
-  { name: 'Home', path: '/', anchor: null },
-  { name: 'Temples', path: '/temples', anchor: null },
-  { name: 'Linghams', path: '/linghams', anchor: null }, // <-- FIXED
-  { name: 'Girivalam', path: '/girivalam', anchor: null },
-  { name: 'Festivals', path: '/festivals', anchor: null },
-  { name: 'Stay & Food', path: '/stay-food', anchor: null },
-  { name: 'Spiritual Tourism', path: '/spiritual-tourism', anchor: null },
-  { name: 'Getting There', path: '/getting-there', anchor: null },
-  { name: 'Blog', path: '/blog', anchor: null },
-  { name: 'Contact', path: '/contact', anchor: null },
-];
-
+  const menuItems = [
+    { name: 'Home', path: '/', anchor: null },
+    { name: 'Temples', path: '/temples', anchor: null },
+    { name: 'Linghams', path: '/linghams', anchor: null },
+    { name: 'Girivalam', path: '/girivalam', anchor: null },
+    { name: 'Festivals', path: '/festivals', anchor: null },
+    { name: 'Stay & Food', path: '/stay-food', anchor: null },
+    { name: 'Spiritual Tourism', path: '/spiritual-tourism', anchor: null },
+    { name: 'Getting There', path: '/getting-there', anchor: null },
+    { name: 'Blog', path: '/blog', anchor: null },
+    { name: 'Contact', path: '/contact', anchor: null },
+  ];
 
   const handleLinkClick = (path: string, anchor: string | null) => {
     setIsMenuOpen(false);
     if (location.pathname === '/' && anchor) {
-      // Smooth scroll to section on homepage
       setTimeout(() => {
         const element = document.getElementById(anchor);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
+      }, 100);
+    } else {
+      // Scroll to top when navigating to different pages
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }, 100);
     }
   };
@@ -64,6 +66,7 @@ const menuItems = [
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
+            <LanguageSelector />
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,6 +92,9 @@ const menuItems = [
                   {item.name}
                 </Link>
               ))}
+              <div className="px-4 py-2">
+                <LanguageSelector />
+              </div>
             </div>
           </div>
         )}

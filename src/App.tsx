@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Temples from "./pages/Temples";
+import Linghams from "./pages/Linghams";
 import Girivalam from "./pages/Girivalam";
 import Festivals from "./pages/Festivals";
 import StayFood from "./pages/StayFood";
@@ -23,10 +24,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/arunachala-pilgrim-guide">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/temples" element={<Temples />} />
+          <Route path="/linghams" element={<Linghams />} />
           <Route path="/girivalam" element={<Girivalam />} />
           <Route path="/festivals" element={<Festivals />} />
           <Route path="/stay-food" element={<StayFood />} />
@@ -35,7 +37,6 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -1,7 +1,9 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
+import { MapPin, ExternalLink } from 'lucide-react';
 
 const Temples = () => {
   const mainTemples = [
@@ -11,7 +13,8 @@ const Temples = () => {
       highlights: ['10-day Karthigai Deepam festival', 'Massive temple complex with towering gopurams', 'Sacred pond and holy tanks'],
       timings: '6 AM – 9 PM daily',
       location: 'Center of Tiruvannamalai town',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnz2d6bezvap3m6nsxwgcxj%2F1748789010_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=rvARKK9ehsA6s2iaS5oEvjTiJAUxo%2FEafiZ7ULS4pt4%3D&az=oaivgprodscus?w=600&h=400&fit=crop'
+      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnz2d6bezvap3m6nsxwgcxj%2F1748789010_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=rvARKK9ehsA6s2iaS5oEvjTiJAUxo%2FEafiZ7ULS4pt4%3D&az=oaivgprodscus',
+      mapLink: '#'
     },
     {
       name: 'Sri Ramana Maharshi Ashram',
@@ -19,7 +22,8 @@ const Temples = () => {
       highlights: ['Meditation halls and quiet gardens', "Ramana Maharshi's samadhi", 'Library and bookshop with spiritual texts'],
       timings: '6 AM – 8 PM',
       location: 'South of the temple town',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr9y9wwfzcbbpj3pr7sd2yt%2F1748867518_img_1.webp?st=2025-06-02T10%3A48%3A18Z&se=2025-06-08T11%3A48%3A18Z&sks=b&skt=2025-06-02T10%3A48%3A18Z&ske=2025-06-08T11%3A48%3A18Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=ls7otAn1FGYnAqSs9pDWDhR9pGyxSOKrB8Qz3It%2FhFQ%3D&az=oaivgprodscus?w=600&h=400&fit=crop'
+      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr9y9wwfzcbbpj3pr7sd2yt%2F1748867518_img_1.webp?st=2025-06-02T10%3A48%3A18Z&se=2025-06-08T11%3A48%3A18Z&sks=b&skt=2025-06-02T10%3A48%3A18Z&ske=2025-06-08T11%3A48%3A18Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=ls7otAn1FGYnAqSs9pDWDhR9pGyxSOKrB8Qz3It%2FhFQ%3D&az=oaivgprodscus',
+      mapLink: '#'
     },
     {
       name: 'Virupaksha Cave',
@@ -27,16 +31,26 @@ const Temples = () => {
       highlights: ['Natural rock formations', 'Peaceful surroundings', 'Small shrine nearby'],
       timings: 'Best visited during daytime',
       location: 'Near the base of Arunachala hill',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnz5x2kem2tmg0ecfag3yg8%2F1748789120_img_3.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=Pua%2BTLQWi9pqNaDQ8mXPLKkMTs65oBzELbHryaT27hk%3D&az=oaivgprodscus?w=600&h=400&fit=crop'
+      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnz5x2kem2tmg0ecfag3yg8%2F1748789120_img_3.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=Pua%2BTLQWi9pqNaDQ8mXPLKkMTs65oBzELbHryaT27hk%3D&az=oaivgprodscus',
+      mapLink: '#'
     }
   ];
 
   const otherTemples = [
-    'Agni Vinayagar Temple', 'Valampoori Vinayagar Temple', 'Durvasar Maha Muni Temple',
-    'Nandhi Muga Darshan', 'Ner Annamalaiyar Temple', 'Suriya Lingam',
-    'Aadhi Annamalai Temple', 'Mookupodi Siddar Shrine', 'Chandra Lingam',
-    'Moksha Duvaram', 'Thirukhu Puliyur Temple', 'Panchamuga Darshan Shrine',
-    'Subramaniya Swamy Temple', 'Arunagiri Nadhar Temple'
+    { name: 'Agni Vinayagar Temple', mapLink: '#' },
+    { name: 'Valampoori Vinayagar Temple', mapLink: '#' },
+    { name: 'Durvasar Maha Muni Temple', mapLink: '#' },
+    { name: 'Nandhi Muga Darshan', mapLink: '#' },
+    { name: 'Ner Annamalaiyar Temple', mapLink: '#' },
+    { name: 'Suriya Lingam', mapLink: '#' },
+    { name: 'Aadhi Annamalai Temple', mapLink: '#' },
+    { name: 'Mookupodi Siddar Shrine', mapLink: '#' },
+    { name: 'Chandra Lingam', mapLink: '#' },
+    { name: 'Moksha Duvaram', mapLink: '#' },
+    { name: 'Thirukhu Puliyur Temple', mapLink: '#' },
+    { name: 'Panchamuga Darshan Shrine', mapLink: '#' },
+    { name: 'Subramaniya Swamy Temple', mapLink: '#' },
+    { name: 'Arunagiri Nadhar Temple', mapLink: '#' }
   ];
 
   return (
@@ -75,9 +89,20 @@ const Temples = () => {
                     />
                   </div>
                   <CardContent className="p-8">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                      {temple.name}
-                    </h3>
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-3xl font-bold text-gray-900">
+                        {temple.name}
+                      </h3>
+                      <a 
+                        href={temple.mapLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-orange-600 hover:text-orange-700 transition-colors"
+                      >
+                        <MapPin size={20} />
+                        <ExternalLink size={16} />
+                      </a>
+                    </div>
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {temple.description}
                     </p>
@@ -124,9 +149,20 @@ const Temples = () => {
               <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
                 <CardContent className="p-6 text-center">
                   <div className="text-2xl mb-3">🛕</div>
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    {temple}
-                  </h3>
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-semibold text-gray-900 flex-1">
+                      {temple.name}
+                    </h3>
+                    <a 
+                      href={temple.mapLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-orange-600 hover:text-orange-700 transition-colors ml-2"
+                    >
+                      <MapPin size={16} />
+                      <ExternalLink size={14} />
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             ))}
