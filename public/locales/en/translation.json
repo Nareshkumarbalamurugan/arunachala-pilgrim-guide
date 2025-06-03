@@ -421,5 +421,141 @@
             "copyright": "© 2025 BKND Groups – All rights reserved.",
             "craftedWith": "Crafted with devotion in Tiruvannamalai ❤️"
         }
-    }
-}
+    },
+    "festivals": {
+        "pageTitle": "Sacred Festivals of Tiruvannamalai",
+        "pageSubtitle": "Experience the divine celebrations that bring spiritual seekers together throughout the year. These festivals are not just events, but powerful occasions for spiritual transformation and divine connection.",
+        "majorFestivalsTitle": "Major Festivals",
+        "majorFestivals": {
+            "karthigaiDeepam": {
+                "name": "Karthigai Deepam",
+                "when": "November–December (Karthigai month, full moon day)",
+                "significance": "The most iconic festival of Tiruvannamalai, celebrating the divine light of Lord Shiva manifested as the eternal fire atop Arunachala Hill.",
+                "highlights": [
+                    "Massive beacon fire lit on the summit of Arunachala Hill",
+                    "Special poojas and night-long chanting",
+                    "Temple and town illuminated with thousands of oil lamps"
+                ],
+                "spiritual": "Symbolizes the victory of light over darkness and the divine presence within."
+            },
+            "mahaShivaratri": {
+                "name": "Maha Shivaratri",
+                "when": "February–March (Phalguna month)",
+                "significance": "A sacred night dedicated to Lord Shiva, marked by fasting, meditation, and vigil.",
+                "highlights": [
+                    "Overnight worship at Arunachaleswarar Temple",
+                    "Special abhishekams and chants of the Shiva Lingam",
+                    "Spiritual discourses and cultural performances"
+                ],
+                "spiritual": "Celebrates the cosmic dance of Shiva and the overcoming of ignorance."
+            },
+            "girivalamFestival": {
+                "name": "Tiruvannamalai Girivalam Festival",
+                "when": "Full moon nights throughout the year",
+                "significance": "Devotees circumambulate Arunachala Hill, performing the holy Girivalam pilgrimage by moonlight.",
+                "highlights": [
+                    "Thousands participate in the 14 km night walk",
+                    "Spiritual songs, lamps, and serene atmosphere",
+                    "Monthly spiritual gathering"
+                ],
+                "spiritual": "A practice believed to purify karma and enhance spiritual growth."
+            },
+            "thaiPoosam": {
+                "name": "Thai Poosam",
+                "when": "January-February (Thai month)",
+                "significance": "Dedicated to Lord Murugan, celebrating his receiving the Vel (divine spear) from Mother Parvati.",
+                "highlights": [
+                    "Grand procession with decorated chariots",
+                    "Special abhishekams to Lord Murugan",
+                    "Devotional music and dance performances"
+                ],
+                "spiritual": "Represents the triumph of divine wisdom over ignorance."
+            }
+        },
+        "otherFestivalsTitle": "Other Noteworthy Festivals",
+        "otherFestivals": [
+            "Tamil New Year (April)",
+            "Panguni Uthiram (March-April)",
+            "Aadi Pooram (July-August)",
+            "Navaratri (September-October)",
+            "Thai Pongal (January)"
+        ],
+        "experienceSection": {
+            "title": "Experience the Divine",
+            "description": "Each festival in Tiruvannamalai offers a unique opportunity to immerse yourself in ancient traditions and spiritual practices that have been preserved for generations.",
+            "magicTitle": "Feel the Magic",
+            "magicDescription": "Join thousands of devotees in celebration, meditation, and spiritual awakening. The energy during these festivals is palpable and transformative."
+        },
+        "tipsTitle": "Festival Visit Tips",
+        "tips": [
+            "Book accommodation well in advance",
+            "Dress modestly and respectfully",
+            "Carry minimal belongings during events",
+            "Stay hydrated and carry water",
+            "Follow local customs and traditions",
+            "Participate in communal activities"
+        ]
+    },
+    "stayFood":{
+        "heroTitle": "Stay & Food in Tiruvannamalai",
+        "heroSubtitle": "Discover comfortable accommodations and delicious cuisine options for your spiritual journey",
+      
+        "placesToStayTitle": "🏨 Places to Stay",
+        "placesToStaySubtitle": "From budget hotels to luxury resorts",
+      
+        "ashramTitle": "🕉️ Ashrams & Spiritual Stays",
+      
+        "restaurantsTitle": "🍽️ Food & Cafés",
+        "restaurantsSubtitle": "Savor authentic flavors and international cuisine",
+      
+        "dessertsTitle": "🍰 Sweet Treats & Desserts",
+      
+        "exampleHotels": [
+          {
+            "name": "Athena Hotel",
+            "type": "4-star hotel",
+            "description": "Just 1 km from Ramana Ashram, featuring spacious rooms, rooftop pool, spa services, and vegetarian restaurant."
+          },
+          {
+            "name": "Hotel Himalayaa",
+            "type": "3.5-star hotel",
+            "description": "Modern rooms with free breakfast, Wi-Fi, and parking. Popular for excellent service and comfort."
+          }
+        ],
+      
+        "exampleAshrams": [
+          {
+            "name": "Sri Ramana Ashram",
+            "description": "The spiritual home of Bhagavan Sri Ramana Maharshi, offering tranquil environment for meditation and self-inquiry."
+          },
+          {
+            "name": "Yogi Ram Surat Kumar Ashram",
+            "description": "Known for calm atmosphere, daily poojas, and spiritual activities - ideal for peace and healing."
+          }
+        ],
+      
+        "exampleRestaurants": [
+          {
+            "name": "Sri Abirami Hotel",
+            "type": "Multi-cuisine",
+            "description": "Popular local spot for South Indian, North Indian dishes, and flavorful biryanis. Budget-friendly with quick service."
+          },
+          {
+            "name": "Shanti Café",
+            "type": "Café",
+            "description": "Known for freshly brewed coffee, croissants from Pondicherry, and peaceful ambiance with lovely views."
+          }
+        ],
+      
+        "desserts": [
+          {
+            "name": "Cake Heaven",
+            "description": "Popular bakery with wide range of cakes and desserts, perfect for sweet lovers."
+          },
+          {
+            "name": "Meenakshi Bhavan",
+            "description": "Renowned for traditional Mysore pak, a must-try South Indian sweet delight."
+          }
+        ]
+      }
+    }      

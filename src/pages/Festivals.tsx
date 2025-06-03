@@ -2,91 +2,42 @@ import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
+import { useTranslation } from 'react-i18next';
 
 const Festivals = () => {
-  const majorFestivals = [
-    {
-      name: 'Karthigai Deepam',
-      when: 'November–December (Karthigai month, full moon day)',
-      significance: 'The most iconic festival of Tiruvannamalai, celebrating the divine light of Lord Shiva manifested as the eternal fire atop Arunachala Hill.',
-      highlights: [
-        'Massive beacon fire lit on the summit of Arunachala Hill',
-        'Special poojas and night-long chanting',
-        'Temple and town illuminated with thousands of oil lamps'
-      ],
-      spiritual: 'Symbolizes the victory of light over darkness and the divine presence within.',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwny0tx0efnvd951hkkkkcnk%2F1748787907_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=RAtAEO2LvIGXO5MKCw5vGDiPAin6I%2F2zotqo7rFPe04%3D&az=oaivgprodscus',
-      color: 'from-orange-500 to-red-600'
-    },
-    {
-      name: 'Maha Shivaratri',
-      when: 'February–March (Phalguna month)',
-      significance: 'A sacred night dedicated to Lord Shiva, marked by fasting, meditation, and vigil.',
-      highlights: [
-        'Overnight worship at Arunachaleswarar Temple',
-        'Special abhishekams and chants of the Shiva Lingam',
-        'Spiritual discourses and cultural performances'
-      ],
-      spiritual: 'Celebrates the cosmic dance of Shiva and the overcoming of ignorance.',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnzx7zeeg885tentt6dspsa%2F1748789868_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=YUC21QnyqQJD1bX%2F9tSoHKCSRmpw8bk%2FWjnMIqLh2fw%3D&az=oaivgprodscus?w=600&h=400&fit=crop',
-      color: 'from-blue-500 to-purple-600'
-    },
-    {
-      name: 'Tiruvannamalai Girivalam Festival',
-      when: 'Full moon nights throughout the year',
-      significance: 'Devotees circumambulate Arunachala Hill, performing the holy Girivalam pilgrimage by moonlight.',
-      highlights: [
-        'Thousands participate in the 14 km night walk',
-        'Spiritual songs, lamps, and serene atmosphere',
-        'Monthly spiritual gathering'
-      ],
-      spiritual: 'A practice believed to purify karma and enhance spiritual growth.',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnzbe31fehvc68x7f51zgfx%2F1748789313_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=3wDm%2BwR75gm026KuTaKFXGWCiY8IEgk2HOtuwSVXngA%3D&az=oaivgprodscus',
-      color: 'from-indigo-500 to-blue-600'
-    },
-    {
-      name: 'Thai Poosam',
-      when: 'January–February (Thai month)',
-      significance: 'Dedicated to Lord Murugan (Subramanya), son of Shiva, who is highly revered in Tiruvannamalai.',
-      highlights: [
-        'Devotional processions with kavadi carried by devotees',
-        'Special pujas at the Subramaniya Swamy Temple',
-        'Colorful cultural celebrations'
-      ],
-      spiritual: 'Celebrates courage, devotion, and the divine victory of good over evil.',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwp01gtwe00rb3s1r3sn7zbq%2F1748790036_img_1.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=072vuozxL%2FJ5EBvfcd2bHZLtmMqDqzqLVGeruOLXs54%3D&az=oaivgprodscus',
-      color: 'from-green-500 to-teal-600'
-    }
-  ];
+  const { t } = useTranslation();
 
-  const otherFestivals = [
-    'Navaratri - Nine nights of worship dedicated to Goddess Durga',
-    'Aadi Pooram - Celebrating the goddess\'s grace with rituals',
-    'Vaikasi Visakam - Honoring Lord Murugan with festivities',
-    'Panguni Uthiram - Celebrates divine marriages and cosmic harmony'
-  ];
+  const majorFestivalKeys = ['karthigaiDeepam', 'mahaShivaratri', 'girivalamFestival', 'thaiPoosam'];
 
-  const tips = [
-    'Plan Early: Book accommodations well in advance',
-    'Respect Local Customs: Dress modestly and follow temple etiquette',
-    'Stay Hydrated: Carry water and keep personal belongings secure',
-    'Participate Mindfully: Join rituals with devotion and respect'
-  ];
+  const festivalColors: { [key: string]: string } = {
+    karthigaiDeepam: 'from-orange-500 to-red-600',
+    mahaShivaratri: 'from-blue-500 to-purple-600',
+    girivalamFestival: 'from-indigo-500 to-blue-600',
+    thaiPoosam: 'from-green-500 to-teal-600'
+  };
+
+  const festivalImages: { [key: string]: string } = {
+    karthigaiDeepam: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwny0tx0efnvd951hkkkkcnk%2F1748787907_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=RAtAEO2LvIGXO5MKCw5vGDiPAin6I%2F2zotqo7rFPe04%3D&az=oaivgprodscus',
+    mahaShivaratri: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnzx7zeeg885tentt6dspsa%2F1748789868_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=YUC21QnyqQJD1bX%2F9tSoHKCSRmpw8bk%2FWjnMIqLh2fw%3D&az=oaivgprodscus?w=600&h=400&fit=crop',
+    girivalamFestival: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnzbe31fehvc68x7f51zgfx%2F1748789313_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=3wDm%2BwR75gm026KuTaKFXGWCiY8IEgk2HOtuwSVXngA%3D&az=oaivgprodscus',
+    thaiPoosam: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwp01gtwe00rb3s1r3sn7zbq%2F1748790036_img_1.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=072vuozxL%2FJ5EBvfcd2bHZLtmMqDqzqLVGeruOLXs54%3D&az=oaivgprodscus'
+  };
+
+  const otherFestivals = t('festivals.otherFestivals', { returnObjects: true }) as string[];
+  const tips = t('festivals.tips', { returnObjects: true }) as string[];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-amber-50">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-yellow-500 to-orange-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-            Festivals of Tiruvannamalai
+            {t('festivals.pageTitle')}
           </h1>
           <p className="text-xl max-w-4xl mx-auto leading-relaxed">
-            Tiruvannamalai is a living spiritual canvas painted with vibrant festivals that honor Lord Arunachaleswarar 
-            and celebrate the rich cultural heritage of the region. These festivals draw thousands of devotees from 
-            across India and the world.
+            {t('festivals.pageSubtitle')}
           </p>
         </div>
       </section>
@@ -95,53 +46,61 @@ const Festivals = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-            Major Festivals
+            {t('festivals.majorFestivalsTitle')}
           </h2>
-          
+
           <div className="space-y-16">
-            {majorFestivals.map((festival, index) => (
-              <Card key={index} className="overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300">
-                <div className={`bg-gradient-to-r ${festival.color} p-2`}></div>
-                <div className="grid grid-cols-1 lg:grid-cols-2">
-                  <div className="relative overflow-hidden">
-                    <img 
-                      src={festival.image} 
-                      alt={festival.name}
-                      className="w-full h-80 lg:h-full object-cover hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            {majorFestivalKeys.map((key, index) => {
+              const festivalName = t(`festivals.majorFestivals.${key}.name`);
+              const festivalWhen = t(`festivals.majorFestivals.${key}.when`);
+              const festivalSignificance = t(`festivals.majorFestivals.${key}.significance`);
+              const festivalHighlights = t(`festivals.majorFestivals.${key}.highlights`, { returnObjects: true }) as string[];
+              const festivalSpiritual = t(`festivals.majorFestivals.${key}.spiritual`);
+
+              return (
+                <Card key={index} className="overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300">
+                  <div className={`bg-gradient-to-r ${festivalColors[key]} p-2`}></div>
+                  <div className="grid grid-cols-1 lg:grid-cols-2">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={festivalImages[key]}
+                        alt={festivalName}
+                        className="w-full h-80 lg:h-full object-cover hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                    <CardContent className="p-8">
+                      <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                        {festivalName}
+                      </h3>
+                      <p className="text-orange-600 font-semibold mb-4">
+                        {festivalWhen}
+                      </p>
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                        {festivalSignificance}
+                      </p>
+
+                      <div className="mb-6">
+                        <h4 className="text-lg font-semibold text-gray-900 mb-3">{t('festivals.majorFestivals.karthigaiDeepam.highlights', { returnObjects: true }) ? t('common.highlights', { defaultValue: 'Highlights:' }) : ''}</h4>
+                        <ul className="space-y-2">
+                          {Array.isArray(festivalHighlights) && festivalHighlights.map((highlight, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <span className="text-orange-500 mr-2">•</span>
+                              <span className="text-gray-600">{highlight}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-4 rounded-lg">
+                        <h4 className="font-semibold text-gray-900 mb-2">{t('festivals.majorFestivals.karthigaiDeepam.spiritual', { returnObjects: true }) ? t('common.spiritualImportance', { defaultValue: 'Spiritual Importance:' }) : ''}</h4>
+                        <p className="text-gray-600 text-sm">{festivalSpiritual}</p>
+                      </div>
+                    </CardContent>
                   </div>
-                  <CardContent className="p-8">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-2">
-                      {festival.name}
-                    </h3>
-                    <p className="text-orange-600 font-semibold mb-4">
-                      {festival.when}
-                    </p>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {festival.significance}
-                    </p>
-                    
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-3">Highlights:</h4>
-                      <ul className="space-y-2">
-                        {festival.highlights.map((highlight, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="text-orange-500 mr-2">•</span>
-                            <span className="text-gray-600">{highlight}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-gray-900 mb-2">Spiritual Importance:</h4>
-                      <p className="text-gray-600 text-sm">{festival.spiritual}</p>
-                    </div>
-                  </CardContent>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -150,11 +109,11 @@ const Festivals = () => {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Other Noteworthy Festivals
+            {t('festivals.otherFestivalsTitle')}
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {otherFestivals.map((festival, index) => (
+            {Array.isArray(otherFestivals) && otherFestivals.map((festival, index) => (
               <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
                 <CardContent className="p-6">
                   <div className="text-3xl mb-3">🎉</div>
@@ -172,31 +131,29 @@ const Festivals = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                Experience the Festivals
+                {t('festivals.experienceSection.title')}
               </h2>
               <Card className="shadow-xl">
                 <CardContent className="p-8">
                   <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                    Visiting Tiruvannamalai during these festivals offers a unique chance to witness centuries-old 
-                    traditions, devotional fervor, and spiritual grandeur. The vibrant decorations, collective prayers, 
-                    sacred music, and overwhelming energy create an unforgettable experience.
+                    {t('festivals.experienceSection.description')}
                   </p>
                   <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-4 rounded-lg">
-                    <p className="font-semibold">✨ Festival Magic</p>
+                    <p className="font-semibold">{t('festivals.experienceSection.magicTitle')}</p>
                     <p className="text-sm opacity-90">
-                      Join thousands in celebration of divine light, spiritual music, and communal joy.
+                      {t('festivals.experienceSection.magicDescription')}
                     </p>
                   </div>
                 </CardContent>
               </Card>
             </div>
-            
+
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                Tips for Festival Visitors
+                {t('festivals.tipsTitle')}
               </h2>
               <div className="space-y-4">
-                {tips.map((tip, index) => (
+                {Array.isArray(tips) && tips.map((tip, index) => (
                   <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-6">
                       <div className="flex items-start">
