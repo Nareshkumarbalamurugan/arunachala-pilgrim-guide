@@ -1,133 +1,106 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Compass, Mountain } from 'lucide-react';
-
-const lingams = [
-  {
-    direction: 'East',
-    name: 'Indra Lingam',
-    deity: 'Lord Indra',
-    description:
-      'Indra, king of heaven, grants spiritual insight and rides the four-tusked elephant Iravathi. This lingam is close to the eastern tower of the Big Temple on Car Street.',
-    location: 'Near Big Temple, Car Street',
-    color: 'text-blue-600'
-  },
-  {
-    direction: 'South-East',
-    name: 'Agni Lingam',
-    deity: 'Lord Agni',
-    description:
-      'Agni, the god of fire and knowledge, acts as the divine messenger. Worshipped during homas, Agni connects man and gods. Found near Seshadri Ashram.',
-    location: 'Seshadri Street, Chengam Road',
-    color: 'text-red-600'
-  },
-  {
-    direction: 'South',
-    name: 'Yama Lingam',
-    deity: 'Lord Yama',
-    description:
-      'Yama, the god of death, reminds beings of mortality and dharma. Associated with the stories of Markandeya and Savitri. Located beside cremation grounds.',
-    location: 'Cremation grounds, Chengam Road',
-    color: 'text-black'
-  },
-  {
-    direction: 'South-West',
-    name: 'Nirudhi Lingam',
-    deity: 'Nirudhi',
-    description:
-      'Nirudhi governs desires and attachments, helping devotees overcome worldly bonds. Located just after Sonagiri and Shanthi Malai compounds.',
-    location: 'Near Sonagiri, Giri Valam Path',
-    color: 'text-purple-700'
-  },
-  {
-    direction: 'West',
-    name: 'Varuna Lingam',
-    deity: 'Lord Varuna',
-    description:
-      'Varuna, god of waters and cosmic law, rides the Makara. Worshipping him brings clarity and flow. Found before Adi Annamalai village.',
-    location: '1 km before Adi Annamalai',
-    color: 'text-blue-800'
-  },
-  {
-    direction: 'North-West',
-    name: 'Vayu Lingam',
-    deity: 'Lord Vayu',
-    description:
-      'Vayu, god of air and breath, sustains life. Known for swift motion and energy. Located near Gosalai on the giri valam route.',
-    location: 'Near Gosalai, Giri Valam Path',
-    color: 'text-green-600'
-  },
-  {
-    direction: 'North',
-    name: 'Kubera Lingam',
-    deity: 'Lord Kubera',
-    description:
-      'Kubera, the god of wealth and Yakshas, blesses prosperity. He worships Shiva at Arunachala. Located before entering the town.',
-    location: 'Before re-entering Tiruvannamalai',
-    color: 'text-yellow-700'
-  },
-  {
-    direction: 'North-East',
-    name: 'Isanya Lingam',
-    deity: 'Isanyar',
-    description:
-      'Isanyar, a Rudra of Shiva, bears the ash-covered body and sacred symbols. Associated with transcendence. Found near the new bus stand.',
-    location: 'Near Old Cremation Grounds, Bus Stand Road',
-    color: 'text-gray-700'
-  }
-];
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Linghams = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-pink-100">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-purple-50">
       <Navigation />
+      
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            Sacred Linghams of Tiruvannamalai
+          </h1>
+          
+          <div className="mb-8">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Tiruvannamalai is blessed with numerous sacred Linghams, each with its unique spiritual significance 
+              and divine energy. These ancient stone representations of Lord Shiva are scattered throughout the 
+              town and along the Girivalam path, offering devotees multiple opportunities for worship and meditation.
+            </p>
+          </div>
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-700 to-red-500 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Ashta Lingams of Arunachala</h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            Eight sacred lingams placed around Arunachala, each facing one of the cardinal directions, represent the Ashta Dikpalakas (Guardians of Directions). Pilgrims receive unique blessings from each as they perform Giri Pradakshina.
-          </p>
-        </div>
-      </section>
-
-      {/* Lingams Grid */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {lingams.map((lingam, index) => (
-            <Card key={index} className="shadow-xl hover:shadow-2xl transition-transform hover:-translate-y-2 bg-white">
-              <CardContent className="p-6">
-                <div className={`flex items-center justify-center mb-4 ${lingam.color}`}>
-                  <Compass size={28} />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  {lingam.direction} – {lingam.name}
-                </h3>
-                <p className="text-sm text-gray-600 italic mb-2">Deity: {lingam.deity}</p>
-                <p className="text-gray-700 mb-4">{lingam.description}</p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <MapPin className="mr-2" size={16} />
-                  {lingam.location}
-                </div>
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-purple-700">Arunachaleswarar Lingam</CardTitle>
+                <CardDescription>The main deity at Arunachaleswarar Temple</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  The primary Lingam representing Lord Shiva as Arunachaleswarar, symbolizing the fire element. 
+                  This ancient Lingam is the focal point of all major festivals and daily worship rituals.
+                </p>
               </CardContent>
             </Card>
-          ))}
-        </div>
-      </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-br from-purple-100 to-red-100">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Begin Your Sacred Journey</h2>
-          <p className="text-gray-600 text-lg mb-6">
-            Whether you're planning a physical pilgrimage or spiritual contemplation, the Ashta Lingams offer a unique path to connect with Shiva in all His aspects. Visit, meditate, and feel the presence of Arunachala.
-          </p>
-        </div>
-      </section>
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-purple-700">Chandra Lingam</CardTitle>
+                <CardDescription>Moon deity representation</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Located along the Girivalam path, this Lingam is associated with lunar energy and is 
+                  particularly revered during full moon nights when devotees perform the sacred circumambulation.
+                </p>
+              </CardContent>
+            </Card>
 
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-purple-700">Suriya Lingam</CardTitle>
+                <CardDescription>Sun deity in Lingam form</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Representing the solar energy, this Lingam is worshipped for vitality, health, and spiritual 
+                  illumination. Devotees often visit during sunrise for maximum spiritual benefit.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-purple-700">Ner Annamalaiyar</CardTitle>
+                <CardDescription>Historic Shiva Lingam</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  An ancient Lingam with deep historical roots, revered for its connection to the early 
+                  spiritual traditions of Tiruvannamalai and the manifestation of divine consciousness.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="bg-white rounded-lg p-6 shadow-md">
+            <h2 className="text-2xl font-semibold mb-4 text-purple-700">Spiritual Significance</h2>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-start">
+                <span className="text-purple-600 mr-2">•</span>
+                Each Lingam represents different aspects of divine energy and consciousness
+              </li>
+              <li className="flex items-start">
+                <span className="text-purple-600 mr-2">•</span>
+                Worshipping these Linghams is believed to purify negative karma and enhance spiritual growth
+              </li>
+              <li className="flex items-start">
+                <span className="text-purple-600 mr-2">•</span>
+                The Linghams along the Girivalam path create a powerful spiritual circuit of divine energy
+              </li>
+              <li className="flex items-start">
+                <span className="text-purple-600 mr-2">•</span>
+                Many devotees report profound spiritual experiences and inner transformation
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
       <Footer />
     </div>
   );
