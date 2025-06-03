@@ -20,8 +20,6 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <Toaster />
-    <Sonner />
     <BrowserRouter basename="/arunachala-pilgrim-guide">
       <Routes>
         <Route path="/" element={<Index />} />
@@ -37,6 +35,8 @@ const App = () => (
         <Route path="/faq" element={<FAQ />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Toaster />
+      <Sonner />
     </BrowserRouter>
   </QueryClientProvider>
 );
