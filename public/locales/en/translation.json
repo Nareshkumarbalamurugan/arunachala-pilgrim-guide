@@ -160,28 +160,147 @@
         }
     },
     "temples": {
-        "mainTemple": {
-            "title": "Sri Arunachaleswarar Temple",
-            "description": "One of the largest temples in India, dedicated to Lord Shiva",
-            "history": "Built in the 9th century, this temple complex spans 25 acres",
-            "timings": "Open from 5:30 AM to 12:30 PM and 4:00 PM to 9:00 PM"
+        "pageTitle": "Sacred Temples of Tiruvannamalai",
+        "pageSubtitle": "Tiruvannamalai is renowned for its rich spiritual heritage and sacred temples dedicated primarily to Lord Shiva. These ancient temples are centers of devotion, history, and architecture that draw pilgrims and visitors from all over the world.",
+        "mainTemples": {
+            "title": "Main Temples",
+            "arunachaleswarar": {
+                "name": "Arunachaleswarar Temple",
+                "description": "One of the most significant Shiva temples in India, representing the eternal flame. Magnificent example of Dravidian architecture.",
+                "highlights": [
+                    "10-day Karthigai Deepam festival",
+                    "Massive temple complex with towering gopurams",
+                    "Sacred pond and holy tanks"
+                ],
+                "timings": "6 AM – 9 PM daily",
+                "location": "Center of Tiruvannamalai town"
+            },
+            "ramanaMaharshi": {
+                "name": "Sri Ramana Maharshi Ashram",
+                "description": "The peaceful ashram of the revered sage Sri Ramana Maharshi, celebrated worldwide for his teachings on self-inquiry and meditation.",
+                "highlights": [
+                    "Meditation halls and quiet gardens",
+                    "Ramana Maharshi's samadhi",
+                    "Library and bookshop with spiritual texts"
+                ],
+                "timings": "6 AM – 8 PM",
+                "location": "South of the temple town"
+            },
+            "virupaksha": {
+                "name": "Virupaksha Cave",
+                "description": "A historical cave where Sri Ramana Maharshi lived as a young ascetic. Sacred spot offering glimpse into spiritual journey.",
+                "highlights": [
+                    "Natural rock formations",
+                    "Peaceful surroundings",
+                    "Small shrine nearby"
+                ],
+                "timings": "Best visited during daytime",
+                "location": "Near the base of Arunachala hill"
+            }
         },
         "otherTemples": {
-            "title": "Other Important Temples",
-            "description": "Explore other significant temples in Tiruvannamalai"
+            "title": "Other Notable Temples & Shrines",
+            "temples": {
+                "agniVinayagar": "Agni Vinayagar Temple",
+                "valampoori": "Valampoori Vinayagar Temple",
+                "durvasar": "Durvasar Maha Muni Temple",
+                "nandhi": "Nandhi Muga Darshan",
+                "nerAnnamalaiyar": "Ner Annamalaiyar Temple",
+                "suriyaLingam": "Suriya Lingam",
+                "adiAnnamalai": "Adi Annamalai Temple",
+                "mookupodi": "Mookupodi Siddar Shrine",
+                "chandraLingam": "Chandra Lingam",
+                "panchamuga": "Panchamuga Darshan Shrine",
+                "subramaniya": "Subramaniya Swamy Temple",
+                "arunagiri": "Arunagiri Nadhar Temple"
+            }
+        },
+        "visitorTips": {
+            "title": "Visitor Tips & Etiquette",
+            "etiquette": {
+                "title": "Temple Etiquette",
+                "tips": [
+                    "Dress modestly and respectfully",
+                    "Remove footwear before entering",
+                    "Photography may be restricted",
+                    "Participate with reverence"
+                ]
+            },
+            "practical": {
+                "title": "Practical Tips",
+                "tips": [
+                    "Carry water and stay hydrated",
+                    "Visit early morning for peace",
+                    "Plan for multiple temple visits",
+                    "Respect meditation areas"
+                ]
+            }
         }
     },
     "girivalam": {
-        "title": "Girivalam - The Sacred Path",
-        "subtitle": "Walk the 14km path around Arunachala Hill",
-        "description": "Girivalam is the practice of circumambulating Arunachala, believed to dissolve karma and bestow liberation",
-        "bestTime": "Best time to perform: Full moon nights (Pournami)",
+        "pageTitle": "Girivalam: The Sacred Hill Walk",
+        "pageSubtitle": "Girivalam, also known as Arunachala Pradakshina, is the revered spiritual practice of circumambulating the sacred Arunachala Hill. This 14-kilometer journey brings spiritual purification, blessings, and liberation.",
+        "significance": {
+            "title": "Significance of Girivalam",
+            "description1": "Arunachala Hill itself is considered a manifestation of Lord Shiva in the form of fire (Agni), one of the five elemental forms (Pancha Bhoota Stalas). Performing Girivalam is not just a physical journey but a deeply spiritual pilgrimage symbolizing surrender, devotion, and union with the divine.",
+            "description2": "The circumambulation path is dotted with temples, shrines, sacred spots, and natural beauty, allowing pilgrims to immerse themselves in the divine presence and experience spiritual awakening."
+        },
+        "whenToGo": {
+            "title": "When to Do Girivalam",
+            "fullMoon": {
+                "title": "Full Moon Night",
+                "description": "The most auspicious time when thousands of devotees gather to walk the path by moonlight, creating a magical and serene atmosphere."
+            },
+            "festivals": {
+                "title": "Festival Days",
+                "description": "Special festivals such as Karthigai Deepam and Maha Shivaratri also see large numbers of pilgrims performing this sacred walk."
+            }
+        },
+        "route": {
+            "title": "The Girivalam Route",
+            "distance": "14 Kilometers",
+            "description": "The path encircles Arunachala Hill and is well-marked and accessible, featuring important temples, sacred spots, shrines dedicated to various deities, and natural features imbued with spiritual significance.",
+            "keyStops": {
+                "title": "Key Stops Include",
+                "items": [
+                    "Arunachaleswarar Temple",
+                    "Seshadri Swamigal Ashram",
+                    "Various Sacred Shrines"
+                ]
+            },
+            "sacredFeatures": {
+                "title": "Sacred Features",
+                "items": [
+                    "Holy streams and trees",
+                    "Eight sacred lingams",
+                    "Natural rock formations"
+                ]
+            }
+        },
         "tips": {
             "title": "Tips for Girivalam",
-            "tip1": "Start early morning or evening",
-            "tip2": "Wear comfortable footwear",
-            "tip3": "Carry water and light snacks",
-            "tip4": "Maintain silence and mindfulness"
+            "items": [
+                "Start Early: Begin before moonrise for serene light and cooler temperatures",
+                "Wear Comfortable Footwear: The path is mostly flat but uneven in parts",
+                "Carry Water and Light Snacks: Essential for the 14 km journey",
+                "Respect the Environment: Keep the path clean and maintain silence",
+                "Dress Modestly: Traditional clothing is recommended for sanctity"
+            ]
+        },
+        "benefits": {
+            "title": "Spiritual Benefits",
+            "subtitle": "Transformative Experience",
+            "items": [
+                "Dissolves karma and negative energies",
+                "Promotes physical and mental well-being",
+                "Deepens connection to Lord Shiva",
+                "Brings feelings of peace and renewal",
+                "Enhances spiritual insight and awakening"
+            ],
+            "experience": {
+                "title": "Experience Report",
+                "description": "Many devotees report feelings of peace, renewal, and spiritual insight after completing the circumambulation. The energy of Arunachala is truly transformative."
+            }
         }
     },
     "contact": {
@@ -201,28 +320,69 @@
         }
     },
     "linghams": {
-        "title": "Ashta Lingams of Arunachala",
-        "subtitle": "Eight sacred lingams placed around Arunachala, each facing one of the cardinal directions, represent the Ashta Dikpalakas (Guardians of Directions). Pilgrims receive unique blessings from each as they perform Giri Pradakshina.",
+        "pageTitle": "Ashta Lingams of Arunachala",
+        "pageSubtitle": "Eight sacred lingams placed around Arunachala, each facing one of the cardinal directions, represent the Ashta Dikpalakas (Guardians of Directions). Pilgrims receive unique blessings from each as they perform Giri Pradakshina.",
+        "lingams": {
+            "indra": {
+                "direction": "East",
+                "name": "Indra Lingam",
+                "deity": "Lord Indra",
+                "description": "Indra, king of heaven, grants spiritual insight and rides the four-tusked elephant Iravathi. This lingam is close to the eastern tower of the Big Temple on Car Street.",
+                "location": "Near Big Temple, Car Street"
+            },
+            "agni": {
+                "direction": "South-East",
+                "name": "Agni Lingam",
+                "deity": "Lord Agni",
+                "description": "Agni, the god of fire and knowledge, acts as the divine messenger. Worshipped during homas, Agni connects man and gods. Found near Seshadri Ashram.",
+                "location": "Seshadri Street, Chengam Road"
+            },
+            "yama": {
+                "direction": "South",
+                "name": "Yama Lingam",
+                "deity": "Lord Yama",
+                "description": "Yama, the god of death, reminds beings of mortality and dharma. Associated with the stories of Markandeya and Savitri. Located beside cremation grounds.",
+                "location": "Cremation grounds, Chengam Road"
+            },
+            "nirudhi": {
+                "direction": "South-West",
+                "name": "Nirudhi Lingam",
+                "deity": "Nirudhi",
+                "description": "Nirudhi governs desires and attachments, helping devotees overcome worldly bonds. Located just after Sonagiri and Shanthi Malai compounds.",
+                "location": "Near Sonagiri, Giri Valam Path"
+            },
+            "varuna": {
+                "direction": "West",
+                "name": "Varuna Lingam",
+                "deity": "Lord Varuna",
+                "description": "Varuna, god of waters and cosmic law, rides the Makara. Worshipping him brings clarity and flow. Found before Adi Annamalai village.",
+                "location": "1 km before Adi Annamalai"
+            },
+            "vayu": {
+                "direction": "North-West",
+                "name": "Vayu Lingam",
+                "deity": "Lord Vayu",
+                "description": "Vayu, god of air and breath, sustains life. Known for swift motion and energy. Located near Gosalai on the giri valam route.",
+                "location": "Near Gosalai, Giri Valam Path"
+            },
+            "kubera": {
+                "direction": "North",
+                "name": "Kubera Lingam",
+                "deity": "Lord Kubera",
+                "description": "Kubera, the god of wealth and Yakshas, blesses prosperity. He worships Shiva at Arunachala. Located before entering the town.",
+                "location": "Before re-entering Tiruvannamalai"
+            },
+            "eesanya": {
+                "direction": "North-East",
+                "name": "Eesanya Lingam",
+                "deity": "Eesanyar",
+                "description": "Isanyar, a Rudra of Shiva, bears the ash-covered body and sacred symbols. Associated with transcendence. Found near the new bus stand.",
+                "location": "Near Old Cremation Grounds, Bus Stand Road"
+            }
+        },
         "cta": {
             "title": "Begin Your Sacred Journey",
             "description": "Whether you're planning a physical pilgrimage or spiritual contemplation, the Ashta Lingams offer a unique path to connect with Shiva in all His aspects. Visit, meditate, and feel the presence of Arunachala."
-        },
-        "lingam": {
-            "deity": "Deity",
-            "location": "Location",
-            "direction": "Direction"
-        },
-        "indra": {
-            "name": "Indra Lingam",
-            "deity": "Lord Indra",
-            "description": "Indra, king of heaven, grants spiritual insight and rides the four-tusked elephant Iravathi. This lingam is close to the eastern tower of the Big Temple on Car Street.",
-            "location": "Near Big Temple, Car Street"
-        },
-        "agni": {
-            "name": "Agni Lingam",
-            "deity": "Lord Agni",
-            "description": "Agni, the god of fire and knowledge, acts as the divine messenger. Worshipped during homas, Agni connects man and gods. Found near Seshadri Ashram.",
-            "location": "Seshadri Street, Chengam Road"
         }
     },
     "footer": {

@@ -3,8 +3,11 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, ExternalLink } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Temples = () => {
+  const { t } = useTranslation();
+
   const mainTemples = [
     {
       name: 'Arunachaleswarar Temple',
@@ -58,27 +61,26 @@ const Temples = () => {
       <section className="relative py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-            Sacred Temples of Tiruvannamalai
+            {t('temples.pageTitle')}
           </h1>
           <p className="text-xl max-w-4xl mx-auto leading-relaxed">
-            Tiruvannamalai is renowned for its rich spiritual heritage and sacred temples dedicated primarily to Lord Shiva.
-            These ancient temples are centers of devotion, history, and architecture that draw pilgrims and visitors from all over the world.
+            {t('temples.pageSubtitle')}
           </p>
         </div>
       </section>
 
       {/* Main Temples */}
-      <section className="py-20">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-            Main Temples
+            {t('temples.mainTemples.title')}
           </h2>
 
           <div className="space-y-12">
-            {mainTemples.map((temple, index) => (
+            {['arunachaleswarar', 'ramanaMaharshi', 'virupaksha'].map((temple, index) => (
               <a
-                key={index}
-                href={temple.mapLink}
+                key={temple}
+                href={mainTemples[index].mapLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block group"
@@ -87,15 +89,15 @@ const Temples = () => {
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div className="relative overflow-hidden">
                       <img
-                        src={temple.image}
-                        alt={temple.name}
+                        src={mainTemples[index].image}
+                        alt={t(`temples.mainTemples.${temple}.name`)}
                         className="w-full h-80 lg:h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
                     <CardContent className="p-8">
                       <div className="flex items-center justify-between mb-4">
                         <h3 className="text-3xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
-                          {temple.name}
+                          {t(`temples.mainTemples.${temple}.name`)}
                         </h3>
                         <span className="flex items-center gap-2 text-orange-600 group-hover:text-orange-700 transition-colors">
                           <MapPin size={20} />
@@ -103,13 +105,13 @@ const Temples = () => {
                         </span>
                       </div>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        {temple.description}
+                        {t(`temples.mainTemples.${temple}.description`)}
                       </p>
 
                       <div className="mb-6">
                         <h4 className="text-lg font-semibold text-orange-600 mb-3">Highlights:</h4>
                         <ul className="space-y-2">
-                          {temple.highlights.map((highlight, idx) => (
+                          {t(`temples.mainTemples.${temple}.highlights`, { returnObjects: true }).map((highlight: string, idx: number) => (
                             <li key={idx} className="flex items-start">
                               <span className="text-orange-500 mr-2">•</span>
                               <span className="text-gray-600">{highlight}</span>
@@ -121,11 +123,11 @@ const Temples = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div>
                           <strong className="text-gray-900">Timings:</strong>
-                          <p className="text-gray-600">{temple.timings}</p>
+                          <p className="text-gray-600">{t(`temples.mainTemples.${temple}.timings`)}</p>
                         </div>
                         <div>
                           <strong className="text-gray-900">Location:</strong>
-                          <p className="text-gray-600">{temple.location}</p>
+                          <p className="text-gray-600">{t(`temples.mainTemples.${temple}.location`)}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -141,14 +143,14 @@ const Temples = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Other Notable Temples & Shrines
+            {t('temples.otherTemples.title')}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {otherTemples.map((temple, index) => (
+            {Object.entries(t('temples.otherTemples.temples', { returnObjects: true })).map(([key, name], index) => (
               <a
-                key={index}
-                href={temple.mapLink}
+                key={key}
+                href={otherTemples[index].mapLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block group"
@@ -158,7 +160,7 @@ const Temples = () => {
                     <div className="text-2xl mb-3">🛕</div>
                     <div className="flex items-center justify-between">
                       <h3 className="text-lg font-semibold text-gray-900 group-hover:text-orange-600 transition-colors flex-1">
-                        {temple.name}
+                        {name}
                       </h3>
                       <span className="flex items-center gap-1 text-orange-600 group-hover:text-orange-700 transition-colors ml-2">
                         <MapPin size={16} />
@@ -174,33 +176,35 @@ const Temples = () => {
       </section>
 
       {/* Visitor Tips */}
-      <section className="py-16 bg-gradient-to-br from-orange-100 to-amber-100">
+      <section className="py-16 bg-gradient-to-b from-amber-50 to-orange-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Visitor Tips & Etiquette
+            {t('temples.visitorTips.title')}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-orange-600 mb-4">Temple Etiquette</h3>
+                <h3 className="text-xl font-semibold text-orange-600 mb-4">
+                  {t('temples.visitorTips.etiquette.title')}
+                </h3>
                 <ul className="space-y-3 text-gray-600">
-                  <li>• Dress modestly and respectfully</li>
-                  <li>• Remove footwear before entering</li>
-                  <li>• Photography may be restricted</li>
-                  <li>• Participate with reverence</li>
+                  {t('temples.visitorTips.etiquette.tips', { returnObjects: true }).map((tip: string, index: number) => (
+                    <li key={index}>• {tip}</li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
 
             <Card className="shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-orange-600 mb-4">Practical Tips</h3>
+                <h3 className="text-xl font-semibold text-orange-600 mb-4">
+                  {t('temples.visitorTips.practical.title')}
+                </h3>
                 <ul className="space-y-3 text-gray-600">
-                  <li>• Carry water and stay hydrated</li>
-                  <li>• Visit early morning for peace</li>
-                  <li>• Plan for multiple temple visits</li>
-                  <li>• Respect meditation areas</li>
+                  {t('temples.visitorTips.practical.tips', { returnObjects: true }).map((tip: string, index: number) => (
+                    <li key={index}>• {tip}</li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
