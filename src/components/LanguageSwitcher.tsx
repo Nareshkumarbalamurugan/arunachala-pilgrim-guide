@@ -25,24 +25,24 @@ const LanguageSwitcher = () => {
                     <Button
                         variant="outline"
                         size="sm"
-                        className="bg-purple-600 text-white hover:bg-purple-700 hover:text-white flex items-center gap-1 h-8 px-2 sm:px-3"
+                        className="bg-purple-600 text-white hover:bg-purple-700 hover:text-white flex items-center gap-1 h-7 px-2 text-xs"
                     >
-                        <Globe className="h-4 w-4 flex-shrink-0" />
-                        <span className="hidden sm:inline text-sm truncate max-w-[60px]">
+                        <Globe className="h-3.5 w-3.5 flex-shrink-0" />
+                        <span className="hidden sm:inline truncate max-w-[40px] lg:max-w-[50px]">
                             {languages.find(lang => lang.code === i18n.language)?.nativeName || 'Lang'}
                         </span>
                     </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                     align="end"
-                    className="w-[120px] min-w-[120px]"
+                    className="w-[100px] min-w-[100px]"
                     sideOffset={5}
                 >
                     {languages.map((language) => (
                         <DropdownMenuItem
                             key={language.code}
                             onClick={() => i18n.changeLanguage(language.code)}
-                            className="cursor-pointer text-sm py-1.5"
+                            className="cursor-pointer text-xs py-1"
                         >
                             <span className="truncate">{language.nativeName}</span>
                         </DropdownMenuItem>

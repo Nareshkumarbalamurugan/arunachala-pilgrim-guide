@@ -39,6 +39,10 @@ const Navigation = () => {
     }
   };
 
+  // Split menu items into two groups for better layout management
+  const firstHalfMenuItems = menuItems.slice(0, 5);
+  const secondHalfMenuItems = menuItems.slice(5);
+
   return (
     <nav className="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-purple-100 w-full">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,15 +58,30 @@ const Navigation = () => {
             </div>
           </Link>
 
-          {/* Desktop Menu - Scrollable on smaller screens */}
-          <div className="hidden lg:flex items-center flex-grow justify-center px-4">
-            <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 overflow-x-auto scrollbar-hide">
-              {menuItems.map((item) => (
+          {/* Desktop Menu - Split into two rows if needed */}
+          <div className="hidden lg:flex flex-col items-center justify-center flex-grow px-4">
+            {/* First row of menu items */}
+            <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 mb-1">
+              {firstHalfMenuItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
                   onClick={() => handleLinkClick(item.path, item.anchor)}
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium relative group px-2 py-1 text-sm md:text-base whitespace-nowrap"
+                  className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium relative group px-2 py-0.5 text-sm whitespace-nowrap"
+                >
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              ))}
+            </div>
+            {/* Second row of menu items */}
+            <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4">
+              {secondHalfMenuItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={() => handleLinkClick(item.path, item.anchor)}
+                  className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium relative group px-2 py-0.5 text-sm whitespace-nowrap"
                 >
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
