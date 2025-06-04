@@ -1,282 +1,250 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Plane, Train, Car, MapPin, Clock } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const GettingThere = () => {
+  const { t } = useTranslation();
+
   const airports = [
     {
-      name: 'Chennai International Airport (MAA)',
-      distance: '197 km',
-      travelTime: '4-5 hours by road',
-      description: 'Primary international gateway with numerous domestic and international flights daily.',
+      name: t('gettingThere.byAir.airports.chennai.name'),
+      distance: t('gettingThere.byAir.airports.chennai.distance'),
+      travelTime: t('gettingThere.byAir.airports.chennai.travelTime'),
+      description: t('gettingThere.byAir.airports.chennai.description'),
       icon: '✈️'
     },
     {
-      name: 'Bengaluru International Airport (BLR)',
-      distance: '209.2 km', 
-      travelTime: '4-5 hours by car',
-      description: 'Another international airport option. Scenic road journey through Hosur and Krishnagiri.',
+      name: t('gettingThere.byAir.airports.bangalore.name'),
+      distance: t('gettingThere.byAir.airports.bangalore.distance'),
+      travelTime: t('gettingThere.byAir.airports.bangalore.travelTime'),
+      description: t('gettingThere.byAir.airports.bangalore.description'),
       icon: '✈️'
     },
     {
-      name: 'Tiruchirappalli International Airport (TRZ)',
-      distance: '167 km',
-      travelTime: '3-4 hours by road',
-      description: 'Smaller airport with good domestic connectivity.',
+      name: t('gettingThere.byAir.airports.trichy.name'),
+      distance: t('gettingThere.byAir.airports.trichy.distance'),
+      travelTime: t('gettingThere.byAir.airports.trichy.travelTime'),
+      description: t('gettingThere.byAir.airports.trichy.description'),
       icon: '✈️'
     }
   ];
 
   const trainConnections = [
     {
-      from: 'Chennai',
-      description: 'Multiple daily trains connect Chennai Central and Tiruvannamalai',
-      frequency: 'Daily services'
+      from: t('gettingThere.byTrain.connections.chennai.from'),
+      description: t('gettingThere.byTrain.connections.chennai.description'),
+      frequency: t('gettingThere.byTrain.connections.chennai.frequency')
     },
     {
-      from: 'Bengaluru',
-      description: 'Direct trains on select days; alternatively change at Katpadi Junction',
-      frequency: 'Select days'
+      from: t('gettingThere.byTrain.connections.bangalore.from'),
+      description: t('gettingThere.byTrain.connections.bangalore.description'),
+      frequency: t('gettingThere.byTrain.connections.bangalore.frequency')
     },
     {
-      from: 'Vellore',
-      description: 'Local trains and buses frequently connect the two towns',
-      frequency: 'Frequent services'
+      from: t('gettingThere.byTrain.connections.vellore.from'),
+      description: t('gettingThere.byTrain.connections.vellore.description'),
+      frequency: t('gettingThere.byTrain.connections.vellore.frequency')
     }
   ];
 
   const roadRoutes = [
     {
-      from: 'Chennai',
-      route: 'Via NH48 and NH77',
-      time: '4-5 hours',
-      transport: ['Government Buses', 'Private Buses', 'Taxi/Self-drive'],
-      description: 'Regular direct buses from Chennai Central Bus Stand and Koyambedu Terminal'
+      from: t('gettingThere.byRoad.routes.chennai.from'),
+      route: t('gettingThere.byRoad.routes.chennai.route'),
+      time: t('gettingThere.byRoad.routes.chennai.time'),
+      transport: t('gettingThere.byRoad.routes.chennai.transport', { returnObjects: true }),
+      description: t('gettingThere.byRoad.routes.chennai.description')
     },
     {
-      from: 'Bengaluru', 
-      route: 'Via NH77',
-      time: '4-5 hours',
-      transport: ['TNSTC/KSRTC Buses', 'Private Volvo Buses', 'Taxi'],
-      description: 'Well-maintained road through scenic rural landscapes'
+      from: t('gettingThere.byRoad.routes.bangalore.from'),
+      route: t('gettingThere.byRoad.routes.bangalore.route'),
+      time: t('gettingThere.byRoad.routes.bangalore.time'),
+      transport: t('gettingThere.byRoad.routes.bangalore.transport', { returnObjects: true }),
+      description: t('gettingThere.byRoad.routes.bangalore.description')
     },
     {
-      from: 'Vellore',
-      route: 'Direct route',
-      time: '1-1.5 hours',
-      transport: ['Frequent buses', 'Shared taxis', 'Private vehicles'],
-      description: 'Quick journey due to proximity'
+      from: t('gettingThere.byRoad.routes.vellore.from'),
+      route: t('gettingThere.byRoad.routes.vellore.route'),
+      time: t('gettingThere.byRoad.routes.vellore.time'),
+      transport: t('gettingThere.byRoad.routes.vellore.transport', { returnObjects: true }),
+      description: t('gettingThere.byRoad.routes.vellore.description')
     }
   ];
 
   const localTransport = [
-    { type: 'Auto-Rickshaws', description: 'Most common for short distances', icon: '🛺' },
-    { type: 'Taxis and Cabs', description: 'Available on hire; hotels arrange pickups', icon: '🚗' },
-    { type: 'Walking', description: 'Many temples clustered close together', icon: '🚶‍♂️' }
+    {
+      type: t('gettingThere.localTransport.options.autoRickshaws.type'),
+      description: t('gettingThere.localTransport.options.autoRickshaws.description'),
+      icon: '🛺'
+    },
+    {
+      type: t('gettingThere.localTransport.options.taxis.type'),
+      description: t('gettingThere.localTransport.options.taxis.description'),
+      icon: '🚗'
+    },
+    {
+      type: t('gettingThere.localTransport.options.walking.type'),
+      description: t('gettingThere.localTransport.options.walking.description'),
+      icon: '🚶‍♂️'
+    }
   ];
 
-  const tips = [
-    'Best Time: October to March for pleasant weather',
-    'Festival Booking: Reserve transport and accommodation early during Karthigai Deepam',
-    'Safety: Keep valuables secure in crowded places',
-    'Health: Carry water and wear comfortable shoes for walking',
-    'Etiquette: Dress modestly and respect temple customs'
-  ];
+  const tips = t('gettingThere.travelTips.tips', { returnObjects: true });
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gray-50">
       <Navigation />
-      
+
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-            Getting to Tiruvannamalai
-          </h1>
-          <p className="text-xl max-w-4xl mx-auto leading-relaxed">
-            Tiruvannamalai is accessible via multiple transport modes, making it easy for pilgrims and travelers 
-            worldwide to visit this sacred town. Plan your journey with our comprehensive travel guide.
+          <h1 className="text-5xl font-bold mb-6">{t('gettingThere.hero.title')}</h1>
+          <p className="text-xl max-w-3xl mx-auto">
+            {t('gettingThere.hero.subtitle')}
           </p>
         </div>
       </section>
 
-      {/* By Air */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <Plane className="mx-auto mb-4 text-blue-600" size={48} />
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">By Air</h2>
-            <p className="text-lg text-gray-600">Nearest airports with good connectivity</p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* By Air Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <Plane className="inline-block mr-2 mb-1" />
+              {t('gettingThere.byAir.title')}
+            </h2>
+            <p className="text-lg text-gray-600">{t('gettingThere.byAir.subtitle')}</p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {airports.map((airport, index) => (
-              <Card key={index} className="shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <Card key={index} className="hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6">
-                  <div className="text-4xl mb-4 text-center">{airport.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                    {airport.name}
-                  </h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center">
-                      <MapPin className="text-blue-500 mr-2" size={16} />
-                      <span className="text-gray-600">{airport.distance}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="text-green-500 mr-2" size={16} />
-                      <span className="text-gray-600">{airport.travelTime}</span>
-                    </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {airport.description}
-                    </p>
+                  <div className="text-3xl mb-4">{airport.icon}</div>
+                  <h3 className="text-xl font-semibold mb-2">{airport.name}</h3>
+                  <div className="flex items-center text-gray-600 mb-2">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    <span>{airport.distance}</span>
+                  </div>
+                  <div className="flex items-center text-gray-600 mb-4">
+                    <Clock className="w-4 h-4 mr-2" />
+                    <span>{airport.travelTime}</span>
+                  </div>
+                  <p className="text-gray-600">{airport.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* By Train Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <Train className="inline-block mr-2 mb-1" />
+              {t('gettingThere.byTrain.title')}
+            </h2>
+            <p className="text-lg text-gray-600">{t('gettingThere.byTrain.subtitle')}</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {trainConnections.map((connection, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4">{connection.from}</h3>
+                  <p className="text-gray-600 mb-4">{connection.description}</p>
+                  <div className="flex items-center text-gray-600">
+                    <Clock className="w-4 h-4 mr-2" />
+                    <span>{connection.frequency}</span>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* By Train */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <Train className="mx-auto mb-4 text-green-600" size={48} />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">By Train</h2>
-            <p className="text-lg text-gray-600">Tiruvannamalai Railway Station (TNM)</p>
+          <div className="mt-8 bg-gray-100 rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-4">{t('gettingThere.byTrain.nearbyJunctions.title')}</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>{t('gettingThere.byTrain.nearbyJunctions.katpadi')}</li>
+              <li>{t('gettingThere.byTrain.nearbyJunctions.chengam')}</li>
+            </ul>
           </div>
-          
-          <Card className="shadow-xl mb-8">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                Railway Connections
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {trainConnections.map((connection, index) => (
-                  <div key={index} className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-lg">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                      From {connection.from}
-                    </h4>
-                    <p className="text-gray-600 text-sm mb-3">
-                      {connection.description}
-                    </p>
-                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">
-                      {connection.frequency}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="mt-8 bg-blue-50 p-6 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Major Nearby Junctions:</h4>
-                <ul className="text-gray-600 text-sm space-y-1">
-                  <li>• <strong>Katpadi Junction (KPD)</strong> — 35 km, major hub with extensive rail connectivity</li>
-                  <li>• <strong>Chengam Station</strong> — 30 km, convenient for nearby visits</li>
-                </ul>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+        </section>
 
-      {/* By Road */}
-      <section className="py-16 bg-gradient-to-br from-yellow-100 to-orange-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* By Road Section */}
+        <section className="mb-16">
           <div className="text-center mb-12">
-            <Car className="mx-auto mb-4 text-orange-600" size={48} />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">By Road</h2>
-            <p className="text-lg text-gray-600">Well-connected by highways and frequent buses</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <Car className="inline-block mr-2 mb-1" />
+              {t('gettingThere.byRoad.title')}
+            </h2>
+            <p className="text-lg text-gray-600">{t('gettingThere.byRoad.subtitle')}</p>
           </div>
-          
-          <div className="space-y-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {roadRoutes.map((route, index) => (
-              <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        From {route.from}
-                      </h3>
-                      <div className="space-y-2 text-sm">
-                        <p><strong>Route:</strong> {route.route}</p>
-                        <p><strong>Time:</strong> {route.time}</p>
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Transport Options:</h4>
-                      <div className="space-y-2">
-                        {route.transport.map((option, idx) => (
-                          <span key={idx} className="block bg-orange-100 text-orange-800 px-3 py-1 rounded text-xs">
-                            {option}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Description:</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        {route.description}
-                      </p>
-                    </div>
+              <Card key={index} className="hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-4">{route.from}</h3>
+                  <div className="text-gray-600 mb-2">
+                    <strong>{route.route}</strong>
+                  </div>
+                  <div className="flex items-center text-gray-600 mb-4">
+                    <Clock className="w-4 h-4 mr-2" />
+                    <span>{route.time}</span>
+                  </div>
+                  <p className="text-gray-600 mb-4">{route.description}</p>
+                  <div className="space-y-1">
+                    {route.transport.map((t, i) => (
+                      <div key={i} className="text-gray-600">• {t}</div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Local Transport */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Local Transport Options
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Local Transport Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('gettingThere.localTransport.title')}</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {localTransport.map((transport, index) => (
-              <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <span className="text-3xl mr-4">{transport.icon}</span>
-                    <h3 className="text-lg font-bold text-gray-900">
-                      {transport.type}
-                    </h3>
-                  </div>
+              <Card key={index} className="hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-6 text-center">
+                  <div className="text-3xl mb-4">{transport.icon}</div>
+                  <h3 className="text-xl font-semibold mb-2">{transport.type}</h3>
                   <p className="text-gray-600">{transport.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Travel Tips */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Travel Tips & Advice
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {tips.map((tip, index) => (
-              <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start">
-                    <div className="text-2xl mr-4">💡</div>
-                    <p className="text-gray-700">{tip}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+        {/* Travel Tips Section */}
+        <section>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('gettingThere.travelTips.title')}</h2>
           </div>
-        </div>
-      </section>
+
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <ul className="space-y-4">
+              {tips.map((tip, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-purple-600 mr-3">•</span>
+                  <span className="text-gray-600">{tip}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      </div>
 
       <Footer />
     </div>

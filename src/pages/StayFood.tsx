@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MapPin, Star, Utensils, Bed, ExternalLink } from 'lucide-react';
@@ -7,6 +7,8 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 const StayFood = () => {
+  const { t } = useTranslation();
+
   const hotels = [
     {
       name: "Athena Hotel",
@@ -97,19 +99,19 @@ const StayFood = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Stay & Food in Tiruvannamalai</h1>
+          <h1 className="text-5xl font-bold mb-6">{t('stayFood.heroTitle', 'Stay & Food in Tiruvannamalai')}</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            Discover comfortable accommodations and delicious cuisine options for your spiritual journey
+            {t('stayFood.heroSubtitle', 'Discover comfortable accommodations and delicious cuisine options for your spiritual journey')}
           </p>
         </div>
       </section>
 
       {/* Hotels Section */}
-      <section id="hotels" className="py-16">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">🏨 Places to Stay</h2>
-            <p className="text-lg text-gray-600">From budget hotels to luxury resorts</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('stayFood.hotels.title', '🏨 Places to Stay')}</h2>
+            <p className="text-lg text-gray-600">{t('stayFood.hotels.subtitle', 'From budget hotels to luxury resorts')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -119,7 +121,7 @@ const StayFood = () => {
                   <div className="flex justify-between items-start">
                     <div>
                       <CardTitle className="text-xl text-purple-600">{hotel.name}</CardTitle>
-                      <p className="text-sm text-gray-500 mb-2">{hotel.type}</p>
+                      <p className="text-sm text-gray-500 mb-2">{t(`stayFood.hotels.types.${hotel.type}`, hotel.type)}</p>
                     </div>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -128,17 +130,17 @@ const StayFood = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">{hotel.description}</p>
+                  <p className="text-gray-600 mb-4">{t(`stayFood.hotels.descriptions.${hotel.name}`, hotel.description)}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {hotel.features.map((feature, idx) => (
                       <span key={idx} className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">
-                        {feature}
+                        {t(`stayFood.hotels.features.${feature}`, feature)}
                       </span>
                     ))}
                   </div>
-                  <Button className="bg-purple-600 hover:bg-purple-700 text-white">
+                  <Button className="bg-purple-600 hover:bg-purple-700 text-white" onClick={() => window.open(hotel.link, '_blank')}>
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    View Details
+                    {t('common.viewDetails', 'View Details')}
                   </Button>
                 </CardContent>
               </Card>
@@ -146,18 +148,18 @@ const StayFood = () => {
           </div>
 
           {/* Ashrams Section */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">🕉️ Ashrams & Spiritual Stays</h3>
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">{t('stayFood.ashrams.title', '🕉️ Ashrams & Spiritual Stays')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {ashrams.map((ashram, index) => (
                 <Card key={index} className="border-orange-100 hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
                     <h4 className="text-lg font-semibold text-orange-600 mb-3">{ashram.name}</h4>
-                    <p className="text-gray-600 mb-4">{ashram.description}</p>
+                    <p className="text-gray-600 mb-4">{t(`stayFood.ashrams.descriptions.${ashram.name}`, ashram.description)}</p>
                     <div className="flex flex-wrap gap-2">
                       {ashram.features.map((feature, idx) => (
                         <span key={idx} className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">
-                          {feature}
+                          {t(`stayFood.ashrams.features.${feature}`, feature)}
                         </span>
                       ))}
                     </div>
@@ -170,11 +172,11 @@ const StayFood = () => {
       </section>
 
       {/* Restaurants Section */}
-      <section id="restaurants" className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">🍽️ Food & Cafés</h2>
-            <p className="text-lg text-gray-600">Savor authentic flavors and international cuisine</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('stayFood.restaurants.title', '🍽️ Food & Cafés')}</h2>
+            <p className="text-lg text-gray-600">{t('stayFood.restaurants.subtitle', 'Savor authentic flavors and international cuisine')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -184,7 +186,7 @@ const StayFood = () => {
                   <div className="flex justify-between items-start">
                     <div>
                       <CardTitle className="text-xl text-green-600">{restaurant.name}</CardTitle>
-                      <p className="text-sm text-gray-500 mb-2">{restaurant.type}</p>
+                      <p className="text-sm text-gray-500 mb-2">{t(`stayFood.restaurants.types.${restaurant.type}`, restaurant.type)}</p>
                     </div>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -193,17 +195,17 @@ const StayFood = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">{restaurant.description}</p>
+                  <p className="text-gray-600 mb-4">{t(`stayFood.restaurants.descriptions.${restaurant.name}`, restaurant.description)}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {restaurant.specialties.map((specialty, idx) => (
                       <span key={idx} className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">
-                        {specialty}
+                        {t(`stayFood.restaurants.specialties.${specialty}`, specialty)}
                       </span>
                     ))}
                   </div>
-                  <Button className="bg-green-600 hover:bg-green-700 text-white">
+                  <Button className="bg-green-600 hover:bg-green-700 text-white" onClick={() => window.open(restaurant.link, '_blank')}>
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    View Menu
+                    {t('common.viewMenu', 'View Menu')}
                   </Button>
                 </CardContent>
               </Card>
@@ -211,19 +213,19 @@ const StayFood = () => {
           </div>
 
           {/* Sweet Treats */}
-          <div className="mt-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">🍰 Sweet Treats & Desserts</h3>
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">{t('stayFood.sweets.title', '🍰 Sweet Treats & Desserts')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="border-pink-100 hover:shadow-lg transition-all duration-300" id="cake-heaven">
                 <CardContent className="p-6 text-center">
-                  <h4 className="text-lg font-semibold text-pink-600 mb-3">Cake Heaven</h4>
-                  <p className="text-gray-600">Popular bakery with wide range of cakes and desserts, perfect for sweet lovers.</p>
+                  <h4 className="text-lg font-semibold text-pink-600 mb-3">{t('stayFood.sweets.cakeHeaven.title', 'Cake Heaven')}</h4>
+                  <p className="text-gray-600">{t('stayFood.sweets.cakeHeaven.description', 'Popular bakery with wide range of cakes and desserts, perfect for sweet lovers.')}</p>
                 </CardContent>
               </Card>
               <Card className="border-pink-100 hover:shadow-lg transition-all duration-300" id="meenakshi-bhavan">
                 <CardContent className="p-6 text-center">
-                  <h4 className="text-lg font-semibold text-pink-600 mb-3">Meenakshi Bhavan</h4>
-                  <p className="text-gray-600">Renowned for traditional Mysore pak, a must-try South Indian sweet delight.</p>
+                  <h4 className="text-lg font-semibold text-pink-600 mb-3">{t('stayFood.sweets.meenakshiBhavan.title', 'Meenakshi Bhavan')}</h4>
+                  <p className="text-gray-600">{t('stayFood.sweets.meenakshiBhavan.description', 'Renowned for traditional Mysore pak, a must-try South Indian sweet delight.')}</p>
                 </CardContent>
               </Card>
             </div>

@@ -7,7 +7,9 @@
         "success": "Success",
         "viewMap": "View on Map",
         "directions": "Get Directions",
-        "learnMore": "Learn More"
+        "learnMore": "Learn More",
+        "viewDetails": "View Details",
+        "viewMenu": "View Menu"
     },
     "navigation": {
         "home": "Home",
@@ -310,13 +312,32 @@
             "name": "Your Name",
             "email": "Email Address",
             "message": "Your Message",
-            "submit": "Send Message"
+            "submit": "Send Message",
+            "sending": "Sending...",
+            "placeholder": {
+                "name": "Enter your name",
+                "email": "Enter your email",
+                "message": "How can we help you?"
+            }
         },
-        "info": {
-            "title": "Contact Information",
-            "address": "Address",
+        "quickContact": {
+            "title": "Quick Contact",
+            "whatsapp": "Chat on WhatsApp",
             "phone": "Phone",
             "email": "Email"
+        },
+        "responseTime": {
+            "title": "Response Time",
+            "description": "We typically respond within 24 hours. For immediate assistance, please use WhatsApp.",
+            "availability": "Available for WhatsApp chat: 9 AM - 6 PM IST"
+        },
+        "success": {
+            "title": "Message Sent Successfully!",
+            "description": "We'll get back to you as soon as possible."
+        },
+        "error": {
+            "title": "Error Sending Message",
+            "description": "Please try again later or use alternative contact methods."
         }
     },
     "linghams": {
@@ -496,66 +517,371 @@
             "Participate in communal activities"
         ]
     },
-    "stayFood":{
-        "heroTitle": "Stay & Food in Tiruvannamalai",
-        "heroSubtitle": "Discover comfortable accommodations and delicious cuisine options for your spiritual journey",
-      
-        "placesToStayTitle": "🏨 Places to Stay",
-        "placesToStaySubtitle": "From budget hotels to luxury resorts",
-      
-        "ashramTitle": "🕉️ Ashrams & Spiritual Stays",
-      
-        "restaurantsTitle": "🍽️ Food & Cafés",
-        "restaurantsSubtitle": "Savor authentic flavors and international cuisine",
-      
-        "dessertsTitle": "🍰 Sweet Treats & Desserts",
-      
-        "exampleHotels": [
-          {
-            "name": "Athena Hotel",
-            "type": "4-star hotel",
-            "description": "Just 1 km from Ramana Ashram, featuring spacious rooms, rooftop pool, spa services, and vegetarian restaurant."
-          },
-          {
-            "name": "Hotel Himalayaa",
-            "type": "3.5-star hotel",
-            "description": "Modern rooms with free breakfast, Wi-Fi, and parking. Popular for excellent service and comfort."
-          }
+    "stayFood": {
+        "title": "Stay & Food in Tiruvannamalai",
+        "subtitle": "Discover comfortable accommodations and delicious cuisine options for your spiritual journey",
+        "hotels": {
+            "title": "🏨 Places to Stay",
+            "subtitle": "From budget hotels to luxury resorts",
+            "types": {
+                "4-star hotel": "4-star hotel",
+                "3.5-star hotel": "3.5-star hotel",
+                "Luxury resort": "Luxury resort",
+                "Budget hotel": "Budget hotel"
+            },
+            "descriptions": {
+                "Athena Hotel": "Just 1 km from Ramana Ashram, featuring spacious rooms, rooftop pool, spa services, and vegetarian restaurant.",
+                "Hotel Himalayaa": "Modern rooms with free breakfast, Wi-Fi, and parking. Popular for excellent service and comfort.",
+                "Sparsa Resort Thiruvannamalai": "Luxury resort with serene views of Arunachala Hill, spa, outdoor pool, and yoga sessions.",
+                "Hotel Ramakrishna": "Budget-friendly hotel near town center with basic amenities and easy access to attractions."
+            },
+            "features": {
+                "Rooftop Pool": "Rooftop Pool",
+                "Spa Services": "Spa Services",
+                "Vegetarian Restaurant": "Vegetarian Restaurant",
+                "Free WiFi": "Free WiFi",
+                "Free Breakfast": "Free Breakfast",
+                "Parking": "Parking",
+                "Modern Rooms": "Modern Rooms",
+                "Arunachala Views": "Arunachala Views",
+                "Outdoor Pool": "Outdoor Pool",
+                "Yoga Sessions": "Yoga Sessions",
+                "Town Center": "Town Center",
+                "Budget Friendly": "Budget Friendly",
+                "Basic Amenities": "Basic Amenities",
+                "Easy Access": "Easy Access"
+            }
+        },
+        "restaurants": {
+            "title": "🍽️ Food & Cafés",
+            "subtitle": "Savor authentic flavors and international cuisine",
+            "types": {
+                "Multi-cuisine": "Multi-cuisine",
+                "Café": "Café",
+                "Rooftop café": "Rooftop café",
+                "Local restaurant": "Local restaurant"
+            },
+            "descriptions": {
+                "Sri Abirami Hotel": "Popular local spot for South Indian, North Indian dishes, and flavorful biryanis. Budget-friendly with quick service.",
+                "Shanti Café": "Known for freshly brewed coffee, croissants from Pondicherry, and peaceful ambiance with lovely views.",
+                "The Dreaming Tree": "Rooftop café with fusion cuisines including raw, vegan, and gluten-free options. Perfect for relaxing.",
+                "Bismillah SS Biryani": "Budget-friendly gem serving excellent chicken biryani, crispy parottas, and fried rice."
+            },
+            "specialties": {
+                "Biryani": "Biryani",
+                "South Indian": "South Indian",
+                "Chinese": "Chinese",
+                "North Indian": "North Indian",
+                "Coffee": "Coffee",
+                "Croissants": "Croissants",
+                "Sandwiches": "Sandwiches",
+                "French Pastries": "French Pastries",
+                "Vegan Food": "Vegan Food",
+                "Raw Food": "Raw Food",
+                "Gluten-free": "Gluten-free",
+                "Global Cuisine": "Global Cuisine",
+                "Chicken Biryani": "Chicken Biryani",
+                "Parottas": "Parottas",
+                "Fried Rice": "Fried Rice",
+                "Tandoori": "Tandoori"
+            }
+        },
+        "ashrams": {
+            "title": "🕉️ Ashrams & Spiritual Stays",
+            "descriptions": {
+                "Sri Ramana Ashram": "The spiritual home of Bhagavan Sri Ramana Maharshi, offering tranquil environment for meditation and self-inquiry.",
+                "Yogi Ram Surat Kumar Ashram": "Known for calm atmosphere, daily poojas, and spiritual activities - ideal for peace and healing."
+            },
+            "features": {
+                "Meditation": "Meditation",
+                "Spiritual Study": "Spiritual Study",
+                "Community Meals": "Community Meals",
+                "Library": "Library",
+                "Daily Poojas": "Daily Poojas",
+                "Healing": "Healing",
+                "Spiritual Activities": "Spiritual Activities",
+                "Peaceful Environment": "Peaceful Environment"
+            }
+        },
+        "sweets": {
+            "title": "🍰 Sweet Treats & Desserts",
+            "cakeHeaven": {
+                "title": "Cake Heaven",
+                "description": "Popular bakery with wide range of cakes and desserts, perfect for sweet lovers."
+            },
+            "meenakshiBhavan": {
+                "title": "Meenakshi Bhavan",
+                "description": "Renowned for traditional Mysore pak, a must-try South Indian sweet delight."
+            }
+        }
+    },
+    "spiritualTourism": {
+        "pageTitle": "Spiritual Tourism in Tiruvannamalai",
+        "pageDescription": "A world-renowned spiritual destination that has drawn seekers, pilgrims, and tourists for centuries. Often called the 'Spiritual Heart of South India,' this sacred town offers profound religious significance, ancient temples, serene ashrams, and deeply rooted traditions.",
+        "whyTitle": "Why Tiruvannamalai is a Spiritual Haven",
+        "why": [
+            {
+                "title": "Arunachala Hill – The Spiritual Axis",
+                "description": "According to Hindu mythology, Arunachala is the embodiment of Lord Shiva in fire form, one of the five sacred elements.",
+                "icon": "⛰️"
+            },
+            {
+                "title": "Ancient Temples and Rituals",
+                "description": "The Arunachaleswarar Temple, built between 9th-10th centuries, features colossal gopurams and sacred tanks.",
+                "icon": "🛕"
+            },
+            {
+                "title": "Home of Saint Ramana Maharshi",
+                "description": "Linked with one of the 20th century's greatest spiritual masters and his teachings on self-inquiry.",
+                "icon": "👤"
+            },
+            {
+                "title": "Vibrant Spiritual Festivals",
+                "description": "Festivals like Karthigai Deepam feature hilltop fire lighting, night-long vigils, and devotional music.",
+                "icon": "🎉"
+            }
         ],
-      
-        "exampleAshrams": [
-          {
-            "name": "Sri Ramana Ashram",
-            "description": "The spiritual home of Bhagavan Sri Ramana Maharshi, offering tranquil environment for meditation and self-inquiry."
-          },
-          {
-            "name": "Yogi Ram Surat Kumar Ashram",
-            "description": "Known for calm atmosphere, daily poojas, and spiritual activities - ideal for peace and healing."
-          }
-        ],
-      
-        "exampleRestaurants": [
-          {
-            "name": "Sri Abirami Hotel",
-            "type": "Multi-cuisine",
-            "description": "Popular local spot for South Indian, North Indian dishes, and flavorful biryanis. Budget-friendly with quick service."
-          },
-          {
-            "name": "Shanti Café",
-            "type": "Café",
-            "description": "Known for freshly brewed coffee, croissants from Pondicherry, and peaceful ambiance with lovely views."
-          }
-        ],
-      
-        "desserts": [
-          {
-            "name": "Cake Heaven",
-            "description": "Popular bakery with wide range of cakes and desserts, perfect for sweet lovers."
-          },
-          {
-            "name": "Meenakshi Bhavan",
-            "description": "Renowned for traditional Mysore pak, a must-try South Indian sweet delight."
-          }
-        ]
-      }
-    }      
+        "practicesTitle": "Spiritual Practices and Experiences",
+        "practices": {
+            "girivalam": {
+                "title": "Girivalam – The Sacred Circumambulation",
+                "description": "Every full moon night, thousands gather to walk the 14-km path around Arunachala Hill.",
+                "details": "This meditative pilgrimage purifies the mind and body. Devotees chant mantras, perform pujas at shrines, and experience deep connection to the divine."
+            },
+            "meditation": {
+                "title": "Meditation and Self-Inquiry",
+                "description": "The teachings of Ramana Maharshi emphasize self-inquiry—asking 'Who am I?'",
+                "details": "Join guided meditation sessions or practice silent meditation within the peaceful environs of the ashram to dissolve ego and realize true nature."
+            },
+            "templeRituals": {
+                "title": "Temple Rituals Participation",
+                "description": "Daily aarti, abhishekam, and archana at Arunachaleswarar Temple.",
+                "details": "These rituals help deepen devotion and create a sacred ambiance. Experience direct engagement with spiritual traditions."
+            },
+            "yoga": {
+                "title": "Yoga and Holistic Healing",
+                "description": "Several centers offer yoga classes, pranayama, Ayurveda treatments, and Reiki healing.",
+                "details": "These holistic practices complement spiritual growth by promoting physical health and emotional balance."
+            }
+        },
+        "planning": {
+            "title": "Planning Your Spiritual Visit",
+            "bestTimeTitle": "Best Time to Visit",
+            "bestTimeDesc": "October to March offers pleasant weather and coincides with major festivals. Full moon days and festival periods are especially auspicious.",
+            "bestTimeNote": "Festival periods are busier but more spiritually vibrant.",
+            "accommodationTitle": "Accommodation Options",
+            "accommodationDesc": "Numerous ashrams offer simple lodging for spiritual seekers. Hotels and guesthouses nearby cater to varying budgets.",
+            "accommodationTip": "Ashram stays provide authentic spiritual atmosphere.",
+            "etiquetteTitle": "Spiritual Etiquette",
+            "etiquetteList": [
+                "Dress modestly and respectfully",
+                "Maintain silence in meditation areas",
+                "Remove footwear before entering temples",
+                "Respect temple customs and traditions"
+            ],
+            "guidesTitle": "Local Guides",
+            "guidesDesc": "Hiring knowledgeable local guides can enrich your experience, providing insights into history, symbolism, and spiritual significance of the sites."
+        }
+    },
+    "gettingThere": {
+        "pageTitle": "Getting to Tiruvannamalai",
+        "pageSubtitle": "Tiruvannamalai is accessible via multiple transport modes, making it easy for pilgrims and travelers worldwide to visit this sacred town. Plan your journey with our comprehensive travel guide.",
+        "hero": {
+            "title": "Getting to Tiruvannamalai",
+            "subtitle": "Tiruvannamalai is accessible via multiple transport modes, making it easy for pilgrims and travelers worldwide to visit this sacred town. Plan your journey with our comprehensive travel guide."
+        },
+        "byAir": {
+            "title": "By Air",
+            "subtitle": "Nearest airports with good connectivity",
+            "airports": {
+                "chennai": {
+                    "name": "Chennai International Airport (MAA)",
+                    "distance": "197 km",
+                    "travelTime": "4-5 hours by road",
+                    "description": "Primary international gateway with numerous domestic and international flights daily."
+                },
+                "bangalore": {
+                    "name": "Bengaluru International Airport (BLR)",
+                    "distance": "209.2 km",
+                    "travelTime": "4-5 hours by car",
+                    "description": "Another international airport option. Scenic road journey through Hosur and Krishnagiri."
+                },
+                "trichy": {
+                    "name": "Tiruchirappalli International Airport (TRZ)",
+                    "distance": "167 km",
+                    "travelTime": "3-4 hours by road",
+                    "description": "Smaller airport with good domestic connectivity."
+                }
+            }
+        },
+        "byTrain": {
+            "title": "By Train",
+            "subtitle": "Tiruvannamalai Railway Station (TNM)",
+            "sectionTitle": "Railway Connections",
+            "connections": {
+                "chennai": {
+                    "from": "Chennai",
+                    "description": "Multiple daily trains connect Chennai Central and Tiruvannamalai",
+                    "frequency": "Daily services"
+                },
+                "bangalore": {
+                    "from": "Bengaluru",
+                    "description": "Direct trains on select days; alternatively change at Katpadi Junction",
+                    "frequency": "Select days"
+                },
+                "vellore": {
+                    "from": "Vellore",
+                    "description": "Local trains and buses frequently connect the two towns",
+                    "frequency": "Frequent services"
+                }
+            },
+            "nearbyJunctions": {
+                "title": "Major Nearby Junctions:",
+                "katpadi": "Katpadi Junction (KPD) — 35 km, major hub with extensive rail connectivity",
+                "chengam": "Chengam Station — 30 km, convenient for nearby visits"
+            }
+        },
+        "byRoad": {
+            "title": "By Road",
+            "subtitle": "Well-connected by highways and frequent buses",
+            "routes": {
+                "chennai": {
+                    "from": "Chennai",
+                    "route": "Via NH48 and NH77",
+                    "time": "4-5 hours",
+                    "transport": [
+                        "Government Buses",
+                        "Private Buses",
+                        "Taxi/Self-drive"
+                    ],
+                    "description": "Regular direct buses from Chennai Central Bus Stand and Koyambedu Terminal"
+                },
+                "bangalore": {
+                    "from": "Bengaluru",
+                    "route": "Via NH77",
+                    "time": "4-5 hours",
+                    "transport": [
+                        "TNSTC/KSRTC Buses",
+                        "Private Volvo Buses",
+                        "Taxi"
+                    ],
+                    "description": "Well-maintained road through scenic rural landscapes"
+                },
+                "vellore": {
+                    "from": "Vellore",
+                    "route": "Direct route",
+                    "time": "1-1.5 hours",
+                    "transport": [
+                        "Frequent buses",
+                        "Shared taxis",
+                        "Private vehicles"
+                    ],
+                    "description": "Quick journey due to proximity"
+                }
+            }
+        },
+        "localTransport": {
+            "title": "Local Transport Options",
+            "options": {
+                "autoRickshaws": {
+                    "type": "Auto-Rickshaws",
+                    "description": "Most common for short distances"
+                },
+                "taxis": {
+                    "type": "Taxis and Cabs",
+                    "description": "Available on hire; hotels arrange pickups"
+                },
+                "walking": {
+                    "type": "Walking",
+                    "description": "Many temples clustered close together"
+                }
+            }
+        },
+        "travelTips": {
+            "title": "Travel Tips & Advice",
+            "tips": [
+                "Best Time: October to March for pleasant weather",
+                "Festival Booking: Reserve transport and accommodation early during Karthigai Deepam",
+                "Safety: Keep valuables secure in crowded places",
+                "Health: Carry water and wear comfortable shoes for walking",
+                "Etiquette: Dress modestly and respect temple customs"
+            ]
+        }
+    },
+    "blog": {
+        "hero": {
+            "title": "Blog & Stories",
+            "subtitle": "Welcome to your gateway to vibrant experiences, timeless wisdom, and inspiring journeys of Tiruvannamalai. Discover captivating stories from pilgrims, travelers, and spiritual seekers who have walked these sacred paths."
+        },
+        "featuredStories": {
+            "title": "Featured Stories",
+            "readMore": "Read More",
+            "stories": {
+                "spiritualJourney": {
+                    "title": "My Spiritual Journey to Arunachala Hill",
+                    "excerpt": "Discover one devotee's transformative experience during the Girivalam walk around Arunachala Hill on a full moon night.",
+                    "author": "Priya Sharma",
+                    "category": "Spiritual Experience"
+                },
+                "ramanaReflections": {
+                    "title": "Meeting Ramana Maharshi: Reflections from the Ashram",
+                    "excerpt": "An inspiring account of a visitor's time at the Ramana Maharshi Ashram, exploring teachings on self-inquiry and silent meditation.",
+                    "author": "David Wilson",
+                    "category": "Ashram Life"
+                },
+                "karthigaiDeepam": {
+                    "title": "The Karthigai Deepam Festival: A Night of Lights and Devotion",
+                    "excerpt": "Experience the magic of Karthigai Deepam through a vibrant narrative of the festival's celebrations and the sacred fire atop Arunachala.",
+                    "author": "Lakshmi Devi",
+                    "category": "Festivals"
+                }
+            }
+        },
+        "travelGuides": {
+            "title": "Travel Tips & Guides",
+            "guides": {
+                "bestTime": {
+                    "title": "Best Time to Visit Tiruvannamalai",
+                    "description": "Understand seasonal variations, festivals, and weather to plan your trip perfectly."
+                },
+                "packing": {
+                    "title": "What to Pack for Your Pilgrimage",
+                    "description": "A handy checklist of essentials for comfort, convenience, and spiritual readiness."
+                },
+                "navigation": {
+                    "title": "Navigating Tiruvannamalai: A Local's Guide",
+                    "description": "Discover hidden gems, local eateries, and tranquil spots away from usual tourist paths."
+                }
+            }
+        },
+        "spiritualInsights": {
+            "title": "Spiritual Insights",
+            "insights": {
+                "temple": {
+                    "title": "Understanding the Significance of Arunachaleswarar Temple",
+                    "description": "Dive into the mythology, symbolism, and unique rituals that make this temple profound."
+                },
+                "philosophy": {
+                    "title": "The Philosophy of Ramana Maharshi",
+                    "description": "Explore key teachings and how they continue to inspire seekers worldwide."
+                },
+                "meditation": {
+                    "title": "Meditation Practices in Tiruvannamalai",
+                    "description": "Learn about different meditation techniques taught in local ashrams and centers."
+                }
+            }
+        },
+        "community": {
+            "submitStory": {
+                "title": "Submit Your Story",
+                "description": "Have a memorable experience from Tiruvannamalai? Share your journey, reflections, and photos to become part of our growing community.",
+                "button": "Share Your Experience"
+            },
+            "voices": {
+                "title": "Community Voices",
+                "description": "Read real-life experiences from devotees who found solace, healing, and awakening. Connect with fellow spiritual travelers.",
+                "button": "Join Community"
+            }
+        }
+    }
+}
