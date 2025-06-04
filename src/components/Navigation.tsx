@@ -42,7 +42,7 @@ const Navigation = () => {
   return (
     <nav className="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-purple-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-lg">T</span>
@@ -54,18 +54,20 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-6">
-            {menuItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={() => handleLinkClick(item.path, item.anchor)}
-                className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium relative group"
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            ))}
+          <div className="hidden lg:flex items-center">
+            <div className="flex items-center space-x-6 mr-6">
+              {menuItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={() => handleLinkClick(item.path, item.anchor)}
+                  className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium relative group whitespace-nowrap"
+                >
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              ))}
+            </div>
             <div className="border-l pl-6 border-gray-200">
               <LanguageSwitcher />
             </div>
@@ -73,11 +75,13 @@ const Navigation = () => {
 
           {/* Mobile Menu Button and Language Switcher */}
           <div className="lg:hidden flex items-center gap-4">
-            <LanguageSwitcher />
+            <div className="flex-shrink-0">
+              <LanguageSwitcher />
+            </div>
             <Button
               variant="ghost"
               size="icon"
-              className="text-purple-600 hover:bg-purple-50"
+              className="text-purple-600 hover:bg-purple-50 flex-shrink-0"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
