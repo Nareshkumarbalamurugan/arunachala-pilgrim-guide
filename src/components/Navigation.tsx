@@ -40,64 +40,62 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-purple-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-purple-100 w-full">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">T</span>
+          {/* Logo and Title - More responsive */}
+          <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-base sm:text-lg">T</span>
             </div>
-            <div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Tiruvannamalai Guide</h1>
+            <div className="hidden sm:block">
+              <h1 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Tiruvannamalai Guide</h1>
               <p className="text-xs text-purple-600">by BKND Groups</p>
             </div>
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center">
-            <div className="flex items-center space-x-6 mr-6">
+          {/* Desktop Menu - Scrollable on smaller screens */}
+          <div className="hidden lg:flex items-center flex-grow justify-center px-4">
+            <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 overflow-x-auto scrollbar-hide">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
                   onClick={() => handleLinkClick(item.path, item.anchor)}
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium relative group whitespace-nowrap"
+                  className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium relative group px-2 py-1 text-sm md:text-base whitespace-nowrap"
                 >
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
             </div>
-            <div className="border-l pl-6 border-gray-200">
-              <LanguageSwitcher />
-            </div>
           </div>
 
-          {/* Mobile Menu Button and Language Switcher */}
-          <div className="lg:hidden flex items-center gap-4">
+          {/* Language Switcher and Mobile Menu Button */}
+          <div className="flex items-center gap-2 sm:gap-4">
             <div className="flex-shrink-0">
               <LanguageSwitcher />
             </div>
             <Button
               variant="ghost"
               size="icon"
-              className="text-purple-600 hover:bg-purple-50 flex-shrink-0"
+              className="lg:hidden text-purple-600 hover:bg-purple-50 flex-shrink-0"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </Button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Full width and better spacing */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-purple-100">
-            <div className="flex flex-col space-y-2">
+          <div className="lg:hidden py-2 border-t border-purple-100">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[70vh] overflow-y-auto">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium px-4 py-2 rounded-md hover:bg-purple-50"
+                  className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium px-3 py-2 rounded-md hover:bg-purple-50 text-sm"
                   onClick={() => handleLinkClick(item.path, item.anchor)}
                 >
                   {item.name}
