@@ -1,0 +1,887 @@
+{
+    "common": {
+        "readMore": "Read More",
+        "close": "Close",
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success",
+        "viewMap": "View on Map",
+        "directions": "Get Directions",
+        "learnMore": "Learn More",
+        "viewDetails": "View Details",
+        "viewMenu": "View Menu"
+    },
+    "navigation": {
+        "home": "Home",
+        "temples": "Temples",
+        "linghams": "Linghams",
+        "girivalam": "Girivalam",
+        "festivals": "Festivals",
+        "stayFood": "Stay & Food",
+        "spiritualTourism": "Spiritual Tourism",
+        "gettingThere": "Getting There",
+        "blog": "Blog",
+        "contact": "Contact"
+    },
+    "home": {
+        "hero": {
+            "badge": "✨ Sacred Spiritual Destination",
+            "title": "Discover the Sacred Heart of Tamil Nadu",
+            "subtitle": "Your Complete Guide to Temples, Girivalam, Stays & Spiritual Journeys in Tiruvannamalai",
+            "stats": {
+                "temples": {
+                    "value": "50+",
+                    "label": "Sacred Temples"
+                },
+                "girivalam": {
+                    "value": "14km",
+                    "label": "Girivalam Path"
+                },
+                "history": {
+                    "value": "1000+",
+                    "label": "Years History"
+                },
+                "sacred": {
+                    "value": "365",
+                    "label": "Days Sacred"
+                }
+            },
+            "cta": {
+                "primary": "Start Your Journey",
+                "secondary": "Plan Your Trip"
+            },
+            "features": {
+                "temples": {
+                    "title": "Sacred Temples",
+                    "description": "Explore ancient spiritual landmarks"
+                },
+                "festivals": {
+                    "title": "Festivals & Events",
+                    "description": "Join vibrant spiritual celebrations"
+                },
+                "community": {
+                    "title": "Spiritual Community",
+                    "description": "Connect with fellow seekers"
+                }
+            }
+        },
+        "quickAccess": {
+            "title": "Quick Access",
+            "subtitle": "Start planning your spiritual journey",
+            "links": {
+                "templesMap": {
+                    "title": "Temples Map",
+                    "description": "Discover ancient temples",
+                    "icon": "🛕"
+                },
+                "girivalam": {
+                    "title": "Girivalam Path",
+                    "description": "Sacred hill walk guide",
+                    "icon": "🚶"
+                },
+                "stayFood": {
+                    "title": "Places to Stay",
+                    "description": "Find accommodation",
+                    "icon": "🏨"
+                },
+                "festivals": {
+                    "title": "Upcoming Festivals",
+                    "description": "Plan your visit",
+                    "icon": "📅"
+                }
+            }
+        },
+        "features": {
+            "title": "Explore Sacred Places",
+            "description": "Discover ancient temples, sacred sites, and spiritual destinations"
+        },
+        "whyVisit": {
+            "title": "Why Visit Tiruvannamalai?",
+            "subtitle": "Experience the spiritual energy and divine presence of this sacred town",
+            "reasons": {
+                "arunachala": {
+                    "title": "Home of Arunachala",
+                    "description": "The Eternal Fire Lingam of Shiva",
+                    "icon": "✨"
+                },
+                "saints": {
+                    "title": "Saints & Sages",
+                    "description": "Birthplace of Sri Ramana Maharshi",
+                    "icon": "🕉️"
+                },
+                "girivalam": {
+                    "title": "Sacred Girivalam",
+                    "description": "Monthly Full Moon pilgrimage walk",
+                    "icon": "🌕"
+                },
+                "temples": {
+                    "title": "Ancient Temples",
+                    "description": "Explore spiritual landmarks & ashrams",
+                    "icon": "🛕"
+                },
+                "retreats": {
+                    "title": "Peaceful Retreats",
+                    "description": "Meditation, yoga & self-discovery",
+                    "icon": "🧘"
+                }
+            }
+        },
+        "featuredSections": {
+            "title": "Featured Sections",
+            "subtitle": "Everything you need to plan your perfect spiritual journey",
+            "sections": {
+                "temples": {
+                    "title": "Sacred Temples of Tiruvannamalai",
+                    "description": "Discover the history, significance, and visiting details of Arunachaleswarar Temple, Ramana Maharshi Ashram, and other spiritual landmarks.",
+                    "buttonText": "Explore Temples →"
+                },
+                "girivalam": {
+                    "title": "Girivalam: The Sacred Hill Walk",
+                    "description": "Walk the 14 km circumambulation path around Arunachala Hill. Learn about the eight sacred lingams, best timings, and essential tips.",
+                    "buttonText": "Begin Girivalam →"
+                },
+                "festivals": {
+                    "title": "Festivals & Events",
+                    "description": "Join the vibrant celebrations of Karthigai Deepam, Mahashivaratri, and monthly full moon Girivalam.",
+                    "buttonText": "View Festival Calendar →"
+                },
+                "stayFood": {
+                    "title": "Stay & Food",
+                    "description": "Find comfortable stays from ashrams to guesthouses and savor local vegetarian cuisine and organic cafes.",
+                    "buttonText": "Find Your Stay & Food →"
+                }
+            }
+        },
+        "newsletter": {
+            "title": "Get monthly updates on festivals & spiritual events",
+            "subtitle": "Stay connected with Tiruvannamalai's spiritual calendar",
+            "emailPlaceholder": "Enter your email",
+            "subscribeButton": "Subscribe",
+            "successTitle": "Thank you for subscribing!",
+            "successMessage": "You'll receive updates on festivals and spiritual events."
+        }
+    },
+    "temples": {
+        "pageTitle": "Sacred Temples of Tiruvannamalai",
+        "pageSubtitle": "Tiruvannamalai is renowned for its rich spiritual heritage and sacred temples dedicated primarily to Lord Shiva. These ancient temples are centers of devotion, history, and architecture that draw pilgrims and visitors from all over the world.",
+        "mainTemples": {
+            "title": "Main Temples",
+            "arunachaleswarar": {
+                "name": "Arunachaleswarar Temple",
+                "description": "One of the most significant Shiva temples in India, representing the eternal flame. Magnificent example of Dravidian architecture.",
+                "highlights": [
+                    "10-day Karthigai Deepam festival",
+                    "Massive temple complex with towering gopurams",
+                    "Sacred pond and holy tanks"
+                ],
+                "timings": "6 AM – 9 PM daily",
+                "location": "Center of Tiruvannamalai town"
+            },
+            "ramanaMaharshi": {
+                "name": "Sri Ramana Maharshi Ashram",
+                "description": "The peaceful ashram of the revered sage Sri Ramana Maharshi, celebrated worldwide for his teachings on self-inquiry and meditation.",
+                "highlights": [
+                    "Meditation halls and quiet gardens",
+                    "Ramana Maharshi's samadhi",
+                    "Library and bookshop with spiritual texts"
+                ],
+                "timings": "6 AM – 8 PM",
+                "location": "South of the temple town"
+            },
+            "virupaksha": {
+                "name": "Virupaksha Cave",
+                "description": "A historical cave where Sri Ramana Maharshi lived as a young ascetic. Sacred spot offering glimpse into spiritual journey.",
+                "highlights": [
+                    "Natural rock formations",
+                    "Peaceful surroundings",
+                    "Small shrine nearby"
+                ],
+                "timings": "Best visited during daytime",
+                "location": "Near the base of Arunachala hill"
+            }
+        },
+        "otherTemples": {
+            "title": "Other Notable Temples & Shrines",
+            "temples": {
+                "agniVinayagar": "Agni Vinayagar Temple",
+                "valampoori": "Valampoori Vinayagar Temple",
+                "durvasar": "Durvasar Maha Muni Temple",
+                "nandhi": "Nandhi Muga Darshan",
+                "nerAnnamalaiyar": "Ner Annamalaiyar Temple",
+                "suriyaLingam": "Suriya Lingam",
+                "adiAnnamalai": "Adi Annamalai Temple",
+                "mookupodi": "Mookupodi Siddar Shrine",
+                "chandraLingam": "Chandra Lingam",
+                "panchamuga": "Panchamuga Darshan Shrine",
+                "subramaniya": "Subramaniya Swamy Temple",
+                "arunagiri": "Arunagiri Nadhar Temple"
+            }
+        },
+        "visitorTips": {
+            "title": "Visitor Tips & Etiquette",
+            "etiquette": {
+                "title": "Temple Etiquette",
+                "tips": [
+                    "Dress modestly and respectfully",
+                    "Remove footwear before entering",
+                    "Photography may be restricted",
+                    "Participate with reverence"
+                ]
+            },
+            "practical": {
+                "title": "Practical Tips",
+                "tips": [
+                    "Carry water and stay hydrated",
+                    "Visit early morning for peace",
+                    "Plan for multiple temple visits",
+                    "Respect meditation areas"
+                ]
+            }
+        }
+    },
+    "girivalam": {
+        "pageTitle": "Girivalam: The Sacred Hill Walk",
+        "pageSubtitle": "Girivalam, also known as Arunachala Pradakshina, is the revered spiritual practice of circumambulating the sacred Arunachala Hill. This 14-kilometer journey brings spiritual purification, blessings, and liberation.",
+        "significance": {
+            "title": "Significance of Girivalam",
+            "description1": "Arunachala Hill itself is considered a manifestation of Lord Shiva in the form of fire (Agni), one of the five elemental forms (Pancha Bhoota Stalas). Performing Girivalam is not just a physical journey but a deeply spiritual pilgrimage symbolizing surrender, devotion, and union with the divine.",
+            "description2": "The circumambulation path is dotted with temples, shrines, sacred spots, and natural beauty, allowing pilgrims to immerse themselves in the divine presence and experience spiritual awakening."
+        },
+        "whenToGo": {
+            "title": "When to Do Girivalam",
+            "fullMoon": {
+                "title": "Full Moon Night",
+                "description": "The most auspicious time when thousands of devotees gather to walk the path by moonlight, creating a magical and serene atmosphere."
+            },
+            "festivals": {
+                "title": "Festival Days",
+                "description": "Special festivals such as Karthigai Deepam and Maha Shivaratri also see large numbers of pilgrims performing this sacred walk."
+            }
+        },
+        "route": {
+            "title": "The Girivalam Route",
+            "distance": "14 Kilometers",
+            "description": "The path encircles Arunachala Hill and is well-marked and accessible, featuring important temples, sacred spots, shrines dedicated to various deities, and natural features imbued with spiritual significance.",
+            "keyStops": {
+                "title": "Key Stops Include",
+                "items": [
+                    "Arunachaleswarar Temple",
+                    "Seshadri Swamigal Ashram",
+                    "Various Sacred Shrines"
+                ]
+            },
+            "sacredFeatures": {
+                "title": "Sacred Features",
+                "items": [
+                    "Holy streams and trees",
+                    "Eight sacred lingams",
+                    "Natural rock formations"
+                ]
+            }
+        },
+        "tips": {
+            "title": "Tips for Girivalam",
+            "items": [
+                "Start Early: Begin before moonrise for serene light and cooler temperatures",
+                "Wear Comfortable Footwear: The path is mostly flat but uneven in parts",
+                "Carry Water and Light Snacks: Essential for the 14 km journey",
+                "Respect the Environment: Keep the path clean and maintain silence",
+                "Dress Modestly: Traditional clothing is recommended for sanctity"
+            ]
+        },
+        "benefits": {
+            "title": "Spiritual Benefits",
+            "subtitle": "Transformative Experience",
+            "items": [
+                "Dissolves karma and negative energies",
+                "Promotes physical and mental well-being",
+                "Deepens connection to Lord Shiva",
+                "Brings feelings of peace and renewal",
+                "Enhances spiritual insight and awakening"
+            ],
+            "experience": {
+                "title": "Experience Report",
+                "description": "Many devotees report feelings of peace, renewal, and spiritual insight after completing the circumambulation. The energy of Arunachala is truly transformative."
+            }
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "Get in touch with us for any queries",
+        "form": {
+            "name": "Your Name",
+            "email": "Email Address",
+            "message": "Your Message",
+            "submit": "Send Message",
+            "sending": "Sending...",
+            "placeholder": {
+                "name": "Enter your name",
+                "email": "Enter your email",
+                "message": "How can we help you?"
+            }
+        },
+        "quickContact": {
+            "title": "Quick Contact",
+            "whatsapp": "Chat on WhatsApp",
+            "phone": "Phone",
+            "email": "Email"
+        },
+        "responseTime": {
+            "title": "Response Time",
+            "description": "We typically respond within 24 hours. For immediate assistance, please use WhatsApp.",
+            "availability": "Available for WhatsApp chat: 9 AM - 6 PM IST"
+        },
+        "success": {
+            "title": "Message Sent Successfully!",
+            "description": "We'll get back to you as soon as possible."
+        },
+        "error": {
+            "title": "Error Sending Message",
+            "description": "Please try again later or use alternative contact methods."
+        }
+    },
+    "linghams": {
+        "pageTitle": "Ashta Lingams of Arunachala",
+        "pageSubtitle": "Eight sacred lingams placed around Arunachala, each facing one of the cardinal directions, represent the Ashta Dikpalakas (Guardians of Directions). Pilgrims receive unique blessings from each as they perform Giri Pradakshina.",
+        "lingams": {
+            "indra": {
+                "direction": "East",
+                "name": "Indra Lingam",
+                "deity": "Lord Indra",
+                "description": "Indra, king of heaven, grants spiritual insight and rides the four-tusked elephant Iravathi. This lingam is close to the eastern tower of the Big Temple on Car Street.",
+                "location": "Near Big Temple, Car Street"
+            },
+            "agni": {
+                "direction": "South-East",
+                "name": "Agni Lingam",
+                "deity": "Lord Agni",
+                "description": "Agni, the god of fire and knowledge, acts as the divine messenger. Worshipped during homas, Agni connects man and gods. Found near Seshadri Ashram.",
+                "location": "Seshadri Street, Chengam Road"
+            },
+            "yama": {
+                "direction": "South",
+                "name": "Yama Lingam",
+                "deity": "Lord Yama",
+                "description": "Yama, the god of death, reminds beings of mortality and dharma. Associated with the stories of Markandeya and Savitri. Located beside cremation grounds.",
+                "location": "Cremation grounds, Chengam Road"
+            },
+            "nirudhi": {
+                "direction": "South-West",
+                "name": "Nirudhi Lingam",
+                "deity": "Nirudhi",
+                "description": "Nirudhi governs desires and attachments, helping devotees overcome worldly bonds. Located just after Sonagiri and Shanthi Malai compounds.",
+                "location": "Near Sonagiri, Giri Valam Path"
+            },
+            "varuna": {
+                "direction": "West",
+                "name": "Varuna Lingam",
+                "deity": "Lord Varuna",
+                "description": "Varuna, god of waters and cosmic law, rides the Makara. Worshipping him brings clarity and flow. Found before Adi Annamalai village.",
+                "location": "1 km before Adi Annamalai"
+            },
+            "vayu": {
+                "direction": "North-West",
+                "name": "Vayu Lingam",
+                "deity": "Lord Vayu",
+                "description": "Vayu, god of air and breath, sustains life. Known for swift motion and energy. Located near Gosalai on the giri valam route.",
+                "location": "Near Gosalai, Giri Valam Path"
+            },
+            "kubera": {
+                "direction": "North",
+                "name": "Kubera Lingam",
+                "deity": "Lord Kubera",
+                "description": "Kubera, the god of wealth and Yakshas, blesses prosperity. He worships Shiva at Arunachala. Located before entering the town.",
+                "location": "Before re-entering Tiruvannamalai"
+            },
+            "eesanya": {
+                "direction": "North-East",
+                "name": "Eesanya Lingam",
+                "deity": "Eesanyar",
+                "description": "Isanyar, a Rudra of Shiva, bears the ash-covered body and sacred symbols. Associated with transcendence. Found near the new bus stand.",
+                "location": "Near Old Cremation Grounds, Bus Stand Road"
+            }
+        },
+        "cta": {
+            "title": "Begin Your Sacred Journey",
+            "description": "Whether you're planning a physical pilgrimage or spiritual contemplation, the Ashta Lingams offer a unique path to connect with Shiva in all His aspects. Visit, meditate, and feel the presence of Arunachala."
+        }
+    },
+    "footer": {
+        "about": {
+            "title": "Tiruvannamalai Guide",
+            "subtitle": "by BKND Groups",
+            "description": "BKND Groups is dedicated to promoting the spiritual, cultural, and natural beauty of Tiruvannamalai. We help travelers explore this sacred land through reliable information, curated guides, and community-powered insights.",
+            "contact": {
+                "email": "Email",
+                "location": "Location",
+                "address": "Tiruvannamalai, Tamil Nadu, India"
+            }
+        },
+        "quickLinks": {
+            "title": "Quick Links",
+            "links": {
+                "home": "Home",
+                "temples": "Temples",
+                "girivalam": "Girivalam",
+                "festivals": "Festivals",
+                "stayLodging": "Stay & Lodging",
+                "foodCafes": "Food & Cafés",
+                "spiritualTourism": "Spiritual Tourism",
+                "gettingThere": "Getting There",
+                "blog": "Blog / Stories",
+                "contact": "Contact",
+                "faq": "FAQ"
+            }
+        },
+        "morePages": {
+            "title": "More Pages"
+        },
+        "bottom": {
+            "tagline": "🧭 Explore. Experience. Enlighten.",
+            "welcomeText": "Whether you are a spiritual seeker, casual traveler, or cultural enthusiast, Tiruvannamalai welcomes you.",
+            "copyright": "© 2025 BKND Groups – All rights reserved.",
+            "craftedWith": "Crafted with devotion in Tiruvannamalai ❤️"
+        }
+    },
+    "festivals": {
+        "pageTitle": "Sacred Festivals of Tiruvannamalai",
+        "pageSubtitle": "Experience the divine celebrations that bring spiritual seekers together throughout the year. These festivals are not just events, but powerful occasions for spiritual transformation and divine connection.",
+        "majorFestivalsTitle": "Major Festivals",
+        "majorFestivals": {
+            "karthigaiDeepam": {
+                "name": "Karthigai Deepam",
+                "when": "November–December (Karthigai month, full moon day)",
+                "significance": "The most iconic festival of Tiruvannamalai, celebrating the divine light of Lord Shiva manifested as the eternal fire atop Arunachala Hill.",
+                "highlights": [
+                    "Massive beacon fire lit on the summit of Arunachala Hill",
+                    "Special poojas and night-long chanting",
+                    "Temple and town illuminated with thousands of oil lamps"
+                ],
+                "spiritual": "Symbolizes the victory of light over darkness and the divine presence within."
+            },
+            "mahaShivaratri": {
+                "name": "Maha Shivaratri",
+                "when": "February–March (Phalguna month)",
+                "significance": "A sacred night dedicated to Lord Shiva, marked by fasting, meditation, and vigil.",
+                "highlights": [
+                    "Overnight worship at Arunachaleswarar Temple",
+                    "Special abhishekams and chants of the Shiva Lingam",
+                    "Spiritual discourses and cultural performances"
+                ],
+                "spiritual": "Celebrates the cosmic dance of Shiva and the overcoming of ignorance."
+            },
+            "girivalamFestival": {
+                "name": "Tiruvannamalai Girivalam Festival",
+                "when": "Full moon nights throughout the year",
+                "significance": "Devotees circumambulate Arunachala Hill, performing the holy Girivalam pilgrimage by moonlight.",
+                "highlights": [
+                    "Thousands participate in the 14 km night walk",
+                    "Spiritual songs, lamps, and serene atmosphere",
+                    "Monthly spiritual gathering"
+                ],
+                "spiritual": "A practice believed to purify karma and enhance spiritual growth."
+            },
+            "thaiPoosam": {
+                "name": "Thai Poosam",
+                "when": "January-February (Thai month)",
+                "significance": "Dedicated to Lord Murugan, celebrating his receiving the Vel (divine spear) from Mother Parvati.",
+                "highlights": [
+                    "Grand procession with decorated chariots",
+                    "Special abhishekams to Lord Murugan",
+                    "Devotional music and dance performances"
+                ],
+                "spiritual": "Represents the triumph of divine wisdom over ignorance."
+            }
+        },
+        "otherFestivalsTitle": "Other Noteworthy Festivals",
+        "otherFestivals": [
+            "Tamil New Year (April)",
+            "Panguni Uthiram (March-April)",
+            "Aadi Pooram (July-August)",
+            "Navaratri (September-October)",
+            "Thai Pongal (January)"
+        ],
+        "experienceSection": {
+            "title": "Experience the Divine",
+            "description": "Each festival in Tiruvannamalai offers a unique opportunity to immerse yourself in ancient traditions and spiritual practices that have been preserved for generations.",
+            "magicTitle": "Feel the Magic",
+            "magicDescription": "Join thousands of devotees in celebration, meditation, and spiritual awakening. The energy during these festivals is palpable and transformative."
+        },
+        "tipsTitle": "Festival Visit Tips",
+        "tips": [
+            "Book accommodation well in advance",
+            "Dress modestly and respectfully",
+            "Carry minimal belongings during events",
+            "Stay hydrated and carry water",
+            "Follow local customs and traditions",
+            "Participate in communal activities"
+        ]
+    },
+    "stayFood": {
+        "title": "Stay & Food in Tiruvannamalai",
+        "subtitle": "Discover comfortable accommodations and delicious cuisine options for your spiritual journey",
+        "hotels": {
+            "title": "🏨 Places to Stay",
+            "subtitle": "From budget hotels to luxury resorts",
+            "types": {
+                "4-star hotel": "4-star hotel",
+                "3.5-star hotel": "3.5-star hotel",
+                "Luxury resort": "Luxury resort",
+                "Budget hotel": "Budget hotel"
+            },
+            "descriptions": {
+                "Athena Hotel": "Just 1 km from Ramana Ashram, featuring spacious rooms, rooftop pool, spa services, and vegetarian restaurant.",
+                "Hotel Himalayaa": "Modern rooms with free breakfast, Wi-Fi, and parking. Popular for excellent service and comfort.",
+                "Sparsa Resort Thiruvannamalai": "Luxury resort with serene views of Arunachala Hill, spa, outdoor pool, and yoga sessions.",
+                "Hotel Ramakrishna": "Budget-friendly hotel near town center with basic amenities and easy access to attractions."
+            },
+            "features": {
+                "Rooftop Pool": "Rooftop Pool",
+                "Spa Services": "Spa Services",
+                "Vegetarian Restaurant": "Vegetarian Restaurant",
+                "Free WiFi": "Free WiFi",
+                "Free Breakfast": "Free Breakfast",
+                "Parking": "Parking",
+                "Modern Rooms": "Modern Rooms",
+                "Arunachala Views": "Arunachala Views",
+                "Outdoor Pool": "Outdoor Pool",
+                "Yoga Sessions": "Yoga Sessions",
+                "Town Center": "Town Center",
+                "Budget Friendly": "Budget Friendly",
+                "Basic Amenities": "Basic Amenities",
+                "Easy Access": "Easy Access"
+            }
+        },
+        "restaurants": {
+            "title": "🍽️ Food & Cafés",
+            "subtitle": "Savor authentic flavors and international cuisine",
+            "types": {
+                "Multi-cuisine": "Multi-cuisine",
+                "Café": "Café",
+                "Rooftop café": "Rooftop café",
+                "Local restaurant": "Local restaurant"
+            },
+            "descriptions": {
+                "Sri Abirami Hotel": "Popular local spot for South Indian, North Indian dishes, and flavorful biryanis. Budget-friendly with quick service.",
+                "Shanti Café": "Known for freshly brewed coffee, croissants from Pondicherry, and peaceful ambiance with lovely views.",
+                "The Dreaming Tree": "Rooftop café with fusion cuisines including raw, vegan, and gluten-free options. Perfect for relaxing.",
+                "Bismillah SS Biryani": "Budget-friendly gem serving excellent chicken biryani, crispy parottas, and fried rice."
+            },
+            "specialties": {
+                "Biryani": "Biryani",
+                "South Indian": "South Indian",
+                "Chinese": "Chinese",
+                "North Indian": "North Indian",
+                "Coffee": "Coffee",
+                "Croissants": "Croissants",
+                "Sandwiches": "Sandwiches",
+                "French Pastries": "French Pastries",
+                "Vegan Food": "Vegan Food",
+                "Raw Food": "Raw Food",
+                "Gluten-free": "Gluten-free",
+                "Global Cuisine": "Global Cuisine",
+                "Chicken Biryani": "Chicken Biryani",
+                "Parottas": "Parottas",
+                "Fried Rice": "Fried Rice",
+                "Tandoori": "Tandoori"
+            }
+        },
+        "ashrams": {
+            "title": "🕉️ Ashrams & Spiritual Stays",
+            "descriptions": {
+                "Sri Ramana Ashram": "The spiritual home of Bhagavan Sri Ramana Maharshi, offering tranquil environment for meditation and self-inquiry.",
+                "Yogi Ram Surat Kumar Ashram": "Known for calm atmosphere, daily poojas, and spiritual activities - ideal for peace and healing."
+            },
+            "features": {
+                "Meditation": "Meditation",
+                "Spiritual Study": "Spiritual Study",
+                "Community Meals": "Community Meals",
+                "Library": "Library",
+                "Daily Poojas": "Daily Poojas",
+                "Healing": "Healing",
+                "Spiritual Activities": "Spiritual Activities",
+                "Peaceful Environment": "Peaceful Environment"
+            }
+        },
+        "sweets": {
+            "title": "🍰 Sweet Treats & Desserts",
+            "cakeHeaven": {
+                "title": "Cake Heaven",
+                "description": "Popular bakery with wide range of cakes and desserts, perfect for sweet lovers."
+            },
+            "meenakshiBhavan": {
+                "title": "Meenakshi Bhavan",
+                "description": "Renowned for traditional Mysore pak, a must-try South Indian sweet delight."
+            }
+        }
+    },
+    "spiritualTourism": {
+        "pageTitle": "Spiritual Tourism in Tiruvannamalai",
+        "pageDescription": "A world-renowned spiritual destination that has drawn seekers, pilgrims, and tourists for centuries. Often called the 'Spiritual Heart of South India,' this sacred town offers profound religious significance, ancient temples, serene ashrams, and deeply rooted traditions.",
+        "whyTitle": "Why Tiruvannamalai is a Spiritual Haven",
+        "why": [
+            {
+                "title": "Arunachala Hill – The Spiritual Axis",
+                "description": "According to Hindu mythology, Arunachala is the embodiment of Lord Shiva in fire form, one of the five sacred elements.",
+                "icon": "⛰️"
+            },
+            {
+                "title": "Ancient Temples and Rituals",
+                "description": "The Arunachaleswarar Temple, built between 9th-10th centuries, features colossal gopurams and sacred tanks.",
+                "icon": "🛕"
+            },
+            {
+                "title": "Home of Saint Ramana Maharshi",
+                "description": "Linked with one of the 20th century's greatest spiritual masters and his teachings on self-inquiry.",
+                "icon": "👤"
+            },
+            {
+                "title": "Vibrant Spiritual Festivals",
+                "description": "Festivals like Karthigai Deepam feature hilltop fire lighting, night-long vigils, and devotional music.",
+                "icon": "🎉"
+            }
+        ],
+        "practicesTitle": "Spiritual Practices and Experiences",
+        "practices": {
+            "girivalam": {
+                "title": "Girivalam – The Sacred Circumambulation",
+                "description": "Every full moon night, thousands gather to walk the 14-km path around Arunachala Hill.",
+                "details": "This meditative pilgrimage purifies the mind and body. Devotees chant mantras, perform pujas at shrines, and experience deep connection to the divine."
+            },
+            "meditation": {
+                "title": "Meditation and Self-Inquiry",
+                "description": "The teachings of Ramana Maharshi emphasize self-inquiry—asking 'Who am I?'",
+                "details": "Join guided meditation sessions or practice silent meditation within the peaceful environs of the ashram to dissolve ego and realize true nature."
+            },
+            "templeRituals": {
+                "title": "Temple Rituals Participation",
+                "description": "Daily aarti, abhishekam, and archana at Arunachaleswarar Temple.",
+                "details": "These rituals help deepen devotion and create a sacred ambiance. Experience direct engagement with spiritual traditions."
+            },
+            "yoga": {
+                "title": "Yoga and Holistic Healing",
+                "description": "Several centers offer yoga classes, pranayama, Ayurveda treatments, and Reiki healing.",
+                "details": "These holistic practices complement spiritual growth by promoting physical health and emotional balance."
+            }
+        },
+        "planning": {
+            "title": "Planning Your Spiritual Visit",
+            "bestTimeTitle": "Best Time to Visit",
+            "bestTimeDesc": "October to March offers pleasant weather and coincides with major festivals. Full moon days and festival periods are especially auspicious.",
+            "bestTimeNote": "Festival periods are busier but more spiritually vibrant.",
+            "accommodationTitle": "Accommodation Options",
+            "accommodationDesc": "Numerous ashrams offer simple lodging for spiritual seekers. Hotels and guesthouses nearby cater to varying budgets.",
+            "accommodationTip": "Ashram stays provide authentic spiritual atmosphere.",
+            "etiquetteTitle": "Spiritual Etiquette",
+            "etiquetteList": [
+                "Dress modestly and respectfully",
+                "Maintain silence in meditation areas",
+                "Remove footwear before entering temples",
+                "Respect temple customs and traditions"
+            ],
+            "guidesTitle": "Local Guides",
+            "guidesDesc": "Hiring knowledgeable local guides can enrich your experience, providing insights into history, symbolism, and spiritual significance of the sites."
+        }
+    },
+    "gettingThere": {
+        "pageTitle": "Getting to Tiruvannamalai",
+        "pageSubtitle": "Tiruvannamalai is accessible via multiple transport modes, making it easy for pilgrims and travelers worldwide to visit this sacred town. Plan your journey with our comprehensive travel guide.",
+        "hero": {
+            "title": "Getting to Tiruvannamalai",
+            "subtitle": "Tiruvannamalai is accessible via multiple transport modes, making it easy for pilgrims and travelers worldwide to visit this sacred town. Plan your journey with our comprehensive travel guide."
+        },
+        "byAir": {
+            "title": "By Air",
+            "subtitle": "Nearest airports with good connectivity",
+            "airports": {
+                "chennai": {
+                    "name": "Chennai International Airport (MAA)",
+                    "distance": "197 km",
+                    "travelTime": "4-5 hours by road",
+                    "description": "Primary international gateway with numerous domestic and international flights daily."
+                },
+                "bangalore": {
+                    "name": "Bengaluru International Airport (BLR)",
+                    "distance": "209.2 km",
+                    "travelTime": "4-5 hours by car",
+                    "description": "Another international airport option. Scenic road journey through Hosur and Krishnagiri."
+                },
+                "trichy": {
+                    "name": "Tiruchirappalli International Airport (TRZ)",
+                    "distance": "167 km",
+                    "travelTime": "3-4 hours by road",
+                    "description": "Smaller airport with good domestic connectivity."
+                }
+            }
+        },
+        "byTrain": {
+            "title": "By Train",
+            "subtitle": "Tiruvannamalai Railway Station (TNM)",
+            "sectionTitle": "Railway Connections",
+            "connections": {
+                "chennai": {
+                    "from": "Chennai",
+                    "description": "Multiple daily trains connect Chennai Central and Tiruvannamalai",
+                    "frequency": "Daily services"
+                },
+                "bangalore": {
+                    "from": "Bengaluru",
+                    "description": "Direct trains on select days; alternatively change at Katpadi Junction",
+                    "frequency": "Select days"
+                },
+                "vellore": {
+                    "from": "Vellore",
+                    "description": "Local trains and buses frequently connect the two towns",
+                    "frequency": "Frequent services"
+                }
+            },
+            "nearbyJunctions": {
+                "title": "Major Nearby Junctions:",
+                "katpadi": "Katpadi Junction (KPD) — 35 km, major hub with extensive rail connectivity",
+                "chengam": "Chengam Station — 30 km, convenient for nearby visits"
+            }
+        },
+        "byRoad": {
+            "title": "By Road",
+            "subtitle": "Well-connected by highways and frequent buses",
+            "routes": {
+                "chennai": {
+                    "from": "Chennai",
+                    "route": "Via NH48 and NH77",
+                    "time": "4-5 hours",
+                    "transport": [
+                        "Government Buses",
+                        "Private Buses",
+                        "Taxi/Self-drive"
+                    ],
+                    "description": "Regular direct buses from Chennai Central Bus Stand and Koyambedu Terminal"
+                },
+                "bangalore": {
+                    "from": "Bengaluru",
+                    "route": "Via NH77",
+                    "time": "4-5 hours",
+                    "transport": [
+                        "TNSTC/KSRTC Buses",
+                        "Private Volvo Buses",
+                        "Taxi"
+                    ],
+                    "description": "Well-maintained road through scenic rural landscapes"
+                },
+                "vellore": {
+                    "from": "Vellore",
+                    "route": "Direct route",
+                    "time": "1-1.5 hours",
+                    "transport": [
+                        "Frequent buses",
+                        "Shared taxis",
+                        "Private vehicles"
+                    ],
+                    "description": "Quick journey due to proximity"
+                }
+            }
+        },
+        "localTransport": {
+            "title": "Local Transport Options",
+            "options": {
+                "autoRickshaws": {
+                    "type": "Auto-Rickshaws",
+                    "description": "Most common for short distances"
+                },
+                "taxis": {
+                    "type": "Taxis and Cabs",
+                    "description": "Available on hire; hotels arrange pickups"
+                },
+                "walking": {
+                    "type": "Walking",
+                    "description": "Many temples clustered close together"
+                }
+            }
+        },
+        "travelTips": {
+            "title": "Travel Tips & Advice",
+            "tips": [
+                "Best Time: October to March for pleasant weather",
+                "Festival Booking: Reserve transport and accommodation early during Karthigai Deepam",
+                "Safety: Keep valuables secure in crowded places",
+                "Health: Carry water and wear comfortable shoes for walking",
+                "Etiquette: Dress modestly and respect temple customs"
+            ]
+        }
+    },
+    "blog": {
+        "hero": {
+            "title": "Blog & Stories",
+            "subtitle": "Welcome to your gateway to vibrant experiences, timeless wisdom, and inspiring journeys of Tiruvannamalai. Discover captivating stories from pilgrims, travelers, and spiritual seekers who have walked these sacred paths."
+        },
+        "featuredStories": {
+            "title": "Featured Stories",
+            "readMore": "Read More",
+            "stories": {
+                "spiritualJourney": {
+                    "title": "My Spiritual Journey to Arunachala Hill",
+                    "excerpt": "Discover one devotee's transformative experience during the Girivalam walk around Arunachala Hill on a full moon night.",
+                    "author": "Priya Sharma",
+                    "category": "Spiritual Experience"
+                },
+                "ramanaReflections": {
+                    "title": "Meeting Ramana Maharshi: Reflections from the Ashram",
+                    "excerpt": "An inspiring account of a visitor's time at the Ramana Maharshi Ashram, exploring teachings on self-inquiry and silent meditation.",
+                    "author": "David Wilson",
+                    "category": "Ashram Life"
+                },
+                "karthigaiDeepam": {
+                    "title": "The Karthigai Deepam Festival: A Night of Lights and Devotion",
+                    "excerpt": "Experience the magic of Karthigai Deepam through a vibrant narrative of the festival's celebrations and the sacred fire atop Arunachala.",
+                    "author": "Lakshmi Devi",
+                    "category": "Festivals"
+                }
+            }
+        },
+        "travelGuides": {
+            "title": "Travel Tips & Guides",
+            "guides": {
+                "bestTime": {
+                    "title": "Best Time to Visit Tiruvannamalai",
+                    "description": "Understand seasonal variations, festivals, and weather to plan your trip perfectly."
+                },
+                "packing": {
+                    "title": "What to Pack for Your Pilgrimage",
+                    "description": "A handy checklist of essentials for comfort, convenience, and spiritual readiness."
+                },
+                "navigation": {
+                    "title": "Navigating Tiruvannamalai: A Local's Guide",
+                    "description": "Discover hidden gems, local eateries, and tranquil spots away from usual tourist paths."
+                }
+            }
+        },
+        "spiritualInsights": {
+            "title": "Spiritual Insights",
+            "insights": {
+                "temple": {
+                    "title": "Understanding the Significance of Arunachaleswarar Temple",
+                    "description": "Dive into the mythology, symbolism, and unique rituals that make this temple profound."
+                },
+                "philosophy": {
+                    "title": "The Philosophy of Ramana Maharshi",
+                    "description": "Explore key teachings and how they continue to inspire seekers worldwide."
+                },
+                "meditation": {
+                    "title": "Meditation Practices in Tiruvannamalai",
+                    "description": "Learn about different meditation techniques taught in local ashrams and centers."
+                }
+            }
+        },
+        "community": {
+            "submitStory": {
+                "title": "Submit Your Story",
+                "description": "Have a memorable experience from Tiruvannamalai? Share your journey, reflections, and photos to become part of our growing community.",
+                "button": "Share Your Experience"
+            },
+            "voices": {
+                "title": "Community Voices",
+                "description": "Read real-life experiences from devotees who found solace, healing, and awakening. Connect with fellow spiritual travelers.",
+                "button": "Join Community"
+            }
+        }
+    }
+}
