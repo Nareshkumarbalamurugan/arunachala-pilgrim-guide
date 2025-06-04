@@ -9,7 +9,7 @@ i18n
     .use(initReactI18next)
     .init({
         fallbackLng: 'en',
-        debug: true,
+        debug: false,
         supportedLngs: ['en', 'ta', 'te'],
 
         interpolation: {
@@ -17,7 +17,7 @@ i18n
         },
 
         backend: {
-            loadPath: '/locales/{{lng}}/{{ns}}.json',
+            loadPath: './locales/{{lng}}/{{ns}}.json',
         },
     });
 

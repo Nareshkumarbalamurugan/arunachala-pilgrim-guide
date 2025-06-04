@@ -13,7 +13,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-80"
         style={{
-          backgroundImage: `url('/public/images/WhatsApp Image 2025-06-03 at 10.45.05_9676064d.jpg')`,
+          backgroundImage: `url('/images/WhatsApp Image 2025-06-03 at 10.45.05_9676064d.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
