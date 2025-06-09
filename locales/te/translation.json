@@ -21,7 +21,8 @@
         "spiritualTourism": "ఆధ్యాత్మిక పర్యాటక",
         "gettingThere": "ఎలా చేరుకోవాలి",
         "blog": "బ్లాగు",
-        "contact": "సంప్రదించండి"
+        "contact": "సంప్రదించండి",
+        "view360": "360° వీక్షణ"
     },
     "home": {
         "hero": {
@@ -891,6 +892,7 @@
                 }
             }
         },
+        
         "spiritualInsights": {
             "title": "ఆధ్యాత్మిక అంతర్దృష్టులు",
             "insights": {
@@ -908,6 +910,7 @@
                 }
             }
         },
+        
         "community": {
             "submitStory": {
                 "title": "మీ కథను సమర్పించండి",
