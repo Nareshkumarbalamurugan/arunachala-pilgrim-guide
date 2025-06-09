@@ -16,13 +16,15 @@ import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import View360 from "./pages/360View";
 import HistoryCulture from "./pages/HistoryCulture";
+import LanguageSelection from "./pages/LanguageSelection";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <Routes>
-      <Route path="/" element={<Index />} />
+      <Route path="/" element={<LanguageSelection />} />
+      <Route path="/index" element={<Index />} />
       <Route path="/temples" element={<Temples />} />
       <Route path="/linghams" element={<Linghams />} />
       <Route path="/girivalam" element={<Girivalam />} />
