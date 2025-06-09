@@ -19,6 +19,7 @@ const Navigation = () => {
     { name: t('navigation.stayFood'), path: '/stay-food', anchor: null },
     { name: t('navigation.spiritualTourism'), path: '/spiritual-tourism', anchor: null },
     { name: t('navigation.gettingThere'), path: '/getting-there', anchor: null },
+    { name: t('navigation.historyCulture'), path: '/history-culture', anchor: null },
     { name: t('navigation.blog'), path: '/blog', anchor: null },
     { name: t('navigation.contact'), path: '/contact', anchor: null },
     { name: t('navigation.view360'), path: '/360View', anchor: null }

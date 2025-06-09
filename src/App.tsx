@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import View360 from "./pages/360View";
+import HistoryCulture from "./pages/HistoryCulture";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
       <Route path="/stay-food" element={<StayFood />} />
       <Route path="/spiritual-tourism" element={<SpiritualTourism />} />
       <Route path="/getting-there" element={<GettingThere />} />
+      <Route path="/history-culture" element={<HistoryCulture />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/faq" element={<FAQ />} />
