@@ -12,28 +12,28 @@ const FeaturedSections = () => {
     {
       title: t('home.featuredSections.sections.temples.title'),
       description: t('home.featuredSections.sections.temples.description'),
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr9gzwpftyvdq2k0nj3hth5%2F1748867077_img_0.webp?st=2025-06-02T10%3A49%3A05Z&se=2025-06-08T11%3A49%3A05Z&sks=b&skt=2025-06-02T10%3A49%3A05Z&ske=2025-06-08T11%3A49%3A05Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=GYctqCAqZrMrXUARy5d%2B6XyBYwACNYhubZ8aTRDfkLg%3D&az=oaivgprodscus',
+      image: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwr9gzwpftyvdq2k0nj3hth5_1748867077_img_0.webp?updatedAt=1749457992441',
       link: '/temples',
       buttonText: t('home.featuredSections.sections.temples.buttonText')
     },
     {
       title: t('home.featuredSections.sections.girivalam.title'),
       description: t('home.featuredSections.sections.girivalam.description'),
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnzbe31fehvc68x7f51zgfx%2F1748789313_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=3wDm%2BwR75gm026KuTaKFXGWCiY8IEgk2HOtuwSVXngA%3D&az=oaivgprodscus',
+      image: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwnzbe31fehvc68x7f51zgfx_1748789313_img_1.webp?updatedAt=1749457992506',
       link: '/girivalam',
       buttonText: t('home.featuredSections.sections.girivalam.buttonText')
     },
     {
       title: t('home.featuredSections.sections.festivals.title'),
       description: t('home.featuredSections.sections.festivals.description'),
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr930vce0vv9pc3xc3etrvk%2F1748866623_img_0.webp?st=2025-06-02T10%3A23%3A46Z&se=2025-06-08T11%3A23%3A46Z&sks=b&skt=2025-06-02T10%3A23%3A46Z&ske=2025-06-08T11%3A23%3A46Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=yFJjD0kO%2F5633vPTYitDFBGKGRC%2Bd5fLYshK3TSC%2FHg%3D&az=oaivgprodscus',
+      image: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwr930vce0vv9pc3xc3etrvk_1748866623_img_0.webp?updatedAt=1749457998107',
       link: '/festivals',
       buttonText: t('home.featuredSections.sections.festivals.buttonText')
     },
     {
       title: t('home.featuredSections.sections.stayFood.title'),
       description: t('home.featuredSections.sections.stayFood.description'),
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnzr0g5f5dacx3xdxcdqr47%2F1748789710_img_2.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=%2FhHZ7FS0v5buaLCoBc1J3KcSXKmVGo9Sjw0lIslGuzM%3D&az=oaivgprodscus',
+      image: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwnzr0g5f5dacx3xdxcdqr47_1748789710_img_2.webp?updatedAt=1749457991860',
       link: '/stay-food',
       buttonText: t('home.featuredSections.sections.stayFood.buttonText')
     }

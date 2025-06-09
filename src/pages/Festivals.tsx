@@ -17,10 +17,10 @@ const Festivals = () => {
   };
 
   const festivalImages: { [key: string]: string } = {
-    karthigaiDeepam: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwny0tx0efnvd951hkkkkcnk%2F1748787907_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=RAtAEO2LvIGXO5MKCw5vGDiPAin6I%2F2zotqo7rFPe04%3D&az=oaivgprodscus',
-    mahaShivaratri: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnzx7zeeg885tentt6dspsa%2F1748789868_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=YUC21QnyqQJD1bX%2F9tSoHKCSRmpw8bk%2FWjnMIqLh2fw%3D&az=oaivgprodscus?w=600&h=400&fit=crop',
-    girivalamFestival: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnzbe31fehvc68x7f51zgfx%2F1748789313_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=3wDm%2BwR75gm026KuTaKFXGWCiY8IEgk2HOtuwSVXngA%3D&az=oaivgprodscus',
-    thaiPoosam: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwp01gtwe00rb3s1r3sn7zbq%2F1748790036_img_1.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=072vuozxL%2FJ5EBvfcd2bHZLtmMqDqzqLVGeruOLXs54%3D&az=oaivgprodscus'
+    karthigaiDeepam: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwny0tx0efnvd951hkkkkcnk_1748787907_img_1.webp?updatedAt=1749457991889',
+    mahaShivaratri: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwnzx7zeeg885tentt6dspsa_1748789868_img_1.webp?updatedAt=1749457992332',
+    girivalamFestival: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwnzbe31fehvc68x7f51zgfx_1748789313_img_1.webp?updatedAt=1749457992506',
+    thaiPoosam: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwp01gtwe00rb3s1r3sn7zbq_1748790036_img_1.webp?updatedAt=1749457992288'
   };
 
   const otherFestivals = t('festivals.otherFestivals', { returnObjects: true }) as string[];

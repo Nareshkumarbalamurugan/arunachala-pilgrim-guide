@@ -12,19 +12,19 @@ const Blog = () => {
   const featuredStories = [
     {
       key: 'spiritualJourney',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr9v1neetv80z7091c4jnye%2F1748867403_img_0.webp?st=2025-06-02T10%3A46%3A00Z&se=2025-06-08T11%3A46%3A00Z&sks=b&skt=2025-06-02T10%3A46%3A00Z&ske=2025-06-08T11%3A46%3A00Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=3b%2F%2Ff36Dou3GECEJK9PEaGxK1p%2Bnm5gQov1Pw52Wzuc%3D&az=oaivgprodscus?w=600&h=400&fit=crop',
+      image: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwr9v1neetv80z7091c4jnye_1748867403_img_3.webp?updatedAt=1749457992176',
       date: 'March 15, 2024',
       readTime: '8 min read'
     },
     {
       key: 'ramanaReflections',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr9y9wwfzcbbpj3pr7sd2yt%2F1748867518_img_1.webp?st=2025-06-02T10%3A48%3A18Z&se=2025-06-08T11%3A48%3A18Z&sks=b&skt=2025-06-02T10%3A48%3A18Z&ske=2025-06-08T11%3A48%3A18Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=ls7otAn1FGYnAqSs9pDWDhR9pGyxSOKrB8Qz3It%2FhFQ%3D&az=oaivgprodscus?w=600&h=400&fit=crop',
+      image: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwr9y9wwfzcbbpj3pr7sd2yt_1748867518_img_1.webp?updatedAt=1749457814495',
       date: 'March 10, 2024',
       readTime: '12 min read'
     },
     {
       key: 'karthigaiDeepam',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr9rme4f2nt06w4qzpj7dq6%2F1748867315_img_1.webp?st=2025-06-02T10%3A49%3A05Z&se=2025-06-08T11%3A49%3A05Z&sks=b&skt=2025-06-02T10%3A49%3A05Z&ske=2025-06-08T11%3A49%3A05Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=Csfk%2FTSwVZAtSgA2Bn%2ByAdQYF8jM%2BVq5FrzxW0NstCk%3D&az=oaivgprodscus?w=600&h=400&fit=crop',
+      image: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwr9rme4f2nt06w4qzpj7dq6_1748867315_img_0.webp?updatedAt=1749457991520',
       date: 'February 28, 2024',
       readTime: '10 min read'
     }

@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 const Temples = () => {
   const { t } = useTranslation();
-
+ 
   const mainTemples = [
     {
       name: 'Arunachaleswarar Temple',
@@ -15,7 +15,7 @@ const Temples = () => {
       highlights: ['10-day Karthigai Deepam festival', 'Massive temple complex with towering gopurams', 'Sacred pond and holy tanks'],
       timings: '6 AM – 9 PM daily',
       location: 'Center of Tiruvannamalai town',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnz2d6bezvap3m6nsxwgcxj%2F1748789010_img_0.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=rvARKK9ehsA6s2iaS5oEvjTiJAUxo%2FEafiZ7ULS4pt4%3D&az=oaivgprodscus',
+      image: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwnz2d6bezvap3m6nsxwgcxj_1748789010_img_0.webp?updatedAt=1749457709066',
       mapLink: 'https://maps.app.goo.gl/BsZH1Qc4PEZzBs9P9'
     },
     {
@@ -24,7 +24,7 @@ const Temples = () => {
       highlights: ['Meditation halls and quiet gardens', "Ramana Maharshi's samadhi", 'Library and bookshop with spiritual texts'],
       timings: '6 AM – 8 PM',
       location: 'South of the temple town',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwr9y9wwfzcbbpj3pr7sd2yt%2F1748867518_img_1.webp?st=2025-06-02T10%3A48%3A18Z&se=2025-06-08T11%3A48%3A18Z&sks=b&skt=2025-06-02T10%3A48%3A18Z&ske=2025-06-08T11%3A48%3A18Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=ls7otAn1FGYnAqSs9pDWDhR9pGyxSOKrB8Qz3It%2FhFQ%3D&az=oaivgprodscus',
+      image: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwr9y9wwfzcbbpj3pr7sd2yt_1748867518_img_1.webp?updatedAt=1749457814495',
       mapLink: 'https://maps.app.goo.gl/tFBDAd7EuA4pAfJf6'
     },
     {
@@ -33,7 +33,7 @@ const Temples = () => {
       highlights: ['Natural rock formations', 'Peaceful surroundings', 'Small shrine nearby'],
       timings: 'Best visited during daytime',
       location: 'Near the base of Arunachala hill',
-      image: 'https://videos.openai.com/vg-assets/assets%2Ftask_01jwnz5x2kem2tmg0ecfag3yg8%2F1748789120_img_3.webp?st=2025-06-02T10%3A49%3A42Z&se=2025-06-08T11%3A49%3A42Z&sks=b&skt=2025-06-02T10%3A49%3A42Z&ske=2025-06-08T11%3A49%3A42Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=8ebb0df1-a278-4e2e-9c20-f2d373479b3a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=Pua%2BTLQWi9pqNaDQ8mXPLKkMTs65oBzELbHryaT27hk%3D&az=oaivgprodscus',
+      image: 'https://ik.imagekit.io/vitr7ll7f/assets_task_01jwnz5x2kem2tmg0ecfag3yg8_1748789120_img_3.webp?updatedAt=1749457992452',
       mapLink: 'https://maps.app.goo.gl/x7Gnb2NBn4hzemEm7'
     }
   ];
