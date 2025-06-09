@@ -21,7 +21,8 @@
         "spiritualTourism": "Spiritual Tourism",
         "gettingThere": "Getting There",
         "blog": "Blog",
-        "contact": "Contact"
+        "contact": "Contact",
+        "view360": "360 Degree View"
     },
     "home": {
         "hero": {
@@ -341,71 +342,79 @@
         }
     },
     "linghams": {
-        "pageTitle": "Ashta Lingams of Arunachala",
-        "pageSubtitle": "Eight sacred lingams placed around Arunachala, each facing one of the cardinal directions, represent the Ashta Dikpalakas (Guardians of Directions). Pilgrims receive unique blessings from each as they perform Giri Pradakshina.",
-        "lingams": {
-            "indra": {
-                "direction": "East",
-                "name": "Indra Lingam",
-                "deity": "Lord Indra",
-                "description": "Indra, king of heaven, grants spiritual insight and rides the four-tusked elephant Iravathi. This lingam is close to the eastern tower of the Big Temple on Car Street.",
-                "location": "Near Big Temple, Car Street"
-            },
-            "agni": {
-                "direction": "South-East",
-                "name": "Agni Lingam",
-                "deity": "Lord Agni",
-                "description": "Agni, the god of fire and knowledge, acts as the divine messenger. Worshipped during homas, Agni connects man and gods. Found near Seshadri Ashram.",
-                "location": "Seshadri Street, Chengam Road"
-            },
-            "yama": {
-                "direction": "South",
-                "name": "Yama Lingam",
-                "deity": "Lord Yama",
-                "description": "Yama, the god of death, reminds beings of mortality and dharma. Associated with the stories of Markandeya and Savitri. Located beside cremation grounds.",
-                "location": "Cremation grounds, Chengam Road"
-            },
-            "nirudhi": {
-                "direction": "South-West",
-                "name": "Nirudhi Lingam",
-                "deity": "Nirudhi",
-                "description": "Nirudhi governs desires and attachments, helping devotees overcome worldly bonds. Located just after Sonagiri and Shanthi Malai compounds.",
-                "location": "Near Sonagiri, Giri Valam Path"
-            },
-            "varuna": {
-                "direction": "West",
-                "name": "Varuna Lingam",
-                "deity": "Lord Varuna",
-                "description": "Varuna, god of waters and cosmic law, rides the Makara. Worshipping him brings clarity and flow. Found before Adi Annamalai village.",
-                "location": "1 km before Adi Annamalai"
-            },
-            "vayu": {
-                "direction": "North-West",
-                "name": "Vayu Lingam",
-                "deity": "Lord Vayu",
-                "description": "Vayu, god of air and breath, sustains life. Known for swift motion and energy. Located near Gosalai on the giri valam route.",
-                "location": "Near Gosalai, Giri Valam Path"
-            },
-            "kubera": {
-                "direction": "North",
-                "name": "Kubera Lingam",
-                "deity": "Lord Kubera",
-                "description": "Kubera, the god of wealth and Yakshas, blesses prosperity. He worships Shiva at Arunachala. Located before entering the town.",
-                "location": "Before re-entering Tiruvannamalai"
-            },
-            "eesanya": {
-                "direction": "North-East",
-                "name": "Eesanya Lingam",
-                "deity": "Eesanyar",
-                "description": "Isanyar, a Rudra of Shiva, bears the ash-covered body and sacred symbols. Associated with transcendence. Found near the new bus stand.",
-                "location": "Near Old Cremation Grounds, Bus Stand Road"
-            }
+    "pageTitle": "Ashta Lingams of Arunachala",
+    "pageSubtitle": "Eight sacred lingams placed around Arunachala, each facing one of the cardinal directions, represent the Ashta Dikpalakas (Guardians of Directions). Pilgrims receive unique blessings from each as they perform Giri Pradakshina.",
+    "lingams": {
+        "indra": {
+            "direction": "East",
+            "name": "Indra Lingam",
+            "deity": "Lord Indra",
+            "description": "Indra, king of heaven, grants spiritual insight and rides the four-tusked elephant Iravathi. This lingam is close to the eastern tower of the Big Temple on Car Street.",
+            "location": "Near Big Temple, Car Street",
+            "mapLink": "https://maps.app.goo.gl/MSD4cptPoMTK7Nek8"
         },
-        "cta": {
-            "title": "Begin Your Sacred Journey",
-            "description": "Whether you're planning a physical pilgrimage or spiritual contemplation, the Ashta Lingams offer a unique path to connect with Shiva in all His aspects. Visit, meditate, and feel the presence of Arunachala."
+        "agni": {
+            "direction": "South-East",
+            "name": "Agni Lingam",
+            "deity": "Lord Agni",
+            "description": "Agni, the god of fire and knowledge, acts as the divine messenger. Worshipped during homas, Agni connects man and gods. Found near Seshadri Ashram.",
+            "location": "Seshadri Street, Chengam Road",
+            "mapLink": "https://maps.app.goo.gl/HXRxuqYC4u6ujU2y8"
+        },
+        "yama": {
+            "direction": "South",
+            "name": "Yama Lingam",
+            "deity": "Lord Yama",
+            "description": "Yama, the god of death, reminds beings of mortality and dharma. Associated with the stories of Markandeya and Savitri. Located beside cremation grounds.",
+            "location": "Cremation grounds, Chengam Road",
+            "mapLink": "https://maps.app.goo.gl/vo5U824q2WgzrxYm8"
+        },
+        "nirudhi": {
+            "direction": "South-West",
+            "name": "Nirudhi Lingam",
+            "deity": "Nirudhi",
+            "description": "Nirudhi governs desires and attachments, helping devotees overcome worldly bonds. Located just after Sonagiri and Shanthi Malai compounds.",
+            "location": "Near Sonagiri, Giri Valam Path",
+            "mapLink": "https://maps.app.goo.gl/UFgkrWrNyBXndqbt7"
+        },
+        "varuna": {
+            "direction": "West",
+            "name": "Varuna Lingam",
+            "deity": "Lord Varuna",
+            "description": "Varuna, god of waters and cosmic law, rides the Makara. Worshipping him brings clarity and flow. Found before Adi Annamalai village.",
+            "location": "1 km before Adi Annamalai",
+            "mapLink": "https://maps.app.goo.gl/Fe7hqkwqNQgjvRzR8"
+        },
+        "vayu": {
+            "direction": "North-West",
+            "name": "Vayu Lingam",
+            "deity": "Lord Vayu",
+            "description": "Vayu, god of air and breath, sustains life. Known for swift motion and energy. Located near Gosalai on the giri valam route.",
+            "location": "Near Gosalai, Giri Valam Path",
+            "mapLink": "https://maps.app.goo.gl/VmnPcEAahF8DkVGz6"
+        },
+        "kubera": {
+            "direction": "North",
+            "name": "Kubera Lingam",
+            "deity": "Lord Kubera",
+            "description": "Kubera, the god of wealth and Yakshas, blesses prosperity. He worships Shiva at Arunachala. Located before entering the town.",
+            "location": "Before re-entering Tiruvannamalai",
+            "mapLink": "https://maps.app.goo.gl/CoJYCWnbqoQvCBU8A"
+        },
+        "eesanya": {
+            "direction": "North-East",
+            "name": "Eesanya Lingam",
+            "deity": "Eesanyar",
+            "description": "Isanyar, a Rudra of Shiva, bears the ash-covered body and sacred symbols. Associated with transcendence. Found near the new bus stand.",
+            "location": "Near Old Cremation Grounds, Bus Stand Road",
+            "mapLink": "https://maps.app.goo.gl/HsDAzYmBYbEBqWkF9"
         }
     },
+    "cta": {
+        "title": "Begin Your Sacred Journey",
+        "description": "Whether you're planning a physical pilgrimage or spiritual contemplation, the Ashta Lingams offer a unique path to connect with Shiva in all His aspects. Visit, meditate, and feel the presence of Arunachala."
+    }
+},
     "footer": {
         "about": {
             "title": "Tiruvannamalai Guide",
@@ -883,5 +892,8 @@
                 "button": "Join Community"
             }
         }
+    },
+    "360View": {
+      "subtitle": "Explore Tiruvannamalai in 360 degrees"
     }
 }

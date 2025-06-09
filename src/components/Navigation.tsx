@@ -21,6 +21,7 @@ const Navigation = () => {
     { name: t('navigation.gettingThere'), path: '/getting-there', anchor: null },
     { name: t('navigation.blog'), path: '/blog', anchor: null },
     { name: t('navigation.contact'), path: '/contact', anchor: null },
+    { name: t('navigation.view360'), path: '/360View', anchor: null }
   ];
 
   const handleLinkClick = (path: string, anchor: string | null) => {
@@ -62,31 +63,35 @@ const Navigation = () => {
           <div className="hidden lg:flex flex-col items-center justify-center flex-grow px-4">
             {/* First row of menu items */}
             <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 mb-1">
-              {firstHalfMenuItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => handleLinkClick(item.path, item.anchor)}
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium relative group px-2 py-0.5 text-sm whitespace-nowrap"
-                >
-                  {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              ))}
+              {firstHalfMenuItems.map((item) => {
+                  return (
+                    <Link
+                      key={item.name}
+                      to={item.path}
+                      onClick={() => handleLinkClick(item.path, item.anchor)}
+                      className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium relative group px-2 py-0.5 text-sm whitespace-nowrap"
+                    >
+                      {item.name}
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
+                    </Link>
+                  );
+                })}
             </div>
             {/* Second row of menu items */}
             <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4">
-              {secondHalfMenuItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => handleLinkClick(item.path, item.anchor)}
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium relative group px-2 py-0.5 text-sm whitespace-nowrap"
-                >
-                  {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              ))}
+              {secondHalfMenuItems.map((item) => {
+                  return (
+                    <Link
+                      key={item.name}
+                      to={item.path}
+                      onClick={() => handleLinkClick(item.path, item.anchor)}
+                      className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium relative group px-2 py-0.5 text-sm whitespace-nowrap"
+                    >
+                      {item.name}
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
+                    </Link>
+                  );
+                })}
             </div>
           </div>
 
@@ -110,16 +115,18 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-2 border-t border-purple-100">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[70vh] overflow-y-auto">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium px-3 py-2 rounded-md hover:bg-purple-50 text-sm"
-                  onClick={() => handleLinkClick(item.path, item.anchor)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {menuItems.map((item) => {
+                  return (
+                    <Link
+                      key={item.name}
+                      to={item.path}
+                      className="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium px-3 py-2 rounded-md hover:bg-purple-50 text-sm"
+                      onClick={() => handleLinkClick(item.path, item.anchor)}
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                })}
             </div>
           </div>
         )}
