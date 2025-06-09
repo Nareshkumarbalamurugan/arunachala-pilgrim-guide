@@ -21,9 +21,10 @@ const LanguageSelector = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm" className="gap-2 max-w-[100px] overflow-hidden text-ellipsis whitespace-nowrap">
+          <Button variant="outline" size="sm" className="gap-2 max-w-[100px] overflow-hidden text-ellipsis whitespace-nowrap relative">
             <Globe className="h-4 w-4" />
             <span className="hidden sm:inline overflow-hidden text-ellipsis whitespace-nowrap block max-w-[70px]">{selectedLanguage}</span>
+            <div className="absolute inset-0 -z-10 bg-cover bg-center opacity-20" style={{ backgroundImage: "url('/images/WhatsApp Image 2025-06-03 at 10.45.05_9676064d.jpg')" }}></div>
           </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
