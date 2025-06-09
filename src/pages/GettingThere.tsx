@@ -169,7 +169,6 @@ const GettingThere = () => {
             <h3 className="text-xl font-semibold mb-4">{t('gettingThere.byTrain.nearbyJunctions.title')}</h3>
             <ul className="space-y-2 text-gray-600">
               <li>{t('gettingThere.byTrain.nearbyJunctions.katpadi')}</li>
-              <li>{t('gettingThere.byTrain.nearbyJunctions.chengam')}</li>
             </ul>
           </div>
         </section>
