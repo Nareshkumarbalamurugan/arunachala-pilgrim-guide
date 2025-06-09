@@ -11,19 +11,85 @@
         "viewDetails": "View Details",
         "viewMenu": "View Menu"
     },
-    "navigation": {
-        "home": "Home",
-        "temples": "Temples",
-        "linghams": "Linghams",
-        "girivalam": "Girivalam",
-        "festivals": "Festivals",
-        "stayFood": "Stay & Food",
-        "spiritualTourism": "Spiritual Tourism",
-        "gettingThere": "Getting There",
-        "blog": "Blog",
-        "contact": "Contact",
-        "view360": "360 Degree View"
+  "navigation": {
+    "home": "Home",
+    "temples": "Temples",
+    "linghams": "Linghams",
+    "girivalam": "Girivalam",
+    "festivals": "Festivals",
+    "stayFood": "Stay & Food",
+    "spiritualTourism": "Spiritual Tourism",
+    "gettingThere": "Getting There",
+    "historyCulture": "History & Culture",
+    "blog": "Blog",
+    "contact": "Contact",
+    "view360": "360 Degree View"
+  },
+  "historyCulture": {
+    "pageTitle": "History & Culture of Tiruvannamalai Temple",
+    "pageSubtitle": "Explore the rich history, mythology, architecture, and cultural significance of the sacred Tiruvannamalai Temple.",
+    "sacredRoots": {
+      "title": "📍 Sacred Roots of Arunachala",
+      "content": "Tiruvannamalai, located in the heart of Tamil Nadu, is home to the revered Arunachalesvara Temple, one of the oldest and most significant Shiva temples in India. The temple is not only a spiritual center but also a historical landmark that has witnessed the rise and fall of South Indian dynasties over more than a thousand years. The temple is dedicated to Lord Shiva, who is worshipped here as Arunachalesvara—the Lord of the Arunachala Hill. According to ancient Hindu mythology, the hill itself is considered a form of Shiva and is venerated as the embodiment of Agni (fire), one of the five classical elements (Pancha Bhootas)."
     },
+    "mythologyLegends": {
+      "title": "🕯️ Mythology & Legends",
+      "pillarOfFire": {
+        "title": "🔥 The Pillar of Fire (Lingodbhava)",
+        "content": "One of the most powerful legends tells of a divine contest between Lord Vishnu and Lord Brahma, who sought to prove their supremacy. Lord Shiva appeared as an infinite pillar of fire (Jyoti) to humble their ego. The place where this occurred is believed to be Arunachala, and the temple commemorates this cosmic event."
+      },
+      "ardhanareeswara": {
+        "title": "🕉️ Ardhanareeswara & Divine Union",
+        "content": "Another legend says that Goddess Parvati performed penance on the Arunachala Hill to unite with Lord Shiva. Moved by her devotion, Shiva merged with her to form Ardhanareeswara, symbolizing the unity of masculine and feminine energies. This divine event is deeply associated with the temple’s spiritual significance."
+      }
+    },
+    "architecturalHeritage": {
+      "title": "🏛️ Architectural Heritage",
+      "content": "The current temple complex was primarily developed between the 9th and 16th centuries, flourishing under the Cholas, Pandyas, Vijayanagara rulers, and Nayaks. The temple showcases the grandeur of Dravidian architecture, with:",
+      "features": [
+        "Four towering Gopurams (gateway towers), the tallest being the Eastern Rajagopuram (66 meters).",
+        "Vast courtyards and pillared halls, especially the Thousand-Pillared Hall.",
+        "Sacred tanks like Agni Theertham, used for purification before rituals.",
+        "Exquisite stone carvings and sculptures portraying various deities and mythological events.",
+        "The temple spreads across 10 hectares, making it one of the largest in India."
+      ]
+    },
+    "culturalSpiritualSignificance": {
+      "title": "🎭 Cultural & Spiritual Significance",
+      "tamilLiterature": {
+        "title": "📖 Tamil Literature & Devotional Hymns",
+        "content": "Tiruvannamalai has inspired countless saints, poets, and mystics. It is one of the 275 Paadal Petra Sthalams, glorified in the Tevaram hymns by Tamil Shaivite saints like Appar, Sundarar, and Thirugnanasambandar."
+      },
+      "ramanaMaharshi": {
+        "title": "🕊️ Saint Ramana Maharshi",
+        "content": "In the 20th century, the sage Ramana Maharshi made Tiruvannamalai his spiritual home, attracting seekers from around the world. His ashram still lies at the base of Arunachala Hill."
+      },
+      "classicalMusicDance": {
+        "title": "🎶 Classical Music & Dance",
+        "content": "During festivals, the temple becomes a stage for traditional Bharatanatyam dance, Carnatic music, and theatrical performances, reflecting Tamil Nadu’s vibrant cultural traditions."
+      }
+    },
+    "traditionsFestivals": {
+      "title": "🔁 Traditions & Festivals",
+      "girivalam": {
+        "title": "🌕 Girivalam (Giri Pradakshina)",
+        "content": "Devotees walk the 14 km path around Arunachala Hill barefoot during full moon nights. This sacred practice is believed to cleanse sins and bring spiritual merit."
+      },
+      "karthigaiDeepam": {
+        "title": "🪔 Karthigai Deepam",
+        "content": "Held in November/December, this 10-day festival ends with the lighting of a massive beacon atop the hill, visible for miles. It symbolizes Lord Shiva appearing as fire."
+      },
+      "otherFestivals": "Other festivals like Maha Shivaratri, Chitra Pournami, and Panguni Uthiram are celebrated with grandeur, drawing millions of devotees each year."
+    },
+    "ecoSpiritualHarmony": {
+      "title": "🌿 Eco-Spiritual Harmony",
+      "content": "The temple town blends spiritual pursuit with natural preservation. Efforts are underway to protect the Arunachala Hill’s dry deciduous forests, with reforestation and eco-awareness initiatives supported by local communities and ashrams."
+    },
+    "conclusion": {
+      "title": "📌 Conclusion",
+      "content": "The History & Culture of Tiruvannamalai Temple is a living narrative of mythology, spirituality, architecture, literature, and devotion. More than just a pilgrimage site, it is a timeless epic—where divinity meets history, and where every stone whispers ancient wisdom."
+    }
+  },
     "home": {
         "hero": {
             "badge": "✨ Sacred Spiritual Destination",
