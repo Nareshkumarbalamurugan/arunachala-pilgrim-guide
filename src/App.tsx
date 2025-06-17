@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -20,28 +21,34 @@ import LanguageSelection from "./pages/LanguageSelection";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <Routes>
-      <Route path="/" element={<LanguageSelection />} />
-      <Route path="/index" element={<Index />} />
-      <Route path="/temples" element={<Temples />} />
-      <Route path="/linghams" element={<Linghams />} />
-      <Route path="/girivalam" element={<Girivalam />} />
-      <Route path="/festivals" element={<Festivals />} />
-      <Route path="/stay-food" element={<StayFood />} />
-      <Route path="/spiritual-tourism" element={<SpiritualTourism />} />
-      <Route path="/getting-there" element={<GettingThere />} />
-      <Route path="/history-culture" element={<HistoryCulture />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/faq" element={<FAQ />} />
-      <Route path="/360View" element={<View360 />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-    <Toaster />
-    <Sonner />
-  </QueryClientProvider>
-);
+const App = () => {
+  console.log('App component rendering');
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      <div className="min-h-screen">
+        <Routes>
+          <Route path="/" element={<LanguageSelection />} />
+          <Route path="/index" element={<Index />} />
+          <Route path="/temples" element={<Temples />} />
+          <Route path="/linghams" element={<Linghams />} />
+          <Route path="/girivalam" element={<Girivalam />} />
+          <Route path="/festivals" element={<Festivals />} />
+          <Route path="/stay-food" element={<StayFood />} />
+          <Route path="/spiritual-tourism" element={<SpiritualTourism />} />
+          <Route path="/getting-there" element={<GettingThere />} />
+          <Route path="/history-culture" element={<HistoryCulture />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/360View" element={<View360 />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+      <Toaster />
+      <Sonner />
+    </QueryClientProvider>
+  );
+};
 
 export default App;
