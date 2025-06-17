@@ -10,6 +10,7 @@ import FeaturedSections from '@/components/FeaturedSections';
 import WhyVisit from '@/components/WhyVisit';
 import Newsletter from '@/components/Newsletter';
 import Footer from '@/components/Footer';
+import Chatbot from '@/components/Chatbot';
 
 const Index = () => {
   return (
@@ -30,6 +31,7 @@ const Index = () => {
         <Newsletter />
       </div>
       <Footer />
+      <Chatbot />
     </div>
   );
 };
