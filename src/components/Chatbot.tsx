@@ -1,5 +1,4 @@
-
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { MessageSquare, Send, X, Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -34,7 +33,7 @@ const Chatbot = () => {
     scrollToBottom();
   }, [messages]);
 
-  const sendMessage = async () => {
+  const sendMessage = useCallback(async () => {
     if (!inputMessage.trim() || isLoading) return;
 
     const userMessage: Message = {
@@ -49,26 +48,36 @@ const Chatbot = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyDctYfbr_Aw2xNnjimK9az-LR6tpfidGxg`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          contents: [{
-            parts: [{
-              text: `You are Tera AI, a knowledgeable spiritual guide for Tiruvannamalai. Answer questions about temples, Girivalam, festivals, accommodation, spiritual practices, and local guidance. Keep responses helpful, respectful, and focused on Tiruvannamalai. User question: ${inputMessage}`
-            }]
-          }]
-        })
-      });
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyBrvGohOGyOo-qX0Yw-T8GB_QebAG2G0yI`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [
+              {
+                parts: [
+                  {
+                    text: `You are Tera AI, a knowledgeable spiritual guide for Tiruvannamalai. Answer questions about temples, Girivalam, festivals, accommodation, spiritual practices, and local guidance. Keep responses helpful, respectful, and focused on Tiruvannamalai. User question: ${inputMessage}`
+                  }
+                ]
+              }
+            ]
+          })
+        }
+      );
 
       const data = await response.json();
-      
-      if (data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
+      console.log('Gemini API response:', data);
+
+      const replyText =
+        data?.candidates?.[0]?.content?.parts?.[0]?.text ||
+        data?.candidates?.[0]?.content?.text;
+
+      if (replyText) {
         const aiMessage: Message = {
           id: (Date.now() + 1).toString(),
-          text: data.candidates[0].content.parts[0].text,
+          text: replyText,
           isUser: false,
           timestamp: new Date()
         };
@@ -80,7 +89,7 @@ const Chatbot = () => {
       console.error('Error calling Gemini API:', error);
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: 'I apologize, but I\'m having trouble connecting right now. Please try again in a moment.',
+        text: "Sorry, I'm having trouble answering that. Please try again shortly.",
         isUser: false,
         timestamp: new Date()
       };
@@ -88,7 +97,7 @@ const Chatbot = () => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [inputMessage, isLoading]);
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -129,9 +138,8 @@ const Chatbot = () => {
               </Button>
             </div>
           </CardHeader>
-          
+
           <CardContent className="flex-1 flex flex-col p-0">
-            {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
               {messages.map((message) => (
                 <div
@@ -149,13 +157,20 @@ const Chatbot = () => {
                   </div>
                 </div>
               ))}
+
               {isLoading && (
                 <div className="flex justify-start">
                   <div className="bg-gray-100 text-gray-800 p-2 rounded-lg text-sm">
                     <div className="flex items-center space-x-1">
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" />
+                      <div
+                        className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                        style={{ animationDelay: '0.1s' }}
+                      />
+                      <div
+                        className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                        style={{ animationDelay: '0.2s' }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -163,13 +178,12 @@ const Chatbot = () => {
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Input */}
             <div className="p-4 border-t">
               <div className="flex gap-2">
                 <Input
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
-                  onKeyPress={handleKeyPress}
+                  onKeyDown={handleKeyPress}
                   placeholder="Ask about Tiruvannamalai..."
                   disabled={isLoading}
                   className="flex-1"
