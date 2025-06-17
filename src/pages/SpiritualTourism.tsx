@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -172,7 +173,7 @@ const SpiritualTourism = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-green-600 mb-4">{t('spiritualTourism.planning.etiquetteTitle')}</h3>
                 <ul className="text-gray-600 space-y-2 text-sm">
-                  {t('spiritualTourism.planning.etiquetteList', { returnObjects: true }).map((rule, index) => (
+                  {(t('spiritualTourism.planning.etiquetteList', { returnObjects: true }) as string[]).map((rule, index) => (
                     <li key={index}>• {rule}</li>
                   ))}
                 </ul>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -111,7 +112,7 @@ const Temples = () => {
                       <div className="mb-6">
                         <h4 className="text-lg font-semibold text-orange-600 mb-3">Highlights:</h4>
                         <ul className="space-y-2">
-                          {t(`temples.mainTemples.${temple}.highlights`, { returnObjects: true }).map((highlight: string, idx: number) => (
+                          {(t(`temples.mainTemples.${temple}.highlights`, { returnObjects: true }) as string[]).map((highlight, idx) => (
                             <li key={idx} className="flex items-start">
                               <span className="text-orange-500 mr-2">•</span>
                               <span className="text-gray-600">{highlight}</span>
@@ -147,7 +148,7 @@ const Temples = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Object.entries(t('temples.otherTemples.temples', { returnObjects: true })).map(([key, name], index) => (
+            {Object.entries(t('temples.otherTemples.temples', { returnObjects: true }) as Record<string, string>).map(([key, name], index) => (
               <a
                 key={key}
                 href={otherTemples[index].mapLink}
@@ -189,7 +190,7 @@ const Temples = () => {
                   {t('temples.visitorTips.etiquette.title')}
                 </h3>
                 <ul className="space-y-3 text-gray-600">
-                  {t('temples.visitorTips.etiquette.tips', { returnObjects: true }).map((tip: string, index: number) => (
+                  {(t('temples.visitorTips.etiquette.tips', { returnObjects: true }) as string[]).map((tip, index) => (
                     <li key={index}>• {tip}</li>
                   ))}
                 </ul>
@@ -202,7 +203,7 @@ const Temples = () => {
                   {t('temples.visitorTips.practical.title')}
                 </h3>
                 <ul className="space-y-3 text-gray-600">
-                  {t('temples.visitorTips.practical.tips', { returnObjects: true }).map((tip: string, index: number) => (
+                  {(t('temples.visitorTips.practical.tips', { returnObjects: true }) as string[]).map((tip, index) => (
                     <li key={index}>• {tip}</li>
                   ))}
                 </ul>

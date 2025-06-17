@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -55,21 +56,21 @@ const GettingThere = () => {
       from: t('gettingThere.byRoad.routes.chennai.from'),
       route: t('gettingThere.byRoad.routes.chennai.route'),
       time: t('gettingThere.byRoad.routes.chennai.time'),
-      transport: t('gettingThere.byRoad.routes.chennai.transport', { returnObjects: true }),
+      transport: t('gettingThere.byRoad.routes.chennai.transport', { returnObjects: true }) as string[],
       description: t('gettingThere.byRoad.routes.chennai.description')
     },
     {
       from: t('gettingThere.byRoad.routes.bangalore.from'),
       route: t('gettingThere.byRoad.routes.bangalore.route'),
       time: t('gettingThere.byRoad.routes.bangalore.time'),
-      transport: t('gettingThere.byRoad.routes.bangalore.transport', { returnObjects: true }),
+      transport: t('gettingThere.byRoad.routes.bangalore.transport', { returnObjects: true }) as string[],
       description: t('gettingThere.byRoad.routes.bangalore.description')
     },
     {
       from: t('gettingThere.byRoad.routes.vellore.from'),
       route: t('gettingThere.byRoad.routes.vellore.route'),
       time: t('gettingThere.byRoad.routes.vellore.time'),
-      transport: t('gettingThere.byRoad.routes.vellore.transport', { returnObjects: true }),
+      transport: t('gettingThere.byRoad.routes.vellore.transport', { returnObjects: true }) as string[],
       description: t('gettingThere.byRoad.routes.vellore.description')
     }
   ];
@@ -92,7 +93,7 @@ const GettingThere = () => {
     }
   ];
 
-  const tips = t('gettingThere.travelTips.tips', { returnObjects: true });
+  const tips = t('gettingThere.travelTips.tips', { returnObjects: true }) as string[];
 
   return (
     <div className="min-h-screen bg-gray-50">

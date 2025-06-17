@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -121,7 +122,7 @@ const Girivalam = () => {
                     {t('girivalam.route.keyStops.title')}:
                   </h4>
                   <ul className="text-gray-600 space-y-1">
-                    {t('girivalam.route.keyStops.items', { returnObjects: true }).map((item: string, index: number) => (
+                    {(t('girivalam.route.keyStops.items', { returnObjects: true }) as string[]).map((item, index) => (
                       <li key={index}>• {item}</li>
                     ))}
                   </ul>
@@ -131,7 +132,7 @@ const Girivalam = () => {
                     {t('girivalam.route.sacredFeatures.title')}:
                   </h4>
                   <ul className="text-gray-600 space-y-1">
-                    {t('girivalam.route.sacredFeatures.items', { returnObjects: true }).map((item: string, index: number) => (
+                    {(t('girivalam.route.sacredFeatures.items', { returnObjects: true }) as string[]).map((item, index) => (
                       <li key={index}>• {item}</li>
                     ))}
                   </ul>
@@ -150,7 +151,7 @@ const Girivalam = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {t('girivalam.tips.items', { returnObjects: true }).map((tip: string, index: number) => (
+            {(t('girivalam.tips.items', { returnObjects: true }) as string[]).map((tip, index) => (
               <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
                 <CardContent className="p-6">
                   <div className="text-2xl mb-3">💡</div>
@@ -184,7 +185,7 @@ const Girivalam = () => {
                     {t('girivalam.benefits.title')}:
                   </h4>
                   <ul className="space-y-3">
-                    {t('girivalam.benefits.items', { returnObjects: true }).map((benefit: string, index: number) => (
+                    {(t('girivalam.benefits.items', { returnObjects: true }) as string[]).map((benefit, index) => (
                       <li key={index} className="flex items-start">
                         <span className="text-purple-500 mr-2">•</span>
                         <span className="text-gray-600">{benefit}</span>
