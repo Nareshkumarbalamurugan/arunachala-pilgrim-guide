@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { MessageSquare, Send, X, Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -49,7 +50,7 @@ const Chatbot = () => {
 
     try {
       const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyBrvGohOGyOo-qX0Yw-T8GB_QebAG2G0yI`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDctYfbr_Aw2xNnjimK9az-LR6tpfidGxg`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -70,9 +71,11 @@ const Chatbot = () => {
       const data = await response.json();
       console.log('Gemini API response:', data);
 
-      const replyText =
-        data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-        data?.candidates?.[0]?.content?.text;
+      if (data.error) {
+        throw new Error(data.error.message || 'API Error');
+      }
+
+      const replyText = data?.candidates?.[0]?.content?.parts?.[0]?.text;
 
       if (replyText) {
         const aiMessage: Message = {
@@ -83,7 +86,7 @@ const Chatbot = () => {
         };
         setMessages(prev => [...prev, aiMessage]);
       } else {
-        throw new Error('Invalid response format');
+        throw new Error('No response text received');
       }
     } catch (error) {
       console.error('Error calling Gemini API:', error);
