@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { MessageSquare, Send, X, Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -56,7 +55,7 @@ const Chatbot = () => {
           'Authorization': `Bearer a64c65d9-d7a6-4444-a4ed-6bc577ce56b3`
         },
         body: JSON.stringify({
-          model: 'Mistral-Nemo-12B-ArliAI-RPMax-v1.3',
+          model: 'Mistral-Nemo-12B-BD-RP',
           messages: [
             {
               role: 'system',
@@ -128,7 +127,7 @@ const Chatbot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <Card className="fixed bottom-6 left-6 z-50 w-80 h-96 shadow-xl flex flex-col">
+        <Card className="fixed bottom-6 left-6 z-50 w-full max-w-md h-[calc(100vh-12rem)] shadow-xl flex flex-col">
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -146,7 +145,7 @@ const Chatbot = () => {
             </div>
           </CardHeader>
 
-          <CardContent className="flex-1 flex flex-col p-0">
+          <CardContent className="flex-1 flex flex-col p-0 overflow-hidden">
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
               {messages.map((message) => (
                 <div
@@ -154,7 +153,7 @@ const Chatbot = () => {
                   className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}
                 >
                   <div
-                    className={`max-w-[70%] p-2 rounded-lg text-sm ${
+                    className={`max-w-[80%] p-2 rounded-lg text-sm ${
                       message.isUser
                         ? 'bg-purple-600 text-white'
                         : 'bg-gray-100 text-gray-800'
