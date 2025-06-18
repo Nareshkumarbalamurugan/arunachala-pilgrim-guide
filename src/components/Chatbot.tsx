@@ -49,33 +49,37 @@ const Chatbot = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDctYfbr_Aw2xNnjimK9az-LR6tpfidGxg`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            contents: [
-              {
-                parts: [
-                  {
-                    text: `You are Tera AI, a knowledgeable spiritual guide for Tiruvannamalai. Answer questions about temples, Girivalam, festivals, accommodation, spiritual practices, and local guidance. Keep responses helpful, respectful, and focused on Tiruvannamalai. User question: ${inputMessage}`
-                  }
-                ]
-              }
-            ]
-          })
-        }
-      );
+      const response = await fetch('https://api.arliai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer a64c65d9-d7a6-4444-a4ed-6bc577ce56b3`
+        },
+        body: JSON.stringify({
+          model: 'Mistral-Nemo-12B-ArliAI-RPMax-v1.3',
+          messages: [
+            {
+              role: 'system',
+              content: 'You are Tera AI, a knowledgeable spiritual guide for Tiruvannamalai. Answer questions about temples, Girivalam, festivals, accommodation, spiritual practices, and local guidance. Keep responses helpful, respectful, and focused on Tiruvannamalai.'
+            },
+            {
+              role: 'user',
+              content: inputMessage
+            }
+          ],
+          max_tokens: 500,
+          temperature: 0.7
+        })
+      });
 
       const data = await response.json();
-      console.log('Gemini API response:', data);
+      console.log('Arli AI response:', data);
 
       if (data.error) {
         throw new Error(data.error.message || 'API Error');
       }
 
-      const replyText = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+      const replyText = data?.choices?.[0]?.message?.content;
 
       if (replyText) {
         const aiMessage: Message = {
@@ -89,7 +93,7 @@ const Chatbot = () => {
         throw new Error('No response text received');
       }
     } catch (error) {
-      console.error('Error calling Gemini API:', error);
+      console.error('Error calling Arli AI API:', error);
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         text: "Sorry, I'm having trouble answering that. Please try again shortly.",
