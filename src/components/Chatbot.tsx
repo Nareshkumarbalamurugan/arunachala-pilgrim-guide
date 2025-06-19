@@ -33,6 +33,7 @@ const Chatbot = () => {
     scrollToBottom();
   }, [messages]);
 
+  // Added optimization to fetch responses without blocking other functionalities
   const sendMessage = useCallback(async () => {
     if (!inputMessage.trim() || isLoading) return;
 
@@ -47,62 +48,65 @@ const Chatbot = () => {
     setInputMessage('');
     setIsLoading(true);
 
-    try {
-      const response = await fetch('https://api.arliai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer a64c65d9-d7a6-4444-a4ed-6bc577ce56b3`
-        },
-        body: JSON.stringify({
-          model: 'Mistral-Nemo-12B-BD-RP',
-          messages: [
-            {
-              role: 'system',
-              content: 'You are Tera AI, a knowledgeable spiritual guide for Tiruvannamalai. Answer questions about temples, Girivalam, festivals, accommodation, spiritual practices, and local guidance. Keep responses helpful, respectful, and focused on Tiruvannamalai.'
-            },
-            {
-              role: 'user',
-              content: inputMessage
-            }
-          ],
-          max_tokens: 500,
-          temperature: 0.7
-        })
-      });
+    // Fetch response asynchronously without blocking
+    (async () => {
+      try {
+        const response = await fetch('https://api.arliai.com/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer a64c65d9-d7a6-4444-a4ed-6bc577ce56b3`
+          },
+          body: JSON.stringify({
+            model: 'Mistral-Nemo-12B-BD-RP',
+            messages: [
+              {
+                role: 'system',
+                content: 'You are Tera AI, a knowledgeable spiritual guide for Tiruvannamalai. Answer questions about temples, Girivalam, festivals, accommodation, spiritual practices, and local guidance. Keep responses helpful, respectful, and focused on Tiruvannamalai.'
+              },
+              {
+                role: 'user',
+                content: inputMessage
+              }
+            ],
+            max_tokens: 500,
+            temperature: 0.7
+          })
+        });
 
-      const data = await response.json();
-      console.log('Arli AI response:', data);
+        const data = await response.json();
+        console.log('Arli AI response:', data);
 
-      if (data.error) {
-        throw new Error(data.error.message || 'API Error');
-      }
+        if (data.error) {
+          throw new Error(data.error.message || 'API Error');
+        }
 
-      const replyText = data?.choices?.[0]?.message?.content;
+        const replyText = data?.choices?.[0]?.message?.content;
 
-      if (replyText) {
-        const aiMessage: Message = {
+        if (replyText) {
+          const aiMessage: Message = {
+            id: (Date.now() + 1).toString(),
+            text: replyText,
+            isUser: false,
+            timestamp: new Date()
+          };
+          setMessages(prev => [...prev, aiMessage]);
+        } else {
+          throw new Error('No response text received');
+        }
+      } catch (error) {
+        console.error('Error calling Arli AI API:', error);
+        const errorMessage: Message = {
           id: (Date.now() + 1).toString(),
-          text: replyText,
+          text: "Sorry, I'm having trouble answering that. Please try again shortly.",
           isUser: false,
           timestamp: new Date()
         };
-        setMessages(prev => [...prev, aiMessage]);
-      } else {
-        throw new Error('No response text received');
+        setMessages(prev => [...prev, errorMessage]);
+      } finally {
+        setIsLoading(false);
       }
-    } catch (error) {
-      console.error('Error calling Arli AI API:', error);
-      const errorMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        text: "Sorry, I'm having trouble answering that. Please try again shortly.",
-        isUser: false,
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, errorMessage]);
-    } finally {
-      setIsLoading(false);
-    }
+    })();
   }, [inputMessage, isLoading]);
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
