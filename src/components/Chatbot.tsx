@@ -16,7 +16,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hello! I\'m Tera AI, your spiritual guide for Tiruvannamalai. How can I help you today?',
+      text: "Hello! I'm Tera AI, your spiritual guide for Tiruvannamalai. How can I help you today?",
       isUser: false,
       timestamp: new Date()
     }
@@ -33,7 +33,6 @@ const Chatbot = () => {
     scrollToBottom();
   }, [messages]);
 
-  // Added optimization to fetch responses without blocking other functionalities
   const sendMessage = useCallback(async () => {
     if (!inputMessage.trim() || isLoading) return;
 
@@ -48,65 +47,56 @@ const Chatbot = () => {
     setInputMessage('');
     setIsLoading(true);
 
-    // Fetch response asynchronously without blocking
-    (async () => {
-      try {
-        const response = await fetch('https://api.arliai.com/v1/chat/completions', {
+    try {
+      const response = await fetch(
+        'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyDctYfbr_Aw2xNnjimK9az-LR6tpfidGxg',
+        {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer a64c65d9-d7a6-4444-a4ed-6bc577ce56b3`
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            model: 'Mistral-Nemo-12B-BD-RP',
-            messages: [
+            contents: [
               {
-                role: 'system',
-                content: 'You are Tera AI, a knowledgeable spiritual guide for Tiruvannamalai. Answer questions about temples, Girivalam, festivals, accommodation, spiritual practices, and local guidance. Keep responses helpful, respectful, and focused on Tiruvannamalai.'
-              },
-              {
-                role: 'user',
-                content: inputMessage
+                parts: [
+                  {
+                    text: inputMessage
+                  }
+                ]
               }
-            ],
-            max_tokens: 500,
-            temperature: 0.7
+            ]
           })
-        });
-
-        const data = await response.json();
-        console.log('Arli AI response:', data);
-
-        if (data.error) {
-          throw new Error(data.error.message || 'API Error');
         }
+      );
 
-        const replyText = data?.choices?.[0]?.message?.content;
+      const data = await response.json();
+      console.log('Gemini response:', data);
 
-        if (replyText) {
-          const aiMessage: Message = {
-            id: (Date.now() + 1).toString(),
-            text: replyText,
-            isUser: false,
-            timestamp: new Date()
-          };
-          setMessages(prev => [...prev, aiMessage]);
-        } else {
-          throw new Error('No response text received');
-        }
-      } catch (error) {
-        console.error('Error calling Arli AI API:', error);
-        const errorMessage: Message = {
+      const replyText = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+      if (replyText) {
+        const aiMessage: Message = {
           id: (Date.now() + 1).toString(),
-          text: "Sorry, I'm having trouble answering that. Please try again shortly.",
+          text: replyText,
           isUser: false,
           timestamp: new Date()
         };
-        setMessages(prev => [...prev, errorMessage]);
-      } finally {
-        setIsLoading(false);
+        setMessages(prev => [...prev, aiMessage]);
+      } else {
+        throw new Error('No response received from Gemini');
       }
-    })();
+    } catch (error) {
+      console.error('Error calling Gemini API:', error);
+      const errorMessage: Message = {
+        id: (Date.now() + 2).toString(),
+        text: "Sorry, I'm having trouble answering that. Please try again shortly.",
+        isUser: false,
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
   }, [inputMessage, isLoading]);
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -118,7 +108,6 @@ const Chatbot = () => {
 
   return (
     <>
-      {/* Floating Chat Button */}
       {!isOpen && (
         <Button
           onClick={() => setIsOpen(true)}
@@ -129,7 +118,6 @@ const Chatbot = () => {
         </Button>
       )}
 
-      {/* Chat Window */}
       {isOpen && (
         <Card className="fixed bottom-6 left-6 z-50 w-full max-w-md h-[calc(100vh-12rem)] shadow-xl flex flex-col">
           <CardHeader className="pb-2">
