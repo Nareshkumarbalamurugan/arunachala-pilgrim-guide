@@ -55,7 +55,7 @@ const Chatbot = () => {
           'Authorization': `Bearer a64c65d9-d7a6-4444-a4ed-6bc577ce56b3`
         },
         body: JSON.stringify({
-          model: 'Mistral-Nemo-12B-BD-RP',
+          model: 'Mistral-Nemo-12B-ArliAI-RPMax-v1.3',
           messages: [
             {
               role: 'system',
