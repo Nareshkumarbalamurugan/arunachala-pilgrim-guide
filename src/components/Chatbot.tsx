@@ -33,7 +33,7 @@ const Chatbot = () => {
     scrollToBottom();
   }, [messages]);
 
-  // Added optimization to fetch responses without blocking other functionalities
+  // Removed Gemini AI import and usage, restored previous fetch-based implementation
   const sendMessage = useCallback(async () => {
     if (!inputMessage.trim() || isLoading) return;
 
