@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -57,6 +56,41 @@ const Temples = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-amber-50">
       <Navigation />
+
+      {/* Arunachalam Temple Introduction & Timings (SEO Section) */}
+      <section className="relative py-16 bg-gradient-to-r from-yellow-100 to-orange-50 text-gray-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-bold mb-6 text-center text-orange-700">Arunachalam Temple: Spiritual Heart of Tiruvannamalai</h1>
+          <p className="text-lg mb-6 leading-relaxed">
+            The <strong>Arunachalam Temple</strong>, also known as Arunachaleswarar Temple, stands as a beacon of spiritual energy in Tiruvannamalai. Revered as one of the Pancha Bhoota Sthalams representing the element of fire (Agni), this ancient temple is dedicated to Lord Shiva as Arunachaleswarar. Pilgrims from across the world visit to experience its profound spiritual atmosphere, participate in sacred rituals, and undertake the holy Girivalam (circumambulation) around the Arunachala hill. The temple's towering gopurams, vast courtyards, and centuries-old traditions make it a must-visit for seekers of peace and enlightenment.
+          </p>
+          <h2 className="text-2xl font-semibold mb-4 mt-8 text-orange-600">Arunachalam Temple Timings</h2>
+          <div className="overflow-x-auto mb-6">
+            <table className="min-w-full border border-orange-200 rounded-lg">
+              <thead>
+                <tr className="bg-orange-100">
+                  <th className="px-4 py-2 text-left">Day</th>
+                  <th className="px-4 py-2 text-left">Temple Timings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="px-4 py-2">Sunday</td><td className="px-4 py-2">5:30 am–8 pm</td></tr>
+                <tr className="bg-orange-50"><td className="px-4 py-2">Monday</td><td className="px-4 py-2">5:30 am–8 pm</td></tr>
+                <tr><td className="px-4 py-2">Tuesday</td><td className="px-4 py-2">5:30 am–8 pm</td></tr>
+                <tr className="bg-orange-50"><td className="px-4 py-2">Wednesday</td><td className="px-4 py-2">5:30 am–8 pm</td></tr>
+                <tr><td className="px-4 py-2">Thursday</td><td className="px-4 py-2">5:30 am–8 pm</td></tr>
+                <tr className="bg-orange-50"><td className="px-4 py-2">Friday</td><td className="px-4 py-2">5:30 am–8 pm</td></tr>
+                <tr><td className="px-4 py-2">Saturday</td><td className="px-4 py-2">5:30 am–8 pm</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-gray-600 mb-8">Please note: <strong>Arunachalam temple timings</strong> may vary on festival days and special occasions. Early morning and evening are considered especially auspicious for darshan.</p>
+          <h2 className="text-2xl font-semibold mb-4 text-orange-600">Nearby Pilgrimage: The Golden Temple, Vellore</h2>
+          <p className="text-lg mb-2 leading-relaxed">
+            Many pilgrims visiting Tiruvannamalai also include a trip to the renowned <strong>Golden Temple</strong> in Vellore (Sripuram). Located about 80 km from Arunachalam Temple, the Golden Temple is dedicated to Goddess Lakshmi Narayani and is famous for its stunning gold-covered architecture and tranquil spiritual ambiance. Combining a visit to both Arunachalam Temple and the Golden Temple offers a deeply enriching spiritual journey through Tamil Nadu's sacred landscape.
+          </p>
+        </div>
+      </section>
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
@@ -163,8 +197,8 @@ const Temples = () => {
                       <h3 className="text-lg font-semibold text-gray-900 group-hover:text-orange-600 transition-colors flex-1">
                         {name}
                       </h3>
-                      <span className="flex items-center gap-1 text-orange-600 group-hover:text-orange-700 transition-colors ml-2">
-                        <MapPin size={16} />
+                      <span className="flex items-center gap-1 text-orange-600 group-hover:text-orange-700 transition-colors">
+                        <MapPin size={18} />
                         <ExternalLink size={14} />
                       </span>
                     </div>
