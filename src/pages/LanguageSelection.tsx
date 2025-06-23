@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -10,9 +9,9 @@ const LanguageSelection = () => {
   const navigate = useNavigate();
 
   const languages = [
-    { code: 'en', label: 'English', flag: '🇺🇸' },
-    { code: 'ta', label: 'தமிழ்', flag: '🇮🇳' },
-    { code: 'te', label: 'తెలుగు', flag: '🇮🇳' },
+    { code: 'en', label: 'English' },
+    { code: 'ta', label: 'தமிழ்' },
+    { code: 'te', label: 'తెలుగు' },
   ];
 
   const handleLanguageSelect = (code: string) => {
@@ -52,7 +51,7 @@ const LanguageSelection = () => {
                   onClick={() => handleLanguageSelect(lang.code)}
                 >
                   <div className="flex items-center space-x-4">
-                    <span className="text-3xl">{lang.flag}</span>
+                    {/* Removed flag icon */}
                     <div>
                       <span className="text-xl font-semibold text-gray-900">
                         {lang.label}
